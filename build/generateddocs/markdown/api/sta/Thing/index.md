@@ -64,9 +64,12 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/thing](
 
 #### ttl
 ```ttl
+@prefix ns1: <dct:> .
 @prefix sta: <https://schemas.opengis.org/sta/def/core#> .
 
-<http://w3id.org/ogcincubator/bblocks-sta/1> sta:Datastreams "Things(1)/Datastreams" ;
+<http://w3id.org/ogcincubator/bblocks-sta/1> ns1:description "This thing is an oven." ;
+    ns1:title "Oven" ;
+    sta:Datastreams "Things(1)/Datastreams" ;
     sta:HistoricalLocations "Things(1)/HistoricalLocations" ;
     sta:Locations "Things(1)/Locations" .
 
@@ -117,6 +120,26 @@ properties:
     type: string
     description: Reference link to the FeatureOfInterest.
 x-jsonld-extra-terms:
+  name: dct:title
+  description: dct:description
+  property:
+    x-jsonld-id: sdo:additionalProperty
+    x-jsonld-type: '@id'
+  category:
+    x-jsonld-id: sdo:category
+    x-jsonld-type: '@id'
+  termCode: sdo:termCode
+  inDefinedTermSet:
+    x-jsonld-id: sdo:inDefinedTermSet
+    x-jsonld-type: '@id'
+  identifier: sdo:identifier
+  provider:
+    x-jsonld-id: dcterms:publisher
+    x-jsonld-type: '@id'
+  Organization: sdo:Organization
+  PropertyValue: sdo:PropertyValue
+  value: sdo:value
+  propertyID: sdo:propertyID
   Locations@iot.navigationLink: https://schemas.opengis.org/sta/def/core#Locations
   Datastreams@iot.navigationLink: https://schemas.opengis.org/sta/def/core#Datastreams
   HistoricalLocations@iot.navigationLink: https://schemas.opengis.org/sta/def/core#HistoricalLocations
@@ -141,6 +164,30 @@ Links to the schema:
   "@context": {
     "@iot.id": "@id",
     "@iot.selfLink": "orel:iana/1.0/self",
+    "name": "dct:title",
+    "description": "dct:description",
+    "property": {
+      "@id": "sdo:additionalProperty",
+      "@type": "@id"
+    },
+    "category": {
+      "@id": "sdo:category",
+      "@type": "@id"
+    },
+    "termCode": "sdo:termCode",
+    "inDefinedTermSet": {
+      "@id": "sdo:inDefinedTermSet",
+      "@type": "@id"
+    },
+    "identifier": "sdo:identifier",
+    "provider": {
+      "@id": "dcterms:publisher",
+      "@type": "@id"
+    },
+    "Organization": "sdo:Organization",
+    "PropertyValue": "sdo:PropertyValue",
+    "value": "sdo:value",
+    "propertyID": "sdo:propertyID",
     "Locations@iot.navigationLink": "sta:Locations",
     "Datastreams@iot.navigationLink": "sta:Datastreams",
     "HistoricalLocations@iot.navigationLink": "sta:HistoricalLocations",
