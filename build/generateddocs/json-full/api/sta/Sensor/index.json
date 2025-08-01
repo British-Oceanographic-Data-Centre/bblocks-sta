@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-31",
+  "dateOfLastChange": "2025-08-01",
   "link": "https://github.com/opengeospatial/sta-bblock",
   "sources": [
     {
@@ -27,14 +27,14 @@
     "SOSA"
   ],
   "shaclRules": {},
-  "ldContext": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Sensor/context.jsonld",
+  "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Sensor/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Sensor/schema.json"
+    "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.yaml",
+    "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.json"
   },
-  "sourceSchema": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/Sensor/schema.yaml",
-  "sourceLdContext": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/Sensor/context.jsonld",
-  "sourceFiles": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/Sensor/",
+  "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/schema.yaml",
+  "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/context.jsonld",
+  "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Sensor/",
@@ -48,17 +48,17 @@
           "language": "json",
           "ref": "examples/Sensor.json",
           "code": "{\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Sensors(1)\",\n  \"Datastreams@iot.navigationLink\": \"Sensors(1)/Datastreams\",\n  \"name\": \"TMP36\",\n  \"description\": \"TMP36 - Analog Temperature sensor\",\n  \"encodingType\": \"application/pdf\",\n  \"metadata\": \"http://example.org/TMP35_36_37.pdf\"\n}\n",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Sensor/example_1_1.json"
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Sensor/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Sensor/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Sensors(1)\",\n  \"Datastreams@iot.navigationLink\": \"Sensors(1)/Datastreams\",\n  \"name\": \"TMP36\",\n  \"description\": \"TMP36 - Analog Temperature sensor\",\n  \"encodingType\": \"application/pdf\",\n  \"metadata\": \"http://example.org/TMP35_36_37.pdf\"\n}",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Sensor/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Sensors(1)\",\n  \"Datastreams@iot.navigationLink\": \"Sensors(1)/Datastreams\",\n  \"name\": \"TMP36\",\n  \"description\": \"TMP36 - Analog Temperature sensor\",\n  \"encodingType\": \"application/pdf\",\n  \"metadata\": \"http://example.org/TMP35_36_37.pdf\"\n}",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Sensor/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix dcat1: <https://w3c.github.io/dxwg/dcat/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n\n<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description \"TMP36 - Analog Temperature sensor\" ;\n    dcterms:title \"TMP36\" ;\n    dcat1:mediaType \"application/pdf\" .\n\n",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Sensor/example_1_1.ttl"
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Sensor/example_1_1.ttl"
         }
       ]
     }

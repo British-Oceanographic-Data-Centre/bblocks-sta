@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Datastream/schema.json"
+      "$ref": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.json"
     }
   ],
   "x-jsonld-extra-terms": {

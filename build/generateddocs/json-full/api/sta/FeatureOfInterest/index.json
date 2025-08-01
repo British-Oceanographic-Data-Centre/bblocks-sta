@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-31",
+  "dateOfLastChange": "2025-08-01",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -24,14 +24,14 @@
     "templates"
   ],
   "shaclRules": {},
-  "ldContext": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/FeatureOfInterest/context.jsonld",
+  "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/FeatureOfInterest/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/FeatureOfInterest/schema.json"
+    "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.yaml",
+    "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.json"
   },
-  "sourceSchema": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/FeatureOfInterest/schema.yaml",
-  "sourceLdContext": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/FeatureOfInterest/context.jsonld",
-  "sourceFiles": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/FeatureOfInterest/",
+  "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/schema.yaml",
+  "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/context.jsonld",
+  "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/FeatureOfInterest/",
@@ -45,17 +45,17 @@
           "language": "json",
           "ref": "examples/FeatureOfInterest.json",
           "code": "{\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/FeaturesOfInterest(1)\",\n  \"Observations@iot.navigationLink\": \"FeaturesOfInterest(1)/Observations\",\n\n  \"name\": \"Weather Station YYC.\",\n  \"description\": \"This is a weather station located at the Calgary Airport.\",\n  \"encodingType\": \"application/geo+json\",\n  \"feature\": {\n    \"type\": \"Feature\",\n    \"geometry\":{\n      \"type\": \"Point\",\n      \"coordinates\": [-114.06,51.05]\n    }\n  }\n}\n",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/FeatureOfInterest/example_1_1.json"
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/FeatureOfInterest/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/FeatureOfInterest/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/FeaturesOfInterest(1)\",\n  \"Observations@iot.navigationLink\": \"FeaturesOfInterest(1)/Observations\",\n  \"name\": \"Weather Station YYC.\",\n  \"description\": \"This is a weather station located at the Calgary Airport.\",\n  \"encodingType\": \"application/geo+json\",\n  \"feature\": {\n    \"type\": \"Feature\",\n    \"geometry\": {\n      \"type\": \"Point\",\n      \"coordinates\": [\n        -114.06,\n        51.05\n      ]\n    }\n  }\n}",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/FeatureOfInterest/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/FeaturesOfInterest(1)\",\n  \"Observations@iot.navigationLink\": \"FeaturesOfInterest(1)/Observations\",\n  \"name\": \"Weather Station YYC.\",\n  \"description\": \"This is a weather station located at the Calgary Airport.\",\n  \"encodingType\": \"application/geo+json\",\n  \"feature\": {\n    \"type\": \"Feature\",\n    \"geometry\": {\n      \"type\": \"Point\",\n      \"coordinates\": [\n        -114.06,\n        51.05\n      ]\n    }\n  }\n}",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/FeatureOfInterest/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix dcat1: <https://w3c.github.io/dxwg/dcat/> .\n@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sta: <https://schemas.opengis.org/sta/def/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description \"This is a weather station located at the Calgary Airport.\" ;\n    dcterms:title \"Weather Station YYC.\" ;\n    geojson:Feature [ a <http://w3id.org/ogcincubator/bblocks-sta/Feature> ;\n            geojson:geometry [ a geojson:Point ;\n                    geojson:coordinates ( -1.1406e+02 5.105e+01 ) ] ] ;\n    sta:Observation \"FeaturesOfInterest(1)/Observations\" ;\n    dcat1:mediaType \"application/geo+json\" .\n\n",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/FeatureOfInterest/example_1_1.ttl"
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/FeatureOfInterest/example_1_1.ttl"
         }
       ]
     }

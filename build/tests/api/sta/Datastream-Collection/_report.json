@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.sta.Datastream-Collection - STA Datastream as ObsCollection",
   "bblockName": "STA Datastream as ObsCollection",
   "bblockId": "ogc.api.sta.Datastream-Collection",
-  "generated": "2025-08-01T10:41:51.267744+00:00",
+  "generated": "2025-08-01T11:41:55.722835+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/api/sta/Datastream-Collection/example_1_1.json",
-        "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Datastream-Collection/example_1_1.json",
+        "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Datastream-Collection/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"

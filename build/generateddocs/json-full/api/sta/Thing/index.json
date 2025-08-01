@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-31",
+  "dateOfLastChange": "2025-08-01",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -27,14 +27,14 @@
     "SOSA"
   ],
   "shaclRules": {},
-  "ldContext": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Thing/context.jsonld",
+  "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Thing/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Thing/schema.json"
+    "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml",
+    "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.json"
   },
-  "sourceSchema": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/Thing/schema.yaml",
-  "sourceLdContext": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/Thing/context.jsonld",
-  "sourceFiles": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/Thing/",
+  "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/schema.yaml",
+  "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/context.jsonld",
+  "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Thing/",
@@ -48,17 +48,17 @@
           "language": "json",
           "ref": "examples/Thing.json",
           "code": "{\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Things(1)\",\n  \"Locations@iot.navigationLink\": \"Things(1)/Locations\",\n  \"Datastreams@iot.navigationLink\": \"Things(1)/Datastreams\",\n  \"HistoricalLocations@iot.navigationLink\": \"Things(1)/HistoricalLocations\",\n\n  \"name\": \"Oven\",\n  \"description\": \"This thing is an oven.\",\n  \"properties\": {\n    \"owner\": \"Noah Liang\",\n    \"color\": \"Black\"\n  }\n}\n",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Thing/example_1_1.json"
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Thing/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Things(1)\",\n  \"Locations@iot.navigationLink\": \"Things(1)/Locations\",\n  \"Datastreams@iot.navigationLink\": \"Things(1)/Datastreams\",\n  \"HistoricalLocations@iot.navigationLink\": \"Things(1)/HistoricalLocations\",\n  \"name\": \"Oven\",\n  \"description\": \"This thing is an oven.\",\n  \"properties\": {\n    \"owner\": \"Noah Liang\",\n    \"color\": \"Black\"\n  }\n}",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Thing/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Things(1)\",\n  \"Locations@iot.navigationLink\": \"Things(1)/Locations\",\n  \"Datastreams@iot.navigationLink\": \"Things(1)/Datastreams\",\n  \"HistoricalLocations@iot.navigationLink\": \"Things(1)/HistoricalLocations\",\n  \"name\": \"Oven\",\n  \"description\": \"This thing is an oven.\",\n  \"properties\": {\n    \"owner\": \"Noah Liang\",\n    \"color\": \"Black\"\n  }\n}",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix sta: <https://schemas.opengis.org/sta/def/core#> .\n\n<http://w3id.org/ogcincubator/bblocks-sta/1> sta:Datastreams \"Things(1)/Datastreams\" ;\n    sta:HistoricalLocations \"Things(1)/HistoricalLocations\" ;\n    sta:Locations \"Things(1)/Locations\" .\n\n",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Thing/example_1_1.ttl"
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/example_1_1.ttl"
         }
       ]
     }

@@ -49,7 +49,7 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/feature
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/FeatureOfInterest/context.jsonld",
+  "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld",
   "@iot.id": 1,
   "@iot.selfLink": "http://example.org/v1.1/FeaturesOfInterest(1)",
   "Observations@iot.navigationLink": "FeaturesOfInterest(1)/Observations",
@@ -166,8 +166,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/FeatureOfInterest/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/FeatureOfInterest/schema.yaml)
+* YAML version: [schema.yaml](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.json)
+* JSON version: [schema.json](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.yaml)
 
 
 # JSON-LD Context
@@ -212,7 +212,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/FeatureOfInterest/context.jsonld)
+[context.jsonld](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld)
 
 ## Sources
 

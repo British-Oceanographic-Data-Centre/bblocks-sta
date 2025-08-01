@@ -47,7 +47,7 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/thing](
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Thing/context.jsonld",
+  "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/context.jsonld",
   "@iot.id": 1,
   "@iot.selfLink": "http://example.org/v1.1/Things(1)",
   "Locations@iot.navigationLink": "Things(1)/Locations",
@@ -130,8 +130,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Thing/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Thing/schema.yaml)
+* YAML version: [schema.yaml](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.json)
+* JSON version: [schema.json](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml)
 
 
 # JSON-LD Context
@@ -154,7 +154,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Thing/context.jsonld)
+[context.jsonld](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/context.jsonld)
 
 ## Sources
 

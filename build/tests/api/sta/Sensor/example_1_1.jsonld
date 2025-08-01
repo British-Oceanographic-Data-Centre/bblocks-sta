@@ -1,5 +1,5 @@
 {
-  "@context": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Sensor/context.jsonld",
+  "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld",
   "@iot.id": 1,
   "@iot.selfLink": "http://example.org/v1.1/Sensors(1)",
   "Datastreams@iot.navigationLink": "Sensors(1)/Datastreams",

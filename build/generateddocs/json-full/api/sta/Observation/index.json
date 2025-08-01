@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-31",
+  "dateOfLastChange": "2025-08-01",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -27,14 +27,14 @@
     "SOSA"
   ],
   "shaclRules": {},
-  "ldContext": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Observation/context.jsonld",
+  "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Observation/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Observation/schema.json"
+    "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml",
+    "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json"
   },
-  "sourceSchema": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/Observation/schema.yaml",
-  "sourceLdContext": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/Observation/context.jsonld",
-  "sourceFiles": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/_sources/Observation/",
+  "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/schema.yaml",
+  "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/context.jsonld",
+  "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Observation/",
@@ -48,17 +48,17 @@
           "language": "json",
           "ref": "examples/Observation.json",
           "code": "{\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Observations(1)\",\n  \"FeatureOfInterest@iot.navigationLink\": \"Observations(1)/FeatureOfInterest\",\n  \"Datastream@iot.navigationLink\":\"Observations(1)/Datastream\",\n  \"phenomenonTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"resultTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"result\": 70.4\n}\n",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Observation/example_1_1.json"
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Observation/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Observation/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Observations(1)\",\n  \"FeatureOfInterest@iot.navigationLink\": \"Observations(1)/FeatureOfInterest\",\n  \"Datastream@iot.navigationLink\": \"Observations(1)/Datastream\",\n  \"phenomenonTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"resultTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"result\": 70.4\n}",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Observation/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Observations(1)\",\n  \"FeatureOfInterest@iot.navigationLink\": \"Observations(1)/FeatureOfInterest\",\n  \"Datastream@iot.navigationLink\": \"Observations(1)/Datastream\",\n  \"phenomenonTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"resultTime\": \"2014-12-31T11:59:59.00+08:00\",\n  \"result\": 70.4\n}",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Observation/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix sosa1: <https://www.w3.org/TR/vocab-ssn/#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://w3id.org/ogcincubator/bblocks-sta/1> sosa1:hasFeatureOfInterest \"Observations(1)/FeatureOfInterest\" ;\n    sosa1:hasSimpleResult 7.04e+01 ;\n    sosa1:isMemberOf \"Observations(1)/Datastream\" ;\n    sosa1:phenomenonTime \"2014-12-31T11:59:59.00+08:00\" ;\n    sosa1:resultTime \"2014-12-31T11:59:59.00+08:00\" .\n\n",
-          "url": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/tests/api/sta/Observation/example_1_1.ttl"
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Observation/example_1_1.ttl"
         }
       ]
     }

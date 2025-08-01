@@ -10,7 +10,7 @@
       "items": {
         "allOf": [
           {
-            "$ref": "https://raw.githubusercontent.com/British-Oceanographic-Data-Centre/bblocks-sta/undefined/build/annotated/api/sta/Observation/schema.json"
+            "$ref": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json"
           }
         ]
       },
