@@ -39,6 +39,26 @@ properties:
     type: string
     description: Reference link to the FeatureOfInterest.
 x-jsonld-extra-terms:
+  name: dct:title
+  description: dct:description
+  property:
+    x-jsonld-id: sdo:additionalProperty
+    x-jsonld-type: '@id'
+  category:
+    x-jsonld-id: sdo:category
+    x-jsonld-type: '@id'
+  termCode: sdo:termCode
+  inDefinedTermSet:
+    x-jsonld-id: sdo:inDefinedTermSet
+    x-jsonld-type: '@id'
+  identifier: sdo:identifier
+  provider:
+    x-jsonld-id: dcterms:publisher
+    x-jsonld-type: '@id'
+  Organization: sdo:Organization
+  PropertyValue: sdo:PropertyValue
+  value: sdo:value
+  propertyID: sdo:propertyID
   Locations@iot.navigationLink: https://schemas.opengis.org/sta/def/core#Locations
   Datastreams@iot.navigationLink: https://schemas.opengis.org/sta/def/core#Datastreams
   HistoricalLocations@iot.navigationLink: https://schemas.opengis.org/sta/def/core#HistoricalLocations
