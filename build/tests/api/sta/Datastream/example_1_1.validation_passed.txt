@@ -1,5 +1,5 @@
 Validation report for ogc.api.sta.Datastream - STA Datastream
-Generated 2025-09-12T10:14:48.517247+00:00
+Generated 2025-09-12T11:38:52.627060+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
