@@ -6,6 +6,7 @@
     "result": "sosa:hasSimpleResult",
     "resultQuality": {
       "@context": {
+        "rdf:type": "rdf:type",
         "dqv:value": "dqv:value"
       },
       "@id": "dqv:hasQualityMeasurement"

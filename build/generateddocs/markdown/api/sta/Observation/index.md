@@ -101,6 +101,7 @@ properties:
     description: A description of the quality of the result. Type DQ_Element.
     x-jsonld-id: http://www.w3.org/ns/dqv#hasQualityMeasurement
     x-jsonld-extra-terms:
+      rdf:type: rdf:type
       dqv:value: http://www.w3.org/ns/dqv#value
   resultTime:
     type: string
@@ -146,6 +147,7 @@ Links to the schema:
     "result": "sosa:hasSimpleResult",
     "resultQuality": {
       "@context": {
+        "rdf:type": "rdf:type",
         "dqv:value": "dqv:value"
       },
       "@id": "dqv:hasQualityMeasurement"
