@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.api.sta.Thing - STA Thing",
   "bblockName": "STA Thing",
   "bblockId": "ogc.api.sta.Thing",
-  "generated": "2025-08-01T11:52:26.149510+00:00",
+  "generated": "2025-09-12T09:35:38.057855+00:00",
   "result": true,
   "items": [
     {
@@ -40,7 +40,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 5,
+              "size": 6,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }

@@ -1,9 +1,12 @@
-@prefix ns1: <dct:> .
-@prefix sta: <https://schemas.opengis.org/sta/def/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<http://w3id.org/ogcincubator/bblocks-sta/1> ns1:description "This thing is an oven." ;
-    ns1:title "Oven" ;
-    sta:Datastreams "Things(1)/Datastreams" ;
-    sta:HistoricalLocations "Things(1)/HistoricalLocations" ;
-    sta:Locations "Things(1)/Locations" .
+<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "This thing is an oven." ;
+    dcterms:spatial <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Locations> ;
+    dcterms:title "Oven" ;
+    prov:hadLocation <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/HistoricalLocations> ;
+    sosa:ObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Datastreams> ;
+    schema:additionalProperty [ ] .
 

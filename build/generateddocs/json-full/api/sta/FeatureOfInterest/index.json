@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2025-08-01",
+  "dateOfLastChange": "2025-09-12",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -23,7 +23,7 @@
   "tags": [
     "templates"
   ],
-  "shaclRules": {},
+  "shaclShapes": {},
   "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld",
   "schema": {
     "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.yaml",

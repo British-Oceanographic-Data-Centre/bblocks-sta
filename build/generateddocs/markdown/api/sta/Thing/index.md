@@ -64,14 +64,17 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/thing](
 
 #### ttl
 ```ttl
-@prefix ns1: <dct:> .
-@prefix sta: <https://schemas.opengis.org/sta/def/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix schema: <https://schema.org/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<http://w3id.org/ogcincubator/bblocks-sta/1> ns1:description "This thing is an oven." ;
-    ns1:title "Oven" ;
-    sta:Datastreams "Things(1)/Datastreams" ;
-    sta:HistoricalLocations "Things(1)/HistoricalLocations" ;
-    sta:Locations "Things(1)/Locations" .
+<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "This thing is an oven." ;
+    dcterms:spatial <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Locations> ;
+    dcterms:title "Oven" ;
+    prov:hadLocation <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/HistoricalLocations> ;
+    sosa:ObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Datastreams> ;
+    schema:additionalProperty [ ] .
 
 
 ```
@@ -120,34 +123,36 @@ properties:
     type: string
     description: Reference link to the FeatureOfInterest.
 x-jsonld-extra-terms:
-  name: dct:title
-  description: dct:description
-  property:
-    x-jsonld-id: sdo:additionalProperty
+  name: http://purl.org/dc/terms/title
+  description: http://purl.org/dc/terms/description
+  properties:
+    x-jsonld-id: https://schema.org/additionalProperty
+    x-jsonld-context:
+      category: https://schema.org/CategoryCode
+      identifier: https://schema.org/DefinedTerm
+      provider: https://schema.org/Organization
+      name: https://schema.org/name
+      termCode: https://schema.org/termCode
+      inDefinedTermSet: https://schema.org/inDefinedTermSet
+      value: https://schema.org/value
+      propertyID: https://schema.org/propertyID
+  HistoricalLocations@iot.navigationLink:
+    x-jsonld-id: http://www.w3.org/ns/prov#hadLocation
     x-jsonld-type: '@id'
-  category:
-    x-jsonld-id: sdo:category
+  Locations@iot.navigationLink:
+    x-jsonld-id: http://purl.org/dc/terms/spatial
     x-jsonld-type: '@id'
-  termCode: sdo:termCode
-  inDefinedTermSet:
-    x-jsonld-id: sdo:inDefinedTermSet
+  Datastreams@iot.navigationLink:
+    x-jsonld-id: http://www.w3.org/ns/sosa/ObservationCollection
     x-jsonld-type: '@id'
-  identifier: sdo:identifier
-  provider:
-    x-jsonld-id: dcterms:publisher
-    x-jsonld-type: '@id'
-  Organization: sdo:Organization
-  PropertyValue: sdo:PropertyValue
-  value: sdo:value
-  propertyID: sdo:propertyID
-  Locations@iot.navigationLink: https://schemas.opengis.org/sta/def/core#Locations
-  Datastreams@iot.navigationLink: https://schemas.opengis.org/sta/def/core#Datastreams
-  HistoricalLocations@iot.navigationLink: https://schemas.opengis.org/sta/def/core#HistoricalLocations
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
-  sta: https://schemas.opengis.org/sta/def/core#
-  sosa: https://www.w3.org/TR/vocab-ssn/#
-  rel: http://www.iana.org/assignments/relation/
+  dct: http://purl.org/dc/terms/
+  sdo: https://schema.org/
+  prov: http://www.w3.org/ns/prov#
+  sosa: http://www.w3.org/ns/sosa/
+  ssn: http://www.w3.org/ns/ssn/
+  geo: http://www.opengis.net/ont/geosparql#
 
 ```
 
@@ -166,35 +171,38 @@ Links to the schema:
     "@iot.selfLink": "orel:iana/1.0/self",
     "name": "dct:title",
     "description": "dct:description",
-    "property": {
+    "properties": {
       "@id": "sdo:additionalProperty",
+      "@context": {
+        "category": "sdo:CategoryCode",
+        "identifier": "sdo:DefinedTerm",
+        "provider": "sdo:Organization",
+        "name": "sdo:name",
+        "termCode": "sdo:termCode",
+        "inDefinedTermSet": "sdo:inDefinedTermSet",
+        "value": "sdo:value",
+        "propertyID": "sdo:propertyID"
+      }
+    },
+    "HistoricalLocations@iot.navigationLink": {
+      "@id": "prov:hadLocation",
       "@type": "@id"
     },
-    "category": {
-      "@id": "sdo:category",
+    "Locations@iot.navigationLink": {
+      "@id": "dct:spatial",
       "@type": "@id"
     },
-    "termCode": "sdo:termCode",
-    "inDefinedTermSet": {
-      "@id": "sdo:inDefinedTermSet",
+    "Datastreams@iot.navigationLink": {
+      "@id": "sosa:ObservationCollection",
       "@type": "@id"
     },
-    "identifier": "sdo:identifier",
-    "provider": {
-      "@id": "dcterms:publisher",
-      "@type": "@id"
-    },
-    "Organization": "sdo:Organization",
-    "PropertyValue": "sdo:PropertyValue",
-    "value": "sdo:value",
-    "propertyID": "sdo:propertyID",
-    "Locations@iot.navigationLink": "sta:Locations",
-    "Datastreams@iot.navigationLink": "sta:Datastreams",
-    "HistoricalLocations@iot.navigationLink": "sta:HistoricalLocations",
     "orel": "http://www.opengis.net/def/rel/",
-    "sta": "https://schemas.opengis.org/sta/def/core#",
-    "sosa": "https://www.w3.org/TR/vocab-ssn/#",
-    "rel": "http://www.iana.org/assignments/relation/",
+    "dct": "http://purl.org/dc/terms/",
+    "sdo": "https://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
     "@version": 1.1
   }
 }
