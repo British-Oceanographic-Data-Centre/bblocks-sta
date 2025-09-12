@@ -1,9 +1,9 @@
 path	@id
 /@iot.id	@id
-/@iot.selfLink	orel:iana/1.0/self
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
 /name	http://purl.org/dc/terms/title
 /description	http://purl.org/dc/terms/description
-/encodingType	https://w3c.github.io/dxwg/dcat/mediaType
-/feature	https://purl.org/geojson/vocab#Feature
+/encodingType	http://purl.org/dc/terms/format
+/feature	http://www.opengis.net/ont/geosparql#hasGeometry
 /properties	
-/Observations@iot.navigationLink	https://schemas.opengis.org/sta/def/core#Observation
+/Observations@iot.navigationLink	http://www.w3.org/ns/sosa/isFeatureOfInterestOf

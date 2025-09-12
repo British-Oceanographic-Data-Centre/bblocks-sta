@@ -71,20 +71,15 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/feature
 
 #### ttl
 ```ttl
-@prefix dcat1: <https://w3c.github.io/dxwg/dcat/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix sta: <https://schemas.opengis.org/sta/def/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "This is a weather station located at the Calgary Airport." ;
+    dcterms:format "application/geo+json" ;
     dcterms:title "Weather Station YYC." ;
-    geojson:Feature [ a <http://w3id.org/ogcincubator/bblocks-sta/Feature> ;
-            geojson:geometry [ a geojson:Point ;
-                    geojson:coordinates ( -1.1406e+02 5.105e+01 ) ] ] ;
-    sta:Observation "FeaturesOfInterest(1)/Observations" ;
-    dcat1:mediaType "application/geo+json" .
+    geo:hasGeometry [ a <http://w3id.org/ogcincubator/bblocks-sta/Feature> ] ;
+    sosa:isFeatureOfInterestOf <http://w3id.org/ogcincubator/bblocks-sta/FeaturesOfInterest(1)/Observations> .
 
 
 ```
@@ -111,7 +106,7 @@ properties:
   '@iot.selfLink':
     type: string
     description: The direct link to the entity
-    x-jsonld-id: orel:iana/1.0/self
+    x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self
   name:
     type: string
     description: A property provides a label for FeatureOfInterest entity, commonly
@@ -127,40 +122,27 @@ properties:
       ValueCode enumeration (see https://docs.ogc.org/is/18-088/18-088.html#tab-encodingtype-codes
       for the available ValueCode)..
     const: application/geo+json
-    x-jsonld-id: https://w3c.github.io/dxwg/dcat/mediaType
+    x-jsonld-id: http://purl.org/dc/terms/format
   feature:
     description: The detailed description of the feature. The data type is defined
       by encodingType.
-    x-jsonld-id: https://purl.org/geojson/vocab#Feature
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#hasGeometry
     x-jsonld-extra-terms:
       type: '@type'
-      coordinates:
-        x-jsonld-container: '@list'
-        x-jsonld-id: https://purl.org/geojson/vocab#coordinates
+      coordinates: http://www.opengis.net/ont/geosparql#asWKT
   properties:
     type: object
     description: optional properties for the feature.
   Observations@iot.navigationLink:
     type: string
     description: Reference link to the Observations.
-    x-jsonld-id: https://schemas.opengis.org/sta/def/core#Observation
-x-jsonld-extra-terms:
-  LineString: https://purl.org/geojson/vocab#LineString
-  MultiLineString: https://purl.org/geojson/vocab#MultiLineString
-  MultiPoint: https://purl.org/geojson/vocab#MultiPoint
-  MultiPolygon: https://purl.org/geojson/vocab#MultiPolygon
-  Point: https://purl.org/geojson/vocab#Point
-  Polygon: https://purl.org/geojson/vocab#Polygon
-  geometry: https://purl.org/geojson/vocab#geometry
+    x-jsonld-id: http://www.w3.org/ns/sosa/isFeatureOfInterestOf
+    x-jsonld-type: '@id'
 x-jsonld-prefixes:
+  orel: http://www.opengis.net/def/rel/
   dct: http://purl.org/dc/terms/
-  dcat: https://w3c.github.io/dxwg/dcat/
-  geojson: https://purl.org/geojson/vocab#
-  sta: https://schemas.opengis.org/sta/def/core#
-  sosa: https://www.w3.org/TR/vocab-ssn/#
-  skos: http://www.w3.org/2004/02/skos/core#
-  iana: https://www.iana.org/assignments/media-types/
-  rel: http://www.iana.org/assignments/relation/
+  geo: http://www.opengis.net/ont/geosparql#
+  sosa: http://www.w3.org/ns/sosa/
 
 ```
 
@@ -179,33 +161,22 @@ Links to the schema:
     "@iot.selfLink": "orel:iana/1.0/self",
     "name": "dct:title",
     "description": "dct:description",
-    "encodingType": "dcat:mediaType",
+    "encodingType": "dct:format",
     "feature": {
       "@context": {
         "type": "@type",
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
+        "coordinates": "geo:asWKT"
       },
-      "@id": "geojson:Feature"
+      "@id": "geo:hasGeometry"
     },
-    "Observations@iot.navigationLink": "sta:Observation",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "geometry": "geojson:geometry",
+    "Observations@iot.navigationLink": {
+      "@id": "sosa:isFeatureOfInterestOf",
+      "@type": "@id"
+    },
+    "orel": "http://www.opengis.net/def/rel/",
     "dct": "http://purl.org/dc/terms/",
-    "dcat": "https://w3c.github.io/dxwg/dcat/",
-    "geojson": "https://purl.org/geojson/vocab#",
-    "sta": "https://schemas.opengis.org/sta/def/core#",
-    "sosa": "https://www.w3.org/TR/vocab-ssn/#",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "iana": "https://www.iana.org/assignments/media-types/",
-    "rel": "http://www.iana.org/assignments/relation/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "sosa": "http://www.w3.org/ns/sosa/",
     "@version": 1.1
   }
 }
