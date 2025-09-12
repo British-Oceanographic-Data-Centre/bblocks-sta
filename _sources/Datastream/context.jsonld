@@ -5,31 +5,54 @@
     "@iot.selfLink": "orel:iana/1.0/self",
     "name": "dct:title",
     "description": "dct:description",
-    "observationType": { "@id": "sosa:Observation", "@type": "@id" },
-    "unitOfMeasurement": "qudt:unit",
-    "name": "sdo:name",
-    "symbol": "sdo:symbol",
-    "unitDefinition": "@id",
+    "observationType": {
+      "@id": "sosa:Observation",
+      "@type": "@id"
+    },
+    "unitOfMeasurement": {
+      "@id": "qudt:unit",
+      "@context": {
+        "name": "sdo:name",
+        "symbol": "sdo:symbol",
+        "definition": "@id"
+      }
+    },
     "observedArea": "geo:hasGeometry",
     "phenomenonTime": "sosa:phenomenonTime",
     "resultTime": "sosa:resultTime",
-    "properties": "sdo:additionalProperty",
-    "name": "sdo:name",
-    "value": "sdo:value",
-    "unitText": "sdo:unitText",
-    "unitCode": "@id",
-    "category": "sdo:CategoryCode",
-    "termCode": "sdo:termCode",
-    "inDefinedTermSet": "sdo:inDefinedTermSet",
-    "hasSystemProperty": "ssn-system:hasSystemProperty",
-    "status": "sdo:PropertyValue",
-    "provider": "sdo:Organization",
-    "type": "@type",
-    "description": "dct:description",
-    "ObservedProperty@iot.navigationLink": { "@id": "sosa:observedProperty", "@type": "@id" },
-    "Sensor@iot.navigationLink": { "@id": "sosa:madeBySensor", "@type": "@id" },
-    "Thing@iot.navigationLink": { "@id": "sosa:madeByPlatform", "@type": "@id" },
-    "Observations@iot.navigationLink": { "@id": "sosa:hasMember", "@type": "@id" },
+    "properties": {
+      "@id": "sdo:additionalProperty",
+      "@context": {
+        "hasSystemProperty": "ssn-system:hasSystemProperty",
+        "status": "sdo:PropertyValue",
+        "name": "sdo:name",
+        "category": "sdo:CategoryCode",
+        "termCode": "sdo:termCode",
+        "inDefinedTermSet": "sdo:inDefinedTermSet",
+        "provider": "sdo:Organization",
+        "value": "sdo:value",
+        "unitCode": "@id",
+        "unitText": "sdo:unitText",
+        "@type": "@type",
+        "description": "dct:description"
+      }
+    },
+    "ObservedProperty@iot.navigationLink": {
+      "@id": "sosa:observedProperty",
+      "@type": "@id"
+    },
+    "Sensor@iot.navigationLink": {
+      "@id": "sosa:madeBySensor",
+      "@type": "@id"
+    },
+    "Thing@iot.navigationLink": {
+      "@id": "sosa:madeByPlatform",
+      "@type": "@id"
+    },
+    "Observations@iot.navigationLink": {
+      "@id": "sosa:hasMember",
+      "@type": "@id"
+    },
     "@type": "sosa:ObservationCollection",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn-system": "http://www.w3.org/ns/ssn/system/",
@@ -38,6 +61,7 @@
     "orel": "http://www.opengis.net/def/rel/",
     "qudt": "http://qudt.org/schema/qudt/",
     "geo": "http://www.opengis.net/ont/geosparql#",
-    "prov": "http://www.w3.org/ns/prov#"
+    "prov": "http://www.w3.org/ns/prov#",
+    "sta": "https://schemas.opengis.org/sta/def/core#"
   }
 }
