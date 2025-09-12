@@ -33,7 +33,6 @@
         "value": "sdo:value",
         "unitCode": "@id",
         "unitText": "sdo:unitText",
-        "@type": "@type",
         "description": "dct:description"
       }
     },
