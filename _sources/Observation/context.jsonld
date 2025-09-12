@@ -9,6 +9,7 @@
     "resultQuality": {
       "@id": "dqv:hasQualityMeasurement",
       "@context": {
+        "rdf:type": "rdf:type",
         "dqv:value": "dqv:value"
       }
     },
