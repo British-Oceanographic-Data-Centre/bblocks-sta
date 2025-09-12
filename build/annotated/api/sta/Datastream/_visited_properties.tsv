@@ -1,4 +1,4 @@
 path	@id
 /@iot.id	@id
 /@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
-/Observations@iot.navigationLink	
+/Observations@iot.navigationLink	http://www.w3.org/ns/sosa/hasMember
