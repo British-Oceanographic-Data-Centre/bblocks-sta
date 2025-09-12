@@ -13,6 +13,25 @@ properties:
   properties:
     type: object
     description: A JSON Object containing user-annotated properties as key-value pairs.
+    x-jsonld-id: https://schema.org/additionalProperty
+    x-jsonld-extra-terms:
+      category: https://schema.org/DefinedTerm
+      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
+      identifier: https://schema.org/PropertyValue
+      manufacturer: https://schema.org/manufacturer
+      model: https://schema.org/model
+      serialNumber: https://schema.org/serialNumber
+      valueReference: https://schema.org/valueReference
+      name: https://schema.org/name
+      description: http://purl.org/dc/terms/description
+      termCode: https://schema.org/termCode
+      inDefinedTermSet: https://schema.org/inDefinedTermSet
+      propertyID: https://schema.org/propertyID
+      value: https://schema.org/value
+      unitCode: '@id'
+      unitText: https://schema.org/unitText
+      maxValue: https://schema.org/maxValue
+      minValue: https://schema.org/minValue
   name:
     type: string
     description: A property provides a label for Sensor entity, commonly a descriptive
@@ -26,21 +45,24 @@ properties:
     type: string
     description: The encoding type of the metadata property. Its value is one of the
       ValueCode enumeration (see Table 15 for the available ValueCode).
-    x-jsonld-id: https://w3c.github.io/dxwg/dcat/mediaType
+    x-jsonld-id: http://purl.org/dc/terms/format
   metadata:
     description: The detailed description of the Sensor or system. The metadata type
       is defined by encodingType.
+    x-jsonld-id: http://purl.org/dc/terms/source
+    x-jsonld-type: '@id'
   Datastream@iot.navigationLink:
     type: string
     description: Reference link to the DataStream Definition.
 x-jsonld-extra-terms:
-  Observations@iot.navigationLink: https://www.w3.org/TR/vocab-ssn/#madeObservation
+  Datastreams@iot.navigationLink:
+    x-jsonld-id: http://www.w3.org/ns/sosa/ObservationCollection
+    x-jsonld-type: '@id'
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
   dct: http://purl.org/dc/terms/
-  dcat: https://w3c.github.io/dxwg/dcat/
-  sosa: https://www.w3.org/TR/vocab-ssn/#
-  sta: https://schemas.opengis.org/sta/def/core#
-  iana: https://www.iana.org/assignments/media-types/
-  rel: http://www.iana.org/assignments/relation/
-  geojson: https://purl.org/geojson/vocab#
+  sdo: https://schema.org/
+  ssn-system: http://www.w3.org/ns/ssn/system/
+  sosa: http://www.w3.org/ns/sosa/
+  qudt: http://qudt.org/schema/qudt/
+  prov: http://www.w3.org/ns/prov#

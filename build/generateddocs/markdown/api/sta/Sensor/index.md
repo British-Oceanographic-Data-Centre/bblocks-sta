@@ -57,12 +57,14 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/sensor]
 
 #### ttl
 ```ttl
-@prefix dcat1: <https://w3c.github.io/dxwg/dcat/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "TMP36 - Analog Temperature sensor" ;
+    dcterms:format "application/pdf" ;
+    dcterms:source <http://example.org/TMP35_36_37.pdf> ;
     dcterms:title "TMP36" ;
-    dcat1:mediaType "application/pdf" .
+    sosa:ObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Sensors(1)/Datastreams> .
 
 
 ```
@@ -85,6 +87,25 @@ properties:
   properties:
     type: object
     description: A JSON Object containing user-annotated properties as key-value pairs.
+    x-jsonld-id: https://schema.org/additionalProperty
+    x-jsonld-extra-terms:
+      category: https://schema.org/DefinedTerm
+      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
+      identifier: https://schema.org/PropertyValue
+      manufacturer: https://schema.org/manufacturer
+      model: https://schema.org/model
+      serialNumber: https://schema.org/serialNumber
+      valueReference: https://schema.org/valueReference
+      name: https://schema.org/name
+      description: http://purl.org/dc/terms/description
+      termCode: https://schema.org/termCode
+      inDefinedTermSet: https://schema.org/inDefinedTermSet
+      propertyID: https://schema.org/propertyID
+      value: https://schema.org/value
+      unitCode: '@id'
+      unitText: https://schema.org/unitText
+      maxValue: https://schema.org/maxValue
+      minValue: https://schema.org/minValue
   name:
     type: string
     description: A property provides a label for Sensor entity, commonly a descriptive
@@ -98,24 +119,27 @@ properties:
     type: string
     description: The encoding type of the metadata property. Its value is one of the
       ValueCode enumeration (see Table 15 for the available ValueCode).
-    x-jsonld-id: https://w3c.github.io/dxwg/dcat/mediaType
+    x-jsonld-id: http://purl.org/dc/terms/format
   metadata:
     description: The detailed description of the Sensor or system. The metadata type
       is defined by encodingType.
+    x-jsonld-id: http://purl.org/dc/terms/source
+    x-jsonld-type: '@id'
   Datastream@iot.navigationLink:
     type: string
     description: Reference link to the DataStream Definition.
 x-jsonld-extra-terms:
-  Observations@iot.navigationLink: https://www.w3.org/TR/vocab-ssn/#madeObservation
+  Datastreams@iot.navigationLink:
+    x-jsonld-id: http://www.w3.org/ns/sosa/ObservationCollection
+    x-jsonld-type: '@id'
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
   dct: http://purl.org/dc/terms/
-  dcat: https://w3c.github.io/dxwg/dcat/
-  sosa: https://www.w3.org/TR/vocab-ssn/#
-  sta: https://schemas.opengis.org/sta/def/core#
-  iana: https://www.iana.org/assignments/media-types/
-  rel: http://www.iana.org/assignments/relation/
-  geojson: https://purl.org/geojson/vocab#
+  sdo: https://schema.org/
+  ssn-system: http://www.w3.org/ns/ssn/system/
+  sosa: http://www.w3.org/ns/sosa/
+  qudt: http://qudt.org/schema/qudt/
+  prov: http://www.w3.org/ns/prov#
 
 ```
 
@@ -132,18 +156,45 @@ Links to the schema:
   "@context": {
     "@iot.id": "@id",
     "@iot.selfLink": "orel:iana/1.0/self",
+    "properties": {
+      "@context": {
+        "category": "sdo:DefinedTerm",
+        "hasSystemProperty": "ssn-system:hasSystemProperty",
+        "identifier": "sdo:PropertyValue",
+        "manufacturer": "sdo:manufacturer",
+        "model": "sdo:model",
+        "serialNumber": "sdo:serialNumber",
+        "valueReference": "sdo:valueReference",
+        "name": "sdo:name",
+        "termCode": "sdo:termCode",
+        "inDefinedTermSet": "sdo:inDefinedTermSet",
+        "propertyID": "sdo:propertyID",
+        "value": "sdo:value",
+        "unitCode": "@id",
+        "unitText": "sdo:unitText",
+        "maxValue": "sdo:maxValue",
+        "minValue": "sdo:minValue"
+      },
+      "@id": "sdo:additionalProperty"
+    },
     "name": "dct:title",
     "description": "dct:description",
-    "encodingType": "dcat:mediaType",
-    "Observations@iot.navigationLink": "sosa:madeObservation",
+    "encodingType": "dct:format",
+    "metadata": {
+      "@id": "dct:source",
+      "@type": "@id"
+    },
+    "Datastreams@iot.navigationLink": {
+      "@id": "sosa:ObservationCollection",
+      "@type": "@id"
+    },
     "orel": "http://www.opengis.net/def/rel/",
     "dct": "http://purl.org/dc/terms/",
-    "dcat": "https://w3c.github.io/dxwg/dcat/",
-    "sosa": "https://www.w3.org/TR/vocab-ssn/#",
-    "sta": "https://schemas.opengis.org/sta/def/core#",
-    "iana": "https://www.iana.org/assignments/media-types/",
-    "rel": "http://www.iana.org/assignments/relation/",
-    "geojson": "https://purl.org/geojson/vocab#",
+    "sdo": "https://schema.org/",
+    "ssn-system": "http://www.w3.org/ns/ssn/system/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "prov": "http://www.w3.org/ns/prov#",
     "@version": 1.1
   }
 }
