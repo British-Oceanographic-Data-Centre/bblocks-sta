@@ -55,14 +55,14 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/observa
 
 #### ttl
 ```ttl
-@prefix sosa1: <https://www.w3.org/TR/vocab-ssn/#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/ogcincubator/bblocks-sta/1> sosa1:hasFeatureOfInterest "Observations(1)/FeatureOfInterest" ;
-    sosa1:hasSimpleResult 7.04e+01 ;
-    sosa1:isMemberOf "Observations(1)/Datastream" ;
-    sosa1:phenomenonTime "2014-12-31T11:59:59.00+08:00" ;
-    sosa1:resultTime "2014-12-31T11:59:59.00+08:00" .
+<http://w3id.org/ogcincubator/bblocks-sta/1> sosa:hasFeatureOfInterest <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/FeatureOfInterest> ;
+    sosa:hasSimpleResult 7.04e+01 ;
+    sosa:phenomenonTime "2014-12-31T11:59:59.00+08:00" ;
+    sosa:resultTime "2014-12-31T11:59:59.00+08:00" ;
+    sosa:usedProcedure <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/Datastream> .
 
 
 ```
@@ -91,37 +91,41 @@ properties:
     type: string
     description: The time when the observation happened. or Time Interval string (e.g.,
       2010-12-23T10:20:00.00-07:00 or 2010-12-23T10:20:00.00-07:00/2010-12-23T12:20:00.00-07:00)
-    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#phenomenonTime
+    x-jsonld-id: http://www.w3.org/ns/sosa/phenomenonTime
   result:
     description: The estimated value of the observed property. Type depends on the
       observationType defined in the associated Datastream
-    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#hasSimpleResult
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasSimpleResult
   resultQuality:
     type: string
     description: A description of the quality of the result. Type DQ_Element.
-    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#resultQuality
+    x-jsonld-id: http://www.w3.org/ns/dqv#hasQualityMeasurement
+    x-jsonld-extra-terms:
+      dqv:value: http://www.w3.org/ns/dqv#value
   resultTime:
     type: string
     description: The time the result was generated. TM_Instant (ISO 8601 Time string)
-    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#resultTime
+    x-jsonld-id: http://www.w3.org/ns/sosa/resultTime
   validTime:
     type: string
     description: The time period during which the result can be used. TM_Period (ISO
       8601 Time Interval string)
-    x-jsonld-id: https://schemas.opengis.org/sta/def/core#validTime
   Datastream@iot.navigationLink:
     type: string
     description: Reference link to the DataStream Definition.
-    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#isMemberOf
+    x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
+    x-jsonld-type: '@id'
   FeatureOfInterest@iot.navigationLink:
     type: string
     description: Reference link to the FeatureOfInterest.
-    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#hasFeatureOfInterest
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasFeatureOfInterest
+    x-jsonld-type: '@id'
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
-  sosa: https://www.w3.org/TR/vocab-ssn/#
-  sta: https://schemas.opengis.org/sta/def/core#
-  rel: http://www.iana.org/assignments/relation/
+  sosa: http://www.w3.org/ns/sosa/
+  dqv: http://www.w3.org/ns/dqv#
+  sdo: https://schema.org/
+  dct: http://purl.org/dc/terms/
 
 ```
 
@@ -140,15 +144,26 @@ Links to the schema:
     "@iot.selfLink": "orel:iana/1.0/self",
     "phenomenonTime": "sosa:phenomenonTime",
     "result": "sosa:hasSimpleResult",
-    "resultQuality": "sosa:resultQuality",
+    "resultQuality": {
+      "@context": {
+        "dqv:value": "dqv:value"
+      },
+      "@id": "dqv:hasQualityMeasurement"
+    },
     "resultTime": "sosa:resultTime",
-    "validTime": "sta:validTime",
-    "Datastream@iot.navigationLink": "sosa:isMemberOf",
-    "FeatureOfInterest@iot.navigationLink": "sosa:hasFeatureOfInterest",
+    "Datastream@iot.navigationLink": {
+      "@id": "sosa:usedProcedure",
+      "@type": "@id"
+    },
+    "FeatureOfInterest@iot.navigationLink": {
+      "@id": "sosa:hasFeatureOfInterest",
+      "@type": "@id"
+    },
     "orel": "http://www.opengis.net/def/rel/",
-    "sosa": "https://www.w3.org/TR/vocab-ssn/#",
-    "sta": "https://schemas.opengis.org/sta/def/core#",
-    "rel": "http://www.iana.org/assignments/relation/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "sdo": "https://schema.org/",
+    "dct": "http://purl.org/dc/terms/",
     "@version": 1.1
   }
 }

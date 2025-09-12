@@ -23,42 +23,47 @@
     "phenomenonTime": {
       "type": "string",
       "description": "The time when the observation happened. or Time Interval string (e.g., 2010-12-23T10:20:00.00-07:00 or 2010-12-23T10:20:00.00-07:00/2010-12-23T12:20:00.00-07:00)",
-      "x-jsonld-id": "https://www.w3.org/TR/vocab-ssn/#phenomenonTime"
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/phenomenonTime"
     },
     "result": {
       "description": "The estimated value of the observed property. Type depends on the observationType defined in the associated Datastream",
-      "x-jsonld-id": "https://www.w3.org/TR/vocab-ssn/#hasSimpleResult"
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasSimpleResult"
     },
     "resultQuality": {
       "type": "string",
       "description": "A description of the quality of the result. Type DQ_Element.",
-      "x-jsonld-id": "https://www.w3.org/TR/vocab-ssn/#resultQuality"
+      "x-jsonld-id": "http://www.w3.org/ns/dqv#hasQualityMeasurement",
+      "x-jsonld-extra-terms": {
+        "dqv:value": "http://www.w3.org/ns/dqv#value"
+      }
     },
     "resultTime": {
       "type": "string",
       "description": "The time the result was generated. TM_Instant (ISO 8601 Time string)",
-      "x-jsonld-id": "https://www.w3.org/TR/vocab-ssn/#resultTime"
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/resultTime"
     },
     "validTime": {
       "type": "string",
-      "description": "The time period during which the result can be used. TM_Period (ISO 8601 Time Interval string)",
-      "x-jsonld-id": "https://schemas.opengis.org/sta/def/core#validTime"
+      "description": "The time period during which the result can be used. TM_Period (ISO 8601 Time Interval string)"
     },
     "Datastream@iot.navigationLink": {
       "type": "string",
       "description": "Reference link to the DataStream Definition.",
-      "x-jsonld-id": "https://www.w3.org/TR/vocab-ssn/#isMemberOf"
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "x-jsonld-type": "@id"
     },
     "FeatureOfInterest@iot.navigationLink": {
       "type": "string",
       "description": "Reference link to the FeatureOfInterest.",
-      "x-jsonld-id": "https://www.w3.org/TR/vocab-ssn/#hasFeatureOfInterest"
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "x-jsonld-type": "@id"
     }
   },
   "x-jsonld-prefixes": {
     "orel": "http://www.opengis.net/def/rel/",
-    "sosa": "https://www.w3.org/TR/vocab-ssn/#",
-    "sta": "https://schemas.opengis.org/sta/def/core#",
-    "rel": "http://www.iana.org/assignments/relation/"
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "sdo": "https://schema.org/",
+    "dct": "http://purl.org/dc/terms/"
   }
 }

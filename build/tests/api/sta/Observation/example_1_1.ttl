@@ -1,9 +1,9 @@
-@prefix sosa1: <https://www.w3.org/TR/vocab-ssn/#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://w3id.org/ogcincubator/bblocks-sta/1> sosa1:hasFeatureOfInterest "Observations(1)/FeatureOfInterest" ;
-    sosa1:hasSimpleResult 7.04e+01 ;
-    sosa1:isMemberOf "Observations(1)/Datastream" ;
-    sosa1:phenomenonTime "2014-12-31T11:59:59.00+08:00" ;
-    sosa1:resultTime "2014-12-31T11:59:59.00+08:00" .
+<http://w3id.org/ogcincubator/bblocks-sta/1> sosa:hasFeatureOfInterest <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/FeatureOfInterest> ;
+    sosa:hasSimpleResult 7.04e+01 ;
+    sosa:phenomenonTime "2014-12-31T11:59:59.00+08:00" ;
+    sosa:resultTime "2014-12-31T11:59:59.00+08:00" ;
+    sosa:usedProcedure <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/Datastream> .
 
