@@ -1,7 +1,9 @@
-@prefix dcat1: <https://w3c.github.io/dxwg/dcat/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "TMP36 - Analog Temperature sensor" ;
+    dcterms:format "application/pdf" ;
+    dcterms:source <http://example.org/TMP35_36_37.pdf> ;
     dcterms:title "TMP36" ;
-    dcat1:mediaType "application/pdf" .
+    sosa:ObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Sensors(1)/Datastreams> .
 

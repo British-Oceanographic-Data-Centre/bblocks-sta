@@ -2,18 +2,45 @@
   "@context": {
     "@iot.id": "@id",
     "@iot.selfLink": "orel:iana/1.0/self",
+    "properties": {
+      "@context": {
+        "category": "sdo:DefinedTerm",
+        "hasSystemProperty": "ssn-system:hasSystemProperty",
+        "identifier": "sdo:PropertyValue",
+        "manufacturer": "sdo:manufacturer",
+        "model": "sdo:model",
+        "serialNumber": "sdo:serialNumber",
+        "valueReference": "sdo:valueReference",
+        "name": "sdo:name",
+        "termCode": "sdo:termCode",
+        "inDefinedTermSet": "sdo:inDefinedTermSet",
+        "propertyID": "sdo:propertyID",
+        "value": "sdo:value",
+        "unitCode": "@id",
+        "unitText": "sdo:unitText",
+        "maxValue": "sdo:maxValue",
+        "minValue": "sdo:minValue"
+      },
+      "@id": "sdo:additionalProperty"
+    },
     "name": "dct:title",
     "description": "dct:description",
-    "encodingType": "dcat:mediaType",
-    "Observations@iot.navigationLink": "sosa:madeObservation",
+    "encodingType": "dct:format",
+    "metadata": {
+      "@id": "dct:source",
+      "@type": "@id"
+    },
+    "Datastreams@iot.navigationLink": {
+      "@id": "sosa:ObservationCollection",
+      "@type": "@id"
+    },
     "orel": "http://www.opengis.net/def/rel/",
     "dct": "http://purl.org/dc/terms/",
-    "dcat": "https://w3c.github.io/dxwg/dcat/",
-    "sosa": "https://www.w3.org/TR/vocab-ssn/#",
-    "sta": "https://schemas.opengis.org/sta/def/core#",
-    "iana": "https://www.iana.org/assignments/media-types/",
-    "rel": "http://www.iana.org/assignments/relation/",
-    "geojson": "https://purl.org/geojson/vocab#",
+    "sdo": "https://schema.org/",
+    "ssn-system": "http://www.w3.org/ns/ssn/system/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "prov": "http://www.w3.org/ns/prov#",
     "@version": 1.1
   }
 }
