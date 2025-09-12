@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2025-08-01",
+  "dateOfLastChange": "2025-09-12",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -26,7 +26,7 @@
     "OMS",
     "SOSA"
   ],
-  "shaclRules": {},
+  "shaclShapes": {},
   "dependsOn": [
     "ogc.api.sta.Observation"
   ],
