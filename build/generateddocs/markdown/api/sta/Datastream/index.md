@@ -69,13 +69,18 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel#datastr
 #### ttl
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix schema: <https://schema.org/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <http://w3id.org/ogcincubator/bblocks-sta/2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c> dcterms:description "The datastream of jf2024 by sensor: 2e92962c0b6996add9517e4242ea9bdc for observed property: Jelly Fish Abundance Property" ;
-    dcterms:title "2e92962c0b6996add9517e4242ea9bdc:d2511e0ff7ac61981c6051a52b51f05c" ;
-    sosa:featureOfInterest <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/Thing> ;
+    qudt:unit [ schema:name "Unitless" ] ;
+    sosa:Observation <http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement> ;
+    sosa:hasMember <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/Observations> ;
+    sosa:madeByPlatform <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/Thing> ;
     sosa:madeBySensor <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/Sensor> ;
-    sosa:observedProperty <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/ObservedProperty> .
+    sosa:observedProperty <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/ObservedProperty> ;
+    schema:name "2e92962c0b6996add9517e4242ea9bdc:d2511e0ff7ac61981c6051a52b51f05c" .
 
 
 ```
@@ -101,13 +106,31 @@ properties:
   Observations@iot.navigationLink:
     type: string
     description: Reference link to stream of Observations.
+    x-jsonld-id: http://www.w3.org/ns/sosa/hasMember
+    x-jsonld-type: '@id'
 x-jsonld-extra-terms:
-  phenomenonTime: http://www.w3.org/ns/sosa/phenomenonTime
-  name: http://purl.org/dc/terms/title
+  name: https://schema.org/name
   description: http://purl.org/dc/terms/description
-  resultQuality: http://www.w3.org/ns/sosa/resultQuality
+  observationType:
+    x-jsonld-id: http://www.w3.org/ns/sosa/Observation
+    x-jsonld-type: '@id'
+  unitOfMeasurement: http://qudt.org/schema/qudt/unit
+  symbol: https://schema.org/symbol
+  unitDefinition: '@id'
+  observedArea: http://www.opengis.net/ont/geosparql#hasGeometry
+  phenomenonTime: http://www.w3.org/ns/sosa/phenomenonTime
   resultTime: http://www.w3.org/ns/sosa/resultTime
-  validTime: http://www.w3.org/ns/sosa/validTime
+  properties: https://schema.org/additionalProperty
+  value: https://schema.org/value
+  unitText: https://schema.org/unitText
+  unitCode: '@id'
+  category: https://schema.org/CategoryCode
+  termCode: https://schema.org/termCode
+  inDefinedTermSet: https://schema.org/inDefinedTermSet
+  hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
+  status: https://schema.org/PropertyValue
+  provider: https://schema.org/Organization
+  type: '@type'
   ObservedProperty@iot.navigationLink:
     x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
     x-jsonld-type: '@id'
@@ -115,14 +138,17 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/sosa/madeBySensor
     x-jsonld-type: '@id'
   Thing@iot.navigationLink:
-    x-jsonld-id: http://www.w3.org/ns/sosa/featureOfInterest
+    x-jsonld-id: http://www.w3.org/ns/sosa/madeByPlatform
     x-jsonld-type: '@id'
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
-  sosa: http://www.w3.org/ns/sosa/
+  sdo: https://schema.org/
   dct: http://purl.org/dc/terms/
-  sta: https://schemas.opengis.org/sta/def/core#
-  rel: http://www.iana.org/assignments/relation/
+  sosa: http://www.w3.org/ns/sosa/
+  qudt: http://qudt.org/schema/qudt/
+  geo: http://www.opengis.net/ont/geosparql#
+  ssn-system: http://www.w3.org/ns/ssn/system/
+  prov: http://www.w3.org/ns/prov#
 
 ```
 
@@ -139,12 +165,33 @@ Links to the schema:
   "@context": {
     "@iot.id": "@id",
     "@iot.selfLink": "orel:iana/1.0/self",
-    "phenomenonTime": "sosa:phenomenonTime",
-    "name": "dct:title",
+    "Observations@iot.navigationLink": {
+      "@id": "sosa:hasMember",
+      "@type": "@id"
+    },
+    "name": "sdo:name",
     "description": "dct:description",
-    "resultQuality": "sosa:resultQuality",
+    "observationType": {
+      "@id": "sosa:Observation",
+      "@type": "@id"
+    },
+    "unitOfMeasurement": "qudt:unit",
+    "symbol": "sdo:symbol",
+    "unitDefinition": "@id",
+    "observedArea": "geo:hasGeometry",
+    "phenomenonTime": "sosa:phenomenonTime",
     "resultTime": "sosa:resultTime",
-    "validTime": "sosa:validTime",
+    "properties": "sdo:additionalProperty",
+    "value": "sdo:value",
+    "unitText": "sdo:unitText",
+    "unitCode": "@id",
+    "category": "sdo:CategoryCode",
+    "termCode": "sdo:termCode",
+    "inDefinedTermSet": "sdo:inDefinedTermSet",
+    "hasSystemProperty": "ssn-system:hasSystemProperty",
+    "status": "sdo:PropertyValue",
+    "provider": "sdo:Organization",
+    "type": "@type",
     "ObservedProperty@iot.navigationLink": {
       "@id": "sosa:observedProperty",
       "@type": "@id"
@@ -154,14 +201,17 @@ Links to the schema:
       "@type": "@id"
     },
     "Thing@iot.navigationLink": {
-      "@id": "sosa:featureOfInterest",
+      "@id": "sosa:madeByPlatform",
       "@type": "@id"
     },
     "orel": "http://www.opengis.net/def/rel/",
-    "sosa": "http://www.w3.org/ns/sosa/",
+    "sdo": "https://schema.org/",
     "dct": "http://purl.org/dc/terms/",
-    "sta": "https://schemas.opengis.org/sta/def/core#",
-    "rel": "http://www.iana.org/assignments/relation/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "ssn-system": "http://www.w3.org/ns/ssn/system/",
+    "prov": "http://www.w3.org/ns/prov#",
     "@version": 1.1
   }
 }

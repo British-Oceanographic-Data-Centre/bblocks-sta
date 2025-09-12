@@ -19,16 +19,35 @@
     },
     "Observations@iot.navigationLink": {
       "type": "string",
-      "description": "Reference link to stream of Observations."
+      "description": "Reference link to stream of Observations.",
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hasMember",
+      "x-jsonld-type": "@id"
     }
   },
   "x-jsonld-extra-terms": {
-    "phenomenonTime": "http://www.w3.org/ns/sosa/phenomenonTime",
-    "name": "http://purl.org/dc/terms/title",
+    "name": "https://schema.org/name",
     "description": "http://purl.org/dc/terms/description",
-    "resultQuality": "http://www.w3.org/ns/sosa/resultQuality",
+    "observationType": {
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/Observation",
+      "x-jsonld-type": "@id"
+    },
+    "unitOfMeasurement": "http://qudt.org/schema/qudt/unit",
+    "symbol": "https://schema.org/symbol",
+    "unitDefinition": "@id",
+    "observedArea": "http://www.opengis.net/ont/geosparql#hasGeometry",
+    "phenomenonTime": "http://www.w3.org/ns/sosa/phenomenonTime",
     "resultTime": "http://www.w3.org/ns/sosa/resultTime",
-    "validTime": "http://www.w3.org/ns/sosa/validTime",
+    "properties": "https://schema.org/additionalProperty",
+    "value": "https://schema.org/value",
+    "unitText": "https://schema.org/unitText",
+    "unitCode": "@id",
+    "category": "https://schema.org/CategoryCode",
+    "termCode": "https://schema.org/termCode",
+    "inDefinedTermSet": "https://schema.org/inDefinedTermSet",
+    "hasSystemProperty": "http://www.w3.org/ns/ssn/system/hasSystemProperty",
+    "status": "https://schema.org/PropertyValue",
+    "provider": "https://schema.org/Organization",
+    "type": "@type",
     "ObservedProperty@iot.navigationLink": {
       "x-jsonld-id": "http://www.w3.org/ns/sosa/observedProperty",
       "x-jsonld-type": "@id"
@@ -38,15 +57,18 @@
       "x-jsonld-type": "@id"
     },
     "Thing@iot.navigationLink": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/featureOfInterest",
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/madeByPlatform",
       "x-jsonld-type": "@id"
     }
   },
   "x-jsonld-prefixes": {
     "orel": "http://www.opengis.net/def/rel/",
-    "sosa": "http://www.w3.org/ns/sosa/",
+    "sdo": "https://schema.org/",
     "dct": "http://purl.org/dc/terms/",
-    "sta": "https://schemas.opengis.org/sta/def/core#",
-    "rel": "http://www.iana.org/assignments/relation/"
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "ssn-system": "http://www.w3.org/ns/ssn/system/",
+    "prov": "http://www.w3.org/ns/prov#"
   }
 }
