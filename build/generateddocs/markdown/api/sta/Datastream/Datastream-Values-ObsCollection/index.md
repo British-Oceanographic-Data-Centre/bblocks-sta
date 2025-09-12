@@ -247,6 +247,7 @@ Links to the schema:
     "result": "http://www.w3.org/ns/sosa/hasSimpleResult",
     "resultQuality": {
       "@context": {
+        "rdf:type": "rdf:type",
         "dqv:value": "dqv:value"
       },
       "@id": "dqv:hasQualityMeasurement"
