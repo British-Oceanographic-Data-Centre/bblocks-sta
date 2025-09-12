@@ -19,28 +19,34 @@ properties:
     x-jsonld-id: http://www.w3.org/ns/sosa/hasMember
     x-jsonld-type: '@id'
 x-jsonld-extra-terms:
-  name: https://schema.org/name
+  name: http://purl.org/dc/terms/title
   description: http://purl.org/dc/terms/description
   observationType:
     x-jsonld-id: http://www.w3.org/ns/sosa/Observation
     x-jsonld-type: '@id'
-  unitOfMeasurement: http://qudt.org/schema/qudt/unit
-  symbol: https://schema.org/symbol
-  unitDefinition: '@id'
+  unitOfMeasurement:
+    x-jsonld-id: http://qudt.org/schema/qudt/unit
+    x-jsonld-context:
+      name: https://schema.org/name
+      symbol: https://schema.org/symbol
+      definition: '@id'
   observedArea: http://www.opengis.net/ont/geosparql#hasGeometry
   phenomenonTime: http://www.w3.org/ns/sosa/phenomenonTime
   resultTime: http://www.w3.org/ns/sosa/resultTime
-  properties: https://schema.org/additionalProperty
-  value: https://schema.org/value
-  unitText: https://schema.org/unitText
-  unitCode: '@id'
-  category: https://schema.org/CategoryCode
-  termCode: https://schema.org/termCode
-  inDefinedTermSet: https://schema.org/inDefinedTermSet
-  hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
-  status: https://schema.org/PropertyValue
-  provider: https://schema.org/Organization
-  type: '@type'
+  properties:
+    x-jsonld-id: https://schema.org/additionalProperty
+    x-jsonld-context:
+      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
+      status: https://schema.org/PropertyValue
+      name: https://schema.org/name
+      category: https://schema.org/CategoryCode
+      termCode: https://schema.org/termCode
+      inDefinedTermSet: https://schema.org/inDefinedTermSet
+      provider: https://schema.org/Organization
+      value: https://schema.org/value
+      unitCode: '@id'
+      unitText: https://schema.org/unitText
+      description: http://purl.org/dc/terms/description
   ObservedProperty@iot.navigationLink:
     x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
     x-jsonld-type: '@id'
@@ -52,10 +58,11 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
-  sdo: https://schema.org/
   dct: http://purl.org/dc/terms/
   sosa: http://www.w3.org/ns/sosa/
   qudt: http://qudt.org/schema/qudt/
+  sdo: https://schema.org/
   geo: http://www.opengis.net/ont/geosparql#
   ssn-system: http://www.w3.org/ns/ssn/system/
   prov: http://www.w3.org/ns/prov#
+  sta: https://schemas.opengis.org/sta/def/core#

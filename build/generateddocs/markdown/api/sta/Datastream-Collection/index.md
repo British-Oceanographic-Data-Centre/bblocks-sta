@@ -72,13 +72,15 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel#datastr
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <http://w3id.org/ogcincubator/bblocks-sta/2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c> dcterms:description "The datastream of jf2024 by sensor: 2e92962c0b6996add9517e4242ea9bdc for observed property: Jelly Fish Abundance Property" ;
-    qudt:unit [ schema:name "Unitless" ] ;
+    dcterms:title "2e92962c0b6996add9517e4242ea9bdc:d2511e0ff7ac61981c6051a52b51f05c" ;
+    qudt:unit qudt:UNITLESS ;
     sosa:Observation <http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Measurement> ;
     sosa:hasMember <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/Observations> ;
     sosa:madeByPlatform <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/Thing> ;
     sosa:madeBySensor <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/Sensor> ;
-    sosa:observedProperty <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/ObservedProperty> ;
-    schema:name "2e92962c0b6996add9517e4242ea9bdc:d2511e0ff7ac61981c6051a52b51f05c" .
+    sosa:observedProperty <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Datastreams(2e92962c0b6996add9517e4242ea9bdcd2511e0ff7ac61981c6051a52b51f05c)/ObservedProperty> .
+
+qudt:UNITLESS schema:name "Unitless" .
 
 
 ```
@@ -115,29 +117,38 @@ Links to the schema:
       "@id": "sosa:hasMember",
       "@type": "@id"
     },
-    "name": "sdo:name",
+    "name": "dct:title",
     "description": "dct:description",
     "observationType": {
       "@id": "sosa:Observation",
       "@type": "@id"
     },
-    "unitOfMeasurement": "qudt:unit",
-    "symbol": "sdo:symbol",
-    "unitDefinition": "@id",
+    "unitOfMeasurement": {
+      "@id": "qudt:unit",
+      "@context": {
+        "name": "sdo:name",
+        "symbol": "sdo:symbol",
+        "definition": "@id"
+      }
+    },
     "observedArea": "geo:hasGeometry",
     "phenomenonTime": "sosa:phenomenonTime",
     "resultTime": "sosa:resultTime",
-    "properties": "sdo:additionalProperty",
-    "value": "sdo:value",
-    "unitText": "sdo:unitText",
-    "unitCode": "@id",
-    "category": "sdo:CategoryCode",
-    "termCode": "sdo:termCode",
-    "inDefinedTermSet": "sdo:inDefinedTermSet",
-    "hasSystemProperty": "ssn-system:hasSystemProperty",
-    "status": "sdo:PropertyValue",
-    "provider": "sdo:Organization",
-    "type": "@type",
+    "properties": {
+      "@id": "sdo:additionalProperty",
+      "@context": {
+        "hasSystemProperty": "ssn-system:hasSystemProperty",
+        "status": "sdo:PropertyValue",
+        "name": "sdo:name",
+        "category": "sdo:CategoryCode",
+        "termCode": "sdo:termCode",
+        "inDefinedTermSet": "sdo:inDefinedTermSet",
+        "provider": "sdo:Organization",
+        "value": "sdo:value",
+        "unitCode": "@id",
+        "unitText": "sdo:unitText"
+      }
+    },
     "ObservedProperty@iot.navigationLink": {
       "@id": "sosa:observedProperty",
       "@type": "@id"
@@ -151,13 +162,14 @@ Links to the schema:
       "@type": "@id"
     },
     "orel": "http://www.opengis.net/def/rel/",
-    "sdo": "https://schema.org/",
     "dct": "http://purl.org/dc/terms/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "qudt": "http://qudt.org/schema/qudt/",
+    "sdo": "https://schema.org/",
     "geo": "http://www.opengis.net/ont/geosparql#",
     "ssn-system": "http://www.w3.org/ns/ssn/system/",
     "prov": "http://www.w3.org/ns/prov#",
+    "sta": "https://schemas.opengis.org/sta/def/core#",
     "@version": 1.1
   }
 }

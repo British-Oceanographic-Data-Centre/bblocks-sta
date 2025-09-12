@@ -6,29 +6,38 @@
       "@id": "sosa:hasMember",
       "@type": "@id"
     },
-    "name": "sdo:name",
+    "name": "dct:title",
     "description": "dct:description",
     "observationType": {
       "@id": "sosa:Observation",
       "@type": "@id"
     },
-    "unitOfMeasurement": "qudt:unit",
-    "symbol": "sdo:symbol",
-    "unitDefinition": "@id",
+    "unitOfMeasurement": {
+      "@id": "qudt:unit",
+      "@context": {
+        "name": "sdo:name",
+        "symbol": "sdo:symbol",
+        "definition": "@id"
+      }
+    },
     "observedArea": "geo:hasGeometry",
     "phenomenonTime": "sosa:phenomenonTime",
     "resultTime": "sosa:resultTime",
-    "properties": "sdo:additionalProperty",
-    "value": "sdo:value",
-    "unitText": "sdo:unitText",
-    "unitCode": "@id",
-    "category": "sdo:CategoryCode",
-    "termCode": "sdo:termCode",
-    "inDefinedTermSet": "sdo:inDefinedTermSet",
-    "hasSystemProperty": "ssn-system:hasSystemProperty",
-    "status": "sdo:PropertyValue",
-    "provider": "sdo:Organization",
-    "type": "@type",
+    "properties": {
+      "@id": "sdo:additionalProperty",
+      "@context": {
+        "hasSystemProperty": "ssn-system:hasSystemProperty",
+        "status": "sdo:PropertyValue",
+        "name": "sdo:name",
+        "category": "sdo:CategoryCode",
+        "termCode": "sdo:termCode",
+        "inDefinedTermSet": "sdo:inDefinedTermSet",
+        "provider": "sdo:Organization",
+        "value": "sdo:value",
+        "unitCode": "@id",
+        "unitText": "sdo:unitText"
+      }
+    },
     "ObservedProperty@iot.navigationLink": {
       "@id": "sosa:observedProperty",
       "@type": "@id"
@@ -42,13 +51,14 @@
       "@type": "@id"
     },
     "orel": "http://www.opengis.net/def/rel/",
-    "sdo": "https://schema.org/",
     "dct": "http://purl.org/dc/terms/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "qudt": "http://qudt.org/schema/qudt/",
+    "sdo": "https://schema.org/",
     "geo": "http://www.opengis.net/ont/geosparql#",
     "ssn-system": "http://www.w3.org/ns/ssn/system/",
     "prov": "http://www.w3.org/ns/prov#",
+    "sta": "https://schemas.opengis.org/sta/def/core#",
     "@version": 1.1
   }
 }
