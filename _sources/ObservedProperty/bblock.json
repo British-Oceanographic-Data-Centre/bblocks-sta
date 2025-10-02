@@ -1,19 +1,19 @@
 {
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
-  "name": "STA Sensor",
+  "name": "STA ObservedProperty",
   "highlighted": true,
-  "abstract": "A Sensor is an instrument that observes a property or phenomenon with the goal of producing an estimate of the value of the property.",
+  "abstract": "An ObservedProperty specifies the phenomenon of an Observation. It defines what is being observed or measured, typically referenced using a URI from a controlled vocabulary or ontology.",
   "status": "under-development",
-  "dateTimeAddition": "2024-02-10T00:00:00Z",
+  "dateTimeAddition": "2025-10-02T00:00:00Z",
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2024-02-10",
+  "dateOfLastChange": "2025-10-02",
   "link": "https://github.com/opengeospatial/sta-bblock",
   "sources": [
     {
       "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
-      "link": "https://docs.ogc.org/is/18-088/18-088.html#sensor"
+      "link": "https://docs.ogc.org/is/18-088/18-088.html#observedproperty"
     }
   ],
   "maturity": "mature",
@@ -21,6 +21,7 @@
   "tags": [
     "STA",
     "OMS",
-    "SOSA"
+    "SOSA",
+    "I-ADOPT"
   ]
 }

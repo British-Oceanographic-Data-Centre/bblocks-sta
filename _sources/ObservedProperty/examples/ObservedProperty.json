@@ -1,0 +1,8 @@
+{
+  "@iot.selfLink": "http://example.org/v1.1/ObservedProperties(1)",
+  "@iot.id": 1,
+  "name": "air_temperature",
+  "definition": "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/",
+  "description": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature.",
+  "Datastreams@iot.navigationLink": "http://example.org/v1.1/ObservedProperties(1)/Datastreams"
+}
