@@ -3,11 +3,11 @@
 {
   "itemIdentifier": "ogc.api.sta.ObservedProperty",
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
-  "name": "STA Sensor",
+  "name": "STA ObservedProperty",
   "highlighted": true,
-  "abstract": "A Sensor is an instrument that observes a property or phenomenon with the goal of producing an estimate of the value of the property.",
+  "abstract": "An ObservedProperty specifies the phenomenon of an Observation. It defines what is being observed or measured, typically referenced using a URI from a controlled vocabulary or ontology.",
   "status": "under-development",
-  "dateTimeAddition": "2024-02-10T00:00:00Z",
+  "dateTimeAddition": "2025-10-02T00:00:00Z",
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
@@ -16,7 +16,7 @@
   "sources": [
     {
       "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
-      "link": "https://docs.ogc.org/is/18-088/18-088.html#sensor"
+      "link": "https://docs.ogc.org/is/18-088/18-088.html#observedproperty"
     }
   ],
   "maturity": "mature",
@@ -24,7 +24,8 @@
   "tags": [
     "STA",
     "OMS",
-    "SOSA"
+    "SOSA",
+    "I-ADOPT"
   ],
   "shaclShapes": {},
   "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld",
@@ -36,34 +37,34 @@
   "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/ObservedProperty/context.jsonld",
   "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/ObservedProperty/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/ObservedProperty/",
-  "description": "## Sensor\n\nA Sensor is an instrument that observes a property or phenomenon with the goal of producing an estimate of the value of the property.\nSTA sensor is based on the concept from [OGC and ISO 19156:2001, OGC 10-004r3 and ISO 19156:2011(E), OGC Abstract Specification: Geographic information \u2014 Observations and Measurements.](http://portal.opengeospatial.org/files/?artifact_id=41579)\n\n### Limitations\nFor compliance with SwaggerHub where the schema can be referred:\n- type of id is not specified, while it shall be string or number\n- type of metadata property is not specified, while it shall be string or object\n\n\n## References\n\nRequirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/sensor](https://docs.ogc.org/is/18-088/18-088.html#sensor)\n",
+  "description": "## ObservedProperty\n\nAn ObservedProperty specifies the phenomenon of an Observation. It defines what is being observed or measured (e.g., temperature, concentration, water level). The ObservedProperty is typically identified by a URI that points to a definition in a controlled vocabulary or ontology to ensure semantic clarity and interoperability.\n\n##### Needs to be change from here\nSTA sensor is based on the concept from [OGC and ISO 19156:2001, OGC 10-004r3 and ISO 19156:2011(E), OGC Abstract Specification: Geographic information \u2014 Observations and Measurements.](http://portal.opengeospatial.org/files/?artifact_id=41579)\n\n### Limitations\nFor compliance with SwaggerHub where the schema can be referred:\n- type of id is not specified, while it shall be string or number\n- type of metadata property is not specified, while it shall be string or object\n\n##### Till here\n\n\n## References\n\nRequirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/observedproperty](https://docs.ogc.org/is/18-088/18-088.html#observedproperty)\n",
   "examples": [
     {
-      "title": "Observation whose Datastream has an ObservationType of OM_Measurement. A result\u2019s data type is defined by the observationType.",
+      "title": "ObservedProperty specifies the phenomenon of an Observation. It defines what is being observed or measured.",
       "base-uri": "http://w3id.org/ogcincubator/bblocks-sta/",
       "snippets": [
         {
           "language": "json",
-          "ref": "examples/Sensor.json",
-          "code": "{\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Sensors(1)\",\n  \"Datastreams@iot.navigationLink\": \"Sensors(1)/Datastreams\",\n  \"name\": \"TMP36\",\n  \"description\": \"TMP36 - Analog Temperature sensor\",\n  \"encodingType\": \"application/pdf\",\n  \"metadata\": \"http://example.org/TMP35_36_37.pdf\"\n}\n",
+          "ref": "examples/ObservedProperty.json",
+          "code": "{\n  \"@iot.selfLink\": \"http://example.org/v1.1/ObservedProperties(1)\",\n  \"@iot.id\": 1,\n  \"name\": \"air_temperature\",\n  \"definition\": \"http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/\",\n  \"description\": \"Air temperature is the bulk temperature of the air, not the surface (skin) temperature.\",\n  \"Datastreams@iot.navigationLink\": \"http://example.org/v1.1/ObservedProperties(1)/Datastreams\"\n}\n",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/ObservedProperty/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Sensors(1)\",\n  \"Datastreams@iot.navigationLink\": \"Sensors(1)/Datastreams\",\n  \"name\": \"TMP36\",\n  \"description\": \"TMP36 - Analog Temperature sensor\",\n  \"encodingType\": \"application/pdf\",\n  \"metadata\": \"http://example.org/TMP35_36_37.pdf\"\n}",
+          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld\",\n  \"@iot.selfLink\": \"http://example.org/v1.1/ObservedProperties(1)\",\n  \"@iot.id\": 1,\n  \"name\": \"air_temperature\",\n  \"definition\": \"http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/\",\n  \"description\": \"Air temperature is the bulk temperature of the air, not the surface (skin) temperature.\",\n  \"Datastreams@iot.navigationLink\": \"http://example.org/v1.1/ObservedProperties(1)/Datastreams\"\n}",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/ObservedProperty/example_1_1.jsonld"
         },
         {
           "language": "ttl",
-          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n\n<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description \"TMP36 - Analog Temperature sensor\" ;\n    dcterms:format \"application/pdf\" ;\n    dcterms:source <http://example.org/TMP35_36_37.pdf> ;\n    dcterms:title \"TMP36\" ;\n    sosa:ObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Sensors(1)/Datastreams> .\n\n",
+          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n\n<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description \"Air temperature is the bulk temperature of the air, not the surface (skin) temperature.\" ;\n    dcterms:title \"air_temperature\" ;\n    sosa:definition <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/> ;\n    sosa:isObservedBy <http://example.org/v1.1/ObservedProperties(1)/Datastreams> .\n\n",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/ObservedProperty/example_1_1.ttl"
         }
       ]
     }
   ],
-  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\ntitle: Sensor object\ndescription: Schema for Sensor things API 1.3 Observation\ntype: object\nproperties:\n  '@iot.id':\n    description: The Id of the sensor\n    x-jsonld-id: '@id'\n  '@iot.selfLink':\n    type: string\n    description: The direct link to the entity\n    x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self\n  properties:\n    type: object\n    description: A JSON Object containing user-annotated properties as key-value pairs.\n    x-jsonld-id: https://schema.org/additionalProperty\n    x-jsonld-extra-terms:\n      category: https://schema.org/DefinedTerm\n      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty\n      identifier: https://schema.org/PropertyValue\n      manufacturer: https://schema.org/manufacturer\n      model: https://schema.org/model\n      serialNumber: https://schema.org/serialNumber\n      valueReference: https://schema.org/valueReference\n      name: https://schema.org/name\n      description: http://purl.org/dc/terms/description\n      termCode: https://schema.org/termCode\n      inDefinedTermSet: https://schema.org/inDefinedTermSet\n      propertyID: https://schema.org/propertyID\n      value: https://schema.org/value\n      unitCode: '@id'\n      unitText: https://schema.org/unitText\n      maxValue: https://schema.org/maxValue\n      minValue: https://schema.org/minValue\n  name:\n    type: string\n    description: A property provides a label for Sensor entity, commonly a descriptive\n      name.\n    x-jsonld-id: http://purl.org/dc/terms/title\n  description:\n    type: string\n    description: The description of the Sensor entity.\n    x-jsonld-id: http://purl.org/dc/terms/description\n  encodingType:\n    type: string\n    description: The encoding type of the metadata property. Its value is one of the\n      ValueCode enumeration (see Table 15 for the available ValueCode).\n    x-jsonld-id: http://purl.org/dc/terms/format\n  metadata:\n    description: The detailed description of the Sensor or system. The metadata type\n      is defined by encodingType.\n    x-jsonld-id: http://purl.org/dc/terms/source\n    x-jsonld-type: '@id'\n  Datastream@iot.navigationLink:\n    type: string\n    description: Reference link to the DataStream Definition.\nx-jsonld-extra-terms:\n  Datastreams@iot.navigationLink:\n    x-jsonld-id: http://www.w3.org/ns/sosa/ObservationCollection\n    x-jsonld-type: '@id'\nx-jsonld-prefixes:\n  orel: http://www.opengis.net/def/rel/\n  dct: http://purl.org/dc/terms/\n  sdo: https://schema.org/\n  ssn-system: http://www.w3.org/ns/ssn/system/\n  sosa: http://www.w3.org/ns/sosa/\n  qudt: http://qudt.org/schema/qudt/\n  prov: http://www.w3.org/ns/prov#\n",
+  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\ntitle: ObservedProperty object\ndescription: Schema for ObservedProperty entity in OGC SensorThings API 1.3\ntype: object\nproperties:\n  '@iot.id':\n    description: The Id of the ObservedProperty\n    x-jsonld-id: '@id'\n  '@iot.selfLink':\n    type: string\n    description: The direct link to the ObservedProperty entity\n    x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self\n  name:\n    type: string\n    description: A label for the ObservedProperty, commonly a short descriptive name.\n    x-jsonld-id: http://purl.org/dc/terms/title\n  definition:\n    type: string\n    format: uri\n    description: A URI that defines the observed phenomenon (e.g., from a controlled\n      vocabulary or ontology).\n    x-jsonld-id: http://www.w3.org/ns/sosa/definition\n    x-jsonld-type: '@id'\n  description:\n    type: string\n    description: Detailed description of the ObservedProperty.\n    x-jsonld-id: http://purl.org/dc/terms/description\n  properties:\n    type: object\n    description: A JSON Object containing user-annotated properties as key-value pairs.\n    x-jsonld-id: https://schema.org/additionalProperty\n    x-jsonld-extra-terms:\n      name: https://schema.org/name\n      value: https://schema.org/value\n      unit: http://qudt.org/schema/qudt/unit\n  Datastreams@iot.navigationLink:\n    type: string\n    description: Reference link to related Datastream entities.\n    x-jsonld-id: http://www.w3.org/ns/sosa/isObservedBy\n    x-jsonld-type: '@id'\nrequired:\n- '@iot.id'\n- '@iot.selfLink'\n- name\n- definition\n- description\n- properties\nx-jsonld-prefixes:\n  orel: http://www.opengis.net/def/rel/\n  dct: http://purl.org/dc/terms/\n  sosa: http://www.w3.org/ns/sosa/\n  sdo: https://schema.org/\n  qudt: http://qudt.org/schema/qudt/\n",
   "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
   "gitPath": "_sources/ObservedProperty"
 }

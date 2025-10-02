@@ -1,0 +1,88 @@
+Validation report for ogc.api.sta.ObservedProperty - STA ObservedProperty
+Generated 2025-10-02T14:27:29.742861+00:00
+=== Files ===
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'properties' is a required property
+
+Failed validating 'required' in schema:
+    {'$schema': 'http://json-schema.org/draft-04/schema#',
+     'description': 'Schema for ObservedProperty entity in OGC '
+                    'SensorThings API 1.3',
+     'properties': {'@iot.id': {'description': 'The Id of the '
+                                               'ObservedProperty',
+                                'x-jsonld-id': '@id'},
+                    '@iot.selfLink': {'description': 'The direct link to '
+                                                     'the ObservedProperty '
+                                                     'entity',
+                                      'type': 'string',
+                                      'x-jsonld-id': 'http://www.opengis.net/def/rel/iana/1.0/self'},
+                    'Datastreams@iot.navigationLink': {'description': 'Reference '
+                                                                      'link '
+                                                                      'to '
+                                                                      'related '
+                                                                      'Datastream '
+                                                                      'entities.',
+                                                       'type': 'string',
+                                                       'x-jsonld-id': 'http://www.w3.org/ns/sosa/isObservedBy',
+                                                       'x-jsonld-type': '@id'},
+                    'definition': {'description': 'A URI that defines the '
+                                                  'observed phenomenon '
+                                                  '(e.g., from a '
+                                                  'controlled vocabulary '
+                                                  'or ontology).',
+                                   'format': 'uri',
+                                   'type': 'string',
+                                   'x-jsonld-id': 'http://www.w3.org/ns/sosa/definition',
+                                   'x-jsonld-type': '@id'},
+                    'description': {'description': 'Detailed description '
+                                                   'of the '
+                                                   'ObservedProperty.',
+                                    'type': 'string',
+                                    'x-jsonld-id': 'http://purl.org/dc/terms/description'},
+                    'name': {'description': 'A label for the '
+                                            'ObservedProperty, commonly a '
+                                            'short descriptive name.',
+                             'type': 'string',
+                             'x-jsonld-id': 'http://purl.org/dc/terms/title'},
+                    'properties': {'description': 'A JSON Object '
+                                                  'containing '
+                                                  'user-annotated '
+                                                  'properties as key-value '
+                                                  'pairs.',
+                                   'type': 'object',
+                                   'x-jsonld-extra-terms': {'name': 'https://schema.org/name',
+                                                            'unit': 'http://qudt.org/schema/qudt/unit',
+                                                            'value': 'https://schema.org/value'},
+                                   'x-jsonld-id': 'https://schema.org/additionalProperty'}},
+     'required': ['@iot.id',
+                  '@iot.selfLink',
+                  'name',
+                  'definition',
+                  'description',
+                  'properties'],
+     'title': 'ObservedProperty object',
+     'type': 'object',
+     'x-jsonld-prefixes': {'dct': 'http://purl.org/dc/terms/',
+                           'orel': 'http://www.opengis.net/def/rel/',
+                           'qudt': 'http://qudt.org/schema/qudt/',
+                           'sdo': 'https://schema.org/',
+                           'sosa': 'http://www.w3.org/ns/sosa/'}}
+
+On instance:
+    {'@iot.id': 1,
+     '@iot.selfLink': 'http://example.org/v1.1/ObservedProperties(1)',
+     'Datastreams@iot.navigationLink': 'http://example.org/v1.1/ObservedProperties(1)/Datastreams',
+     'definition': 'http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/',
+     'description': 'Air temperature is the bulk temperature of the air, '
+                    'not the surface (skin) temperature.',
+     'name': 'air_temperature'}
+=== End JSON Schema ===
+
