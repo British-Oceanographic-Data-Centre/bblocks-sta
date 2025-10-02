@@ -1,0 +1,10 @@
+path	@id
+/@iot.id	@id
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
+/name	http://purl.org/dc/terms/title
+/description	http://purl.org/dc/terms/description
+/encodingType	http://purl.org/dc/terms/format
+/location	http://www.opengis.net/ont/geosparql#hasGeometry
+/properties	https://schema.org/additionalProperty
+/HistoricalLocations@iot.navigationLink	http://www.w3.org/ns/prov#hadLocation
+/Things@iot.navigationLink	http://www.w3.org/ns/sosa/hosts

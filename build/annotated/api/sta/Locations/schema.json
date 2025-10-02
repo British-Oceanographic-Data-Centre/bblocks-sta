@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Locations object",
+  "description": "Schema for Locations entity in OGC SensorThings API 1.3",
+  "type": "object",
+  "properties": {
+    "@iot.id": {
+      "description": "The Id of the Location",
+      "x-jsonld-id": "@id"
+    },
+    "@iot.selfLink": {
+      "type": "string",
+      "description": "The direct link to the Location entity",
+      "x-jsonld-id": "http://www.opengis.net/def/rel/iana/1.0/self"
+    },
+    "name": {
+      "type": "string",
+      "description": "A label for the Location, commonly a short descriptive name.",
+      "x-jsonld-id": "http://purl.org/dc/terms/title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the Location entity.",
+      "x-jsonld-id": "http://purl.org/dc/terms/description"
+    },
+    "encodingType": {
+      "type": "string",
+      "description": "The encoding type of the metadata property. Its value is one of the ValueCode enumeration (see Table 15 for the available ValueCode).",
+      "x-jsonld-id": "http://purl.org/dc/terms/format"
+    },
+    "location": {
+      "type": "object",
+      "description": "A JSON object that describes the geometry of the Location.",
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "x-jsonld-extra-terms": {
+        "type": "@type",
+        "coordinates": "http://www.opengis.net/ont/geosparql#asWKT"
+      }
+    },
+    "properties": {
+      "type": "object",
+      "description": "A JSON Object containing user-annotated properties as key-value pairs.",
+      "x-jsonld-id": "https://schema.org/additionalProperty",
+      "x-jsonld-extra-terms": {
+        "altitude": {
+          "x-jsonld-id": "http://www.w3.org/ns/sosa/hasResult",
+          "x-jsonld-context": {
+            "value": "https://schema.org/value",
+            "reference": "http://purl.org/dc/terms/description",
+            "unitOfMeasurement": {
+              "@id": "http://qudt.org/schema/qudt/unit",
+              "@context": {
+                "name": "https://schema.org/name",
+                "symbol": "https://schema.org/symbol",
+                "definition": "@id"
+              }
+            }
+          }
+        },
+        "mountingPoint": "https://schema.org/location",
+        "platformType": "https://schema.org/additionalType"
+      }
+    },
+    "HistoricalLocations@iot.navigationLink": {
+      "type": "string",
+      "formats": "uri",
+      "description": "Reference link to related HistoricalLocation entities.",
+      "x-jsonld-id": "http://www.w3.org/ns/prov#hadLocation",
+      "x-jsonld-type": "@id"
+    },
+    "Things@iot.navigationLink": {
+      "type": "string",
+      "formats": "uri",
+      "description": "Reference link to related Thing entities.",
+      "x-jsonld-id": "http://www.w3.org/ns/sosa/hosts",
+      "x-jsonld-type": "@id"
+    }
+  },
+  "x-jsonld-prefixes": {
+    "orel": "http://www.opengis.net/def/rel/",
+    "dct": "http://purl.org/dc/terms/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "sdo": "https://schema.org/",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "prov": "http://www.w3.org/ns/prov#"
+  }
+}

@@ -1,0 +1,15 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "Test monitoring station located on the coast near Liverpool." ;
+    dcterms:format "application/vnd.geo+json" ;
+    dcterms:title "BODC Test Site A" ;
+    geo:hasGeometry [ a <http://w3id.org/ogcincubator/bblocks-sta/Point> ;
+            geo:asWKT -3.0005e+00,
+                5.34002e+01 ] ;
+    prov:hadLocation <http://example.org/v1.1/Locations(101)/HistoricalLocations> ;
+    sosa:hosts <http://example.org/v1.1/Locations(101)/Things> .
+
