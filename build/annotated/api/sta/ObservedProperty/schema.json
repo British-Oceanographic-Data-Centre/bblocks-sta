@@ -52,8 +52,7 @@
     "@iot.selfLink",
     "name",
     "definition",
-    "description",
-    "properties"
+    "description"
   ],
   "x-jsonld-prefixes": {
     "orel": "http://www.opengis.net/def/rel/",

@@ -119,7 +119,6 @@ required:
 - name
 - definition
 - description
-- properties
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
   dct: http://purl.org/dc/terms/
