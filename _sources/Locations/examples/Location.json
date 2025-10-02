@@ -1,0 +1,13 @@
+{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.1/Locations(101)",
+  "name": "BODC Test Site A",
+  "description": "Test monitoring station located on the coast near Liverpool.",
+  "encodingType": "application/vnd.geo+json",
+  "location": {
+    "type": "Point",
+    "coordinates": [-3.0005, 53.4002]
+  },
+  "HistoricalLocations@iot.navigationLink": "http://example.org/v1.1/Locations(101)/HistoricalLocations",
+  "Things@iot.navigationLink": "http://example.org/v1.1/Locations(101)/Things"
+}

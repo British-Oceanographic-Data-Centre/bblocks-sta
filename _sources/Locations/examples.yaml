@@ -1,0 +1,5 @@
+- title: A Location represents the spatial position of a Thing. It describes where a Thing is situated, using a geometry.
+  base-uri: http://w3id.org/ogcincubator/bblocks-sta/
+  snippets:
+    - language: json
+      ref: examples/Location.json

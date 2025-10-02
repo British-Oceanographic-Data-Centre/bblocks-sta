@@ -1,0 +1,33 @@
+"$schema": "http://json-schema.org/draft-04/schema#"
+title: Locations object
+description: "Schema for Locations entity in OGC SensorThings API 1.3"
+type: object
+properties:
+  "@iot.id":
+    description: The Id of the Location
+  "@iot.selfLink":
+    type: string
+    description: The direct link to the Location entity
+  name:
+    type: string
+    description: A label for the Location, commonly a short descriptive name.
+  description:
+    type: string
+    description: Description of the Location entity.
+  encodingType:
+    type: string
+    description: The encoding type of the metadata property. Its value is one of the ValueCode enumeration (see Table 15 for the available ValueCode).
+  location:
+    type: object
+    description: A JSON object that describes the geometry of the Location.
+  properties:
+    type: object
+    description: A JSON Object containing user-annotated properties as key-value pairs.
+  HistoricalLocations@iot.navigationLink:
+    type: string
+    formats: uri
+    description: Reference link to related HistoricalLocation entities.
+  Things@iot.navigationLink:
+    type: string
+    formats: uri
+    description: Reference link to related Thing entities.
