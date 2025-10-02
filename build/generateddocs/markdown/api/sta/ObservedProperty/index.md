@@ -1,7 +1,7 @@
 
 # STA Sensor (Schema)
 
-`ogc.api.sta.Sensor` *v0.1*
+`ogc.api.sta.ObservedProperty` *v0.1*
 
 A Sensor is an instrument that observes a property or phenomenon with the goal of producing an estimate of the value of the property.
 
@@ -44,7 +44,7 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/sensor]
 #### jsonld
 ```jsonld
 {
-  "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld",
+  "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld",
   "@iot.id": 1,
   "@iot.selfLink": "http://example.org/v1.1/Sensors(1)",
   "Datastreams@iot.navigationLink": "Sensors(1)/Datastreams",
@@ -145,8 +145,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.json)
-* JSON version: [schema.json](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.yaml)
+* YAML version: [schema.yaml](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.json)
+* JSON version: [schema.json](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.yaml)
 
 
 # JSON-LD Context
@@ -201,7 +201,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld)
+[context.jsonld](https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld)
 
 ## Sources
 
@@ -212,5 +212,5 @@ You can find the full JSON-LD context here:
 The source code for this Building Block can be found in the following repository:
 
 * URL: [https://github.com/British-Oceanographic-Data-Centre/bblocks-sta](https://github.com/British-Oceanographic-Data-Centre/bblocks-sta)
-* Path: `_sources/Sensor`
+* Path: `_sources/ObservedProperty`
 

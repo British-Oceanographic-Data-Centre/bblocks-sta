@@ -167,8 +167,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "@iot.id": "@id",
-    "@iot.selfLink": "orel:iana/1.0/self",
     "name": "dct:title",
     "description": "dct:description",
     "properties": {
@@ -196,6 +194,8 @@ Links to the schema:
       "@id": "sosa:ObservationCollection",
       "@type": "@id"
     },
+    "@iot.id": "@id",
+    "@iot.selfLink": "orel:iana/1.0/self",
     "orel": "http://www.opengis.net/def/rel/",
     "dct": "http://purl.org/dc/terms/",
     "sdo": "https://schema.org/",
