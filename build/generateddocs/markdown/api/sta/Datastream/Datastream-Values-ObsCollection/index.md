@@ -240,6 +240,10 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "Observations@iot.navigationLink": {
+      "@id": "sosa:hasMember",
+      "@type": "@id"
+    },
     "@iot.count": "sosa:collectionCount",
     "@iot.id": "@id",
     "@iot.selfLink": "orel:iana/1.0/self",
@@ -262,10 +266,6 @@ Links to the schema:
       "@type": "@id"
     },
     "value": "@graph",
-    "Observations@iot.navigationLink": {
-      "@id": "sosa:hasMember",
-      "@type": "@id"
-    },
     "sosa": "https://www.w3.org/TR/vocab-ssn/#",
     "orel": "http://www.opengis.net/def/rel/",
     "dqv": "http://www.w3.org/ns/dqv#",

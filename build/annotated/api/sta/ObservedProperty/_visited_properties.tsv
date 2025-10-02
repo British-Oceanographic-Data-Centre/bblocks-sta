@@ -1,0 +1,9 @@
+path	@id
+/@iot.id	@id
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
+/properties	https://schema.org/additionalProperty
+/name	http://purl.org/dc/terms/title
+/description	http://purl.org/dc/terms/description
+/encodingType	http://purl.org/dc/terms/format
+/metadata	http://purl.org/dc/terms/source
+/Datastream@iot.navigationLink	

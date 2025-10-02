@@ -111,12 +111,6 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "@iot.id": "@id",
-    "@iot.selfLink": "orel:iana/1.0/self",
-    "Observations@iot.navigationLink": {
-      "@id": "sosa:hasMember",
-      "@type": "@id"
-    },
     "name": "dct:title",
     "description": "dct:description",
     "observationType": {
@@ -159,6 +153,12 @@ Links to the schema:
     },
     "Thing@iot.navigationLink": {
       "@id": "sosa:madeByPlatform",
+      "@type": "@id"
+    },
+    "@iot.id": "@id",
+    "@iot.selfLink": "orel:iana/1.0/self",
+    "Observations@iot.navigationLink": {
+      "@id": "sosa:hasMember",
       "@type": "@id"
     },
     "orel": "http://www.opengis.net/def/rel/",
