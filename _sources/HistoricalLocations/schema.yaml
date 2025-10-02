@@ -1,0 +1,25 @@
+"$schema": "http://json-schema.org/draft-04/schema#"
+title: HistoricalLocation object
+description: "Schema for HistoricalLocation entity in OGC SensorThings API 1.3"
+type: object
+properties:
+  "@iot.id":
+    description: The Id of the HistoricalLocation
+  "@iot.selfLink":
+    type: string
+    description: The direct link to the HistoricalLocation entity
+  time:
+    type: string
+    format: date-time
+    description: The time when the Thing was at the Location (PROV startedAtTime).
+  Thing@iot.navigationLink:
+    type: string
+    description: Reference link to the related Thing entity
+  Locations@iot.navigationLink:
+    type: string
+    description: Reference link to the related Location entities
+required:
+  - "@iot.id"
+  - "@iot.selfLink"
+  - Thing@iot.navigationLink
+  - Locations@iot.navigationLink

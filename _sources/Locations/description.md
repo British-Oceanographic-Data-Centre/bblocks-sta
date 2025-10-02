@@ -9,9 +9,6 @@ For compliance with SwaggerHub where the schema can be referred:
 - type of id is not specified, while it shall be string or number
 - type of metadata property is not specified, while it shall be string or object
 
-##### Till here
-
-
 ## References
 
 Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/Location](https://docs.ogc.org/is/18-088/18-088.html#location)

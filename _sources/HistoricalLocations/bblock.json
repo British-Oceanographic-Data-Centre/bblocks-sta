@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "STA HistoricalLocation",
+  "highlighted": true,
+  "abstract": "A HistoricalLocation represents the association of a Thing with its Location(s) at a specific time. It provides the temporal context for where a Thing was located, enabling tracking of movement or changes in position.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-10-02T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2025-10-02",
+  "link": "https://github.com/opengeospatial/sta-bblock",
+  "sources": [
+    {
+      "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+      "link": "https://docs.ogc.org/is/18-088/18-088.html#historicallocation"
+    }
+  ],
+  "maturity": "mature",
+  "scope": "unstable",
+  "tags": [
+    "STA",
+    "HistoricalLocation",
+    "PROV",
+    "GeoJSON"
+  ]
+}

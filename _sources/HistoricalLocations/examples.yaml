@@ -1,0 +1,5 @@
+- title: A HistoricalLocation represents the association of a Thing with a Location (or set of Locations) at a specific time.
+  base-uri: http://w3id.org/ogcincubator/bblocks-sta/
+  snippets:
+    - language: json
+      ref: examples/HistoricalLocation.json

@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@iot.id": "@id",
+    "@iot.selfLink": "orel:iana/1.0/self",
+    "time": "prov:startedAtTime",
+    "Thing@iot.navigationLink": {
+      "@id": "prov:entity",
+      "@type": "@id"
+    },
+    "Locations@iot.navigationLink": {
+      "@id": "geo:hasGeometry",
+      "@type": "@id"
+    },
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "orel": "http://www.opengis.net/def/rel/",
+    "prov": "http://www.w3.org/ns/prov#"
+  }
+}

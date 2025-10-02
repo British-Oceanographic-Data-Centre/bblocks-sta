@@ -1,0 +1,7 @@
+{
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.1/HistoricalLocations(1)",
+  "time": "2024-09-01T12:00:00Z",
+  "Thing@iot.navigationLink": "http://example.org/v1.1/HistoricalLocations(1)/Thing",
+  "Locations@iot.navigationLink": "http://example.org/v1.1/HistoricalLocations(1)/Locations"
+}
