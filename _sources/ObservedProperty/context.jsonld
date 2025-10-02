@@ -5,45 +5,28 @@
     "@iot.selfLink": "orel:iana/1.0/self",
     "name": "dct:title",
     "description": "dct:description",
-    "encodingType": "dct:format",
-    "metadata": {
-      "@id": "dct:source",
+    "definition": {
+      "@id": "sosa:definition",
       "@type": "@id"
     },
     "properties": {
       "@id": "sdo:additionalProperty",
       "@context": {
-        "category": "sdo:DefinedTerm",
-        "hasSystemProperty": "ssn-system:hasSystemProperty",
-        "identifier": "sdo:PropertyValue",
-        "manufacturer": "sdo:manufacturer",
-        "model": "sdo:model",
-        "serialNumber": "sdo:serialNumber",
-        "valueReference": "sdo:valueReference",
         "name": "sdo:name",
-        "description": "dct:description",
-        "termCode": "sdo:termCode",
-        "inDefinedTermSet": "sdo:inDefinedTermSet",
-        "propertyID": "sdo:propertyID",
         "value": "sdo:value",
-        "unitCode": "@id",
-        "unitText": "sdo:unitText",
-        "maxValue": "sdo:maxValue",
-        "minValue": "sdo:minValue",
+        "unit": "qudt:unit",
         "@type": "@type"
       }
     },
     "Datastreams@iot.navigationLink": {
-      "@id": "sosa:ObservationCollection",
+      "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
-    "@type": "sosa:Sensor",
+    "@type": "sosa:ObservableProperty",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "ssn-system": "http://www.w3.org/ns/ssn/system/",
     "sdo": "https://schema.org/",
     "dct": "http://purl.org/dc/terms/",
     "orel": "http://www.opengis.net/def/rel/",
-    "qudt": "http://qudt.org/schema/qudt/",
-    "prov": "http://www.w3.org/ns/prov#"
+    "qudt": "http://qudt.org/schema/qudt/"
   }
 }

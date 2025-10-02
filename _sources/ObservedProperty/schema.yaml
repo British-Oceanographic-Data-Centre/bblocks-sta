@@ -18,6 +18,9 @@ properties:
   description:
     type: string
     description: Detailed description of the ObservedProperty.
+  properties:
+    type: object
+    description: A JSON Object containing user-annotated properties as key-value pairs.
   Datastreams@iot.navigationLink:
     type: string
     description: Reference link to related Datastream entities.
@@ -28,3 +31,4 @@ required:
   - name
   - definition
   - description
+  - properties
