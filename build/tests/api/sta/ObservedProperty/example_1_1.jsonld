@@ -1,10 +1,9 @@
 {
   "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld",
+  "@iot.selfLink": "http://example.org/v1.1/ObservedProperties(1)",
   "@iot.id": 1,
-  "@iot.selfLink": "http://example.org/v1.1/Sensors(1)",
-  "Datastreams@iot.navigationLink": "Sensors(1)/Datastreams",
-  "name": "TMP36",
-  "description": "TMP36 - Analog Temperature sensor",
-  "encodingType": "application/pdf",
-  "metadata": "http://example.org/TMP35_36_37.pdf"
+  "name": "air_temperature",
+  "definition": "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/",
+  "description": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature.",
+  "Datastreams@iot.navigationLink": "http://example.org/v1.1/ObservedProperties(1)/Datastreams"
 }

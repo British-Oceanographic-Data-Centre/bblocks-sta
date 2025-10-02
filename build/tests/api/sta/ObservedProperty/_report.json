@@ -1,9 +1,9 @@
 {
-  "title": "Validation report for ogc.api.sta.ObservedProperty - STA Sensor",
-  "bblockName": "STA Sensor",
+  "title": "Validation report for ogc.api.sta.ObservedProperty - STA ObservedProperty",
+  "bblockName": "STA ObservedProperty",
   "bblockId": "ogc.api.sta.ObservedProperty",
-  "generated": "2025-10-02T13:35:03.720310+00:00",
-  "result": true,
+  "generated": "2025-10-02T14:27:29.742926+00:00",
+  "result": false,
   "items": [
     {
       "source": {
@@ -15,7 +15,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -40,7 +40,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 5,
+              "size": 4,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -52,9 +52,11 @@
           "entries": [
             {
               "op": "validation",
-              "result": true,
-              "isError": false,
-              "message": "Validation passed"
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'properties' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'properties' is a required property\n\nFailed validating 'required' in schema:\n    {'$schema': 'http://json-schema.org/draft-04/schema#',\n     'description': 'Schema for ObservedProperty entity in OGC '\n                    'SensorThings API 1.3',\n     'properties': {'@iot.id': {'description': 'The Id of the '\n                                               'ObservedProperty',\n                                'x-jsonld-id': '@id'},\n                    '@iot.selfLink': {'description': 'The direct link to '\n                                                     'the ObservedProperty '\n                                                     'entity',\n                                      'type': 'string',\n                                      'x-jsonld-id': 'http://www.opengis.net/def/rel/iana/1.0/self'},\n                    'Datastreams@iot.navigationLink': {'description': 'Reference '\n                                                                      'link '\n                                                                      'to '\n                                                                      'related '\n                                                                      'Datastream '\n                                                                      'entities.',\n                                                       'type': 'string',\n                                                       'x-jsonld-id': 'http://www.w3.org/ns/sosa/isObservedBy',\n                                                       'x-jsonld-type': '@id'},\n                    'definition': {'description': 'A URI that defines the '\n                                                  'observed phenomenon '\n                                                  '(e.g., from a '\n                                                  'controlled vocabulary '\n                                                  'or ontology).',\n                                   'format': 'uri',\n                                   'type': 'string',\n                                   'x-jsonld-id': 'http://www.w3.org/ns/sosa/definition',\n                                   'x-jsonld-type': '@id'},\n                    'description': {'description': 'Detailed description '\n                                                   'of the '\n                                                   'ObservedProperty.',\n                                    'type': 'string',\n                                    'x-jsonld-id': 'http://purl.org/dc/terms/description'},\n                    'name': {'description': 'A label for the '\n                                            'ObservedProperty, commonly a '\n                                            'short descriptive name.',\n                             'type': 'string',\n                             'x-jsonld-id': 'http://purl.org/dc/terms/title'},\n                    'properties': {'description': 'A JSON Object '\n                                                  'containing '\n                                                  'user-annotated '\n                                                  'properties as key-value '\n                                                  'pairs.',\n                                   'type': 'object',\n                                   'x-jsonld-extra-terms': {'name': 'https://schema.org/name',\n                                                            'unit': 'http://qudt.org/schema/qudt/unit',\n                                                            'value': 'https://schema.org/value'},\n                                   'x-jsonld-id': 'https://schema.org/additionalProperty'}},\n     'required': ['@iot.id',\n                  '@iot.selfLink',\n                  'name',\n                  'definition',\n                  'description',\n                  'properties'],\n     'title': 'ObservedProperty object',\n     'type': 'object',\n     'x-jsonld-prefixes': {'dct': 'http://purl.org/dc/terms/',\n                           'orel': 'http://www.opengis.net/def/rel/',\n                           'qudt': 'http://qudt.org/schema/qudt/',\n                           'sdo': 'https://schema.org/',\n                           'sosa': 'http://www.w3.org/ns/sosa/'}}\n\nOn instance:\n    {'@iot.id': 1,\n     '@iot.selfLink': 'http://example.org/v1.1/ObservedProperties(1)',\n     'Datastreams@iot.navigationLink': 'http://example.org/v1.1/ObservedProperties(1)/Datastreams',\n     'definition': 'http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/',\n     'description': 'Air temperature is the bulk temperature of the air, '\n                    'not the surface (skin) temperature.',\n     'name': 'air_temperature'}"
             }
           ]
         }
@@ -64,7 +66,7 @@
   "globalErrors": {},
   "counts": {
     "total": 1,
-    "passed": 1,
-    "failed": 0
+    "passed": 0,
+    "failed": 1
   }
 }

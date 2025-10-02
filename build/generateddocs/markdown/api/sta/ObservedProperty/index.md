@@ -1,17 +1,19 @@
 
-# STA Sensor (Schema)
+# STA ObservedProperty (Schema)
 
 `ogc.api.sta.ObservedProperty` *v0.1*
 
-A Sensor is an instrument that observes a property or phenomenon with the goal of producing an estimate of the value of the property.
+An ObservedProperty specifies the phenomenon of an Observation. It defines what is being observed or measured, typically referenced using a URI from a controlled vocabulary or ontology.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 
-## Sensor
+## ObservedProperty
 
-A Sensor is an instrument that observes a property or phenomenon with the goal of producing an estimate of the value of the property.
+An ObservedProperty specifies the phenomenon of an Observation. It defines what is being observed or measured (e.g., temperature, concentration, water level). The ObservedProperty is typically identified by a URI that points to a definition in a controlled vocabulary or ontology to ensure semantic clarity and interoperability.
+
+##### Needs to be change from here
 STA sensor is based on the concept from [OGC and ISO 19156:2001, OGC 10-004r3 and ISO 19156:2011(E), OGC Abstract Specification: Geographic information — Observations and Measurements.](http://portal.opengeospatial.org/files/?artifact_id=41579)
 
 ### Limitations
@@ -19,24 +21,25 @@ For compliance with SwaggerHub where the schema can be referred:
 - type of id is not specified, while it shall be string or number
 - type of metadata property is not specified, while it shall be string or object
 
+##### Till here
+
 
 ## References
 
-Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/sensor](https://docs.ogc.org/is/18-088/18-088.html#sensor)
+Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/observedproperty](https://docs.ogc.org/is/18-088/18-088.html#observedproperty)
 
 ## Examples
 
-### Observation whose Datastream has an ObservationType of OM_Measurement. A result’s data type is defined by the observationType.
+### ObservedProperty specifies the phenomenon of an Observation. It defines what is being observed or measured.
 #### json
 ```json
 {
+  "@iot.selfLink": "http://example.org/v1.1/ObservedProperties(1)",
   "@iot.id": 1,
-  "@iot.selfLink": "http://example.org/v1.1/Sensors(1)",
-  "Datastreams@iot.navigationLink": "Sensors(1)/Datastreams",
-  "name": "TMP36",
-  "description": "TMP36 - Analog Temperature sensor",
-  "encodingType": "application/pdf",
-  "metadata": "http://example.org/TMP35_36_37.pdf"
+  "name": "air_temperature",
+  "definition": "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/",
+  "description": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature.",
+  "Datastreams@iot.navigationLink": "http://example.org/v1.1/ObservedProperties(1)/Datastreams"
 }
 
 ```
@@ -45,13 +48,12 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/sensor]
 ```jsonld
 {
   "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld",
+  "@iot.selfLink": "http://example.org/v1.1/ObservedProperties(1)",
   "@iot.id": 1,
-  "@iot.selfLink": "http://example.org/v1.1/Sensors(1)",
-  "Datastreams@iot.navigationLink": "Sensors(1)/Datastreams",
-  "name": "TMP36",
-  "description": "TMP36 - Analog Temperature sensor",
-  "encodingType": "application/pdf",
-  "metadata": "http://example.org/TMP35_36_37.pdf"
+  "name": "air_temperature",
+  "definition": "http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/",
+  "description": "Air temperature is the bulk temperature of the air, not the surface (skin) temperature.",
+  "Datastreams@iot.navigationLink": "http://example.org/v1.1/ObservedProperties(1)/Datastreams"
 }
 ```
 
@@ -60,11 +62,10 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/sensor]
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "TMP36 - Analog Temperature sensor" ;
-    dcterms:format "application/pdf" ;
-    dcterms:source <http://example.org/TMP35_36_37.pdf> ;
-    dcterms:title "TMP36" ;
-    sosa:ObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Sensors(1)/Datastreams> .
+<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "Air temperature is the bulk temperature of the air, not the surface (skin) temperature." ;
+    dcterms:title "air_temperature" ;
+    sosa:definition <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/> ;
+    sosa:isObservedBy <http://example.org/v1.1/ObservedProperties(1)/Datastreams> .
 
 
 ```
@@ -73,73 +74,58 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/sensor]
 
 ```yaml
 $schema: http://json-schema.org/draft-04/schema#
-title: Sensor object
-description: Schema for Sensor things API 1.3 Observation
+title: ObservedProperty object
+description: Schema for ObservedProperty entity in OGC SensorThings API 1.3
 type: object
 properties:
   '@iot.id':
-    description: The Id of the sensor
+    description: The Id of the ObservedProperty
     x-jsonld-id: '@id'
   '@iot.selfLink':
     type: string
-    description: The direct link to the entity
+    description: The direct link to the ObservedProperty entity
     x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self
+  name:
+    type: string
+    description: A label for the ObservedProperty, commonly a short descriptive name.
+    x-jsonld-id: http://purl.org/dc/terms/title
+  definition:
+    type: string
+    format: uri
+    description: A URI that defines the observed phenomenon (e.g., from a controlled
+      vocabulary or ontology).
+    x-jsonld-id: http://www.w3.org/ns/sosa/definition
+    x-jsonld-type: '@id'
+  description:
+    type: string
+    description: Detailed description of the ObservedProperty.
+    x-jsonld-id: http://purl.org/dc/terms/description
   properties:
     type: object
     description: A JSON Object containing user-annotated properties as key-value pairs.
     x-jsonld-id: https://schema.org/additionalProperty
     x-jsonld-extra-terms:
-      category: https://schema.org/DefinedTerm
-      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
-      identifier: https://schema.org/PropertyValue
-      manufacturer: https://schema.org/manufacturer
-      model: https://schema.org/model
-      serialNumber: https://schema.org/serialNumber
-      valueReference: https://schema.org/valueReference
       name: https://schema.org/name
-      description: http://purl.org/dc/terms/description
-      termCode: https://schema.org/termCode
-      inDefinedTermSet: https://schema.org/inDefinedTermSet
-      propertyID: https://schema.org/propertyID
       value: https://schema.org/value
-      unitCode: '@id'
-      unitText: https://schema.org/unitText
-      maxValue: https://schema.org/maxValue
-      minValue: https://schema.org/minValue
-  name:
-    type: string
-    description: A property provides a label for Sensor entity, commonly a descriptive
-      name.
-    x-jsonld-id: http://purl.org/dc/terms/title
-  description:
-    type: string
-    description: The description of the Sensor entity.
-    x-jsonld-id: http://purl.org/dc/terms/description
-  encodingType:
-    type: string
-    description: The encoding type of the metadata property. Its value is one of the
-      ValueCode enumeration (see Table 15 for the available ValueCode).
-    x-jsonld-id: http://purl.org/dc/terms/format
-  metadata:
-    description: The detailed description of the Sensor or system. The metadata type
-      is defined by encodingType.
-    x-jsonld-id: http://purl.org/dc/terms/source
-    x-jsonld-type: '@id'
-  Datastream@iot.navigationLink:
-    type: string
-    description: Reference link to the DataStream Definition.
-x-jsonld-extra-terms:
+      unit: http://qudt.org/schema/qudt/unit
   Datastreams@iot.navigationLink:
-    x-jsonld-id: http://www.w3.org/ns/sosa/ObservationCollection
+    type: string
+    description: Reference link to related Datastream entities.
+    x-jsonld-id: http://www.w3.org/ns/sosa/isObservedBy
     x-jsonld-type: '@id'
+required:
+- '@iot.id'
+- '@iot.selfLink'
+- name
+- definition
+- description
+- properties
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
   dct: http://purl.org/dc/terms/
-  sdo: https://schema.org/
-  ssn-system: http://www.w3.org/ns/ssn/system/
   sosa: http://www.w3.org/ns/sosa/
+  sdo: https://schema.org/
   qudt: http://qudt.org/schema/qudt/
-  prov: http://www.w3.org/ns/prov#
 
 ```
 
@@ -154,47 +140,31 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "Datastreams@iot.navigationLink": {
-      "@id": "sosa:ObservationCollection",
-      "@type": "@id"
-    },
     "@iot.id": "@id",
     "@iot.selfLink": "orel:iana/1.0/self",
+    "name": "dct:title",
+    "definition": {
+      "@id": "sosa:definition",
+      "@type": "@id"
+    },
+    "description": "dct:description",
     "properties": {
       "@context": {
-        "category": "sdo:DefinedTerm",
-        "hasSystemProperty": "ssn-system:hasSystemProperty",
-        "identifier": "sdo:PropertyValue",
-        "manufacturer": "sdo:manufacturer",
-        "model": "sdo:model",
-        "serialNumber": "sdo:serialNumber",
-        "valueReference": "sdo:valueReference",
         "name": "sdo:name",
-        "termCode": "sdo:termCode",
-        "inDefinedTermSet": "sdo:inDefinedTermSet",
-        "propertyID": "sdo:propertyID",
         "value": "sdo:value",
-        "unitCode": "@id",
-        "unitText": "sdo:unitText",
-        "maxValue": "sdo:maxValue",
-        "minValue": "sdo:minValue"
+        "unit": "qudt:unit"
       },
       "@id": "sdo:additionalProperty"
     },
-    "name": "dct:title",
-    "description": "dct:description",
-    "encodingType": "dct:format",
-    "metadata": {
-      "@id": "dct:source",
+    "Datastreams@iot.navigationLink": {
+      "@id": "sosa:isObservedBy",
       "@type": "@id"
     },
     "orel": "http://www.opengis.net/def/rel/",
     "dct": "http://purl.org/dc/terms/",
-    "sdo": "https://schema.org/",
-    "ssn-system": "http://www.w3.org/ns/ssn/system/",
     "sosa": "http://www.w3.org/ns/sosa/",
+    "sdo": "https://schema.org/",
     "qudt": "http://qudt.org/schema/qudt/",
-    "prov": "http://www.w3.org/ns/prov#",
     "@version": 1.1
   }
 }
@@ -205,7 +175,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [OGC SensorThings API Part 1: Sensing Version 1.1](https://docs.ogc.org/is/18-088/18-088.html#sensor)
+* [OGC SensorThings API Part 1: Sensing Version 1.1](https://docs.ogc.org/is/18-088/18-088.html#observedproperty)
 
 # For developers
 

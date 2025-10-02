@@ -1,9 +1,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "TMP36 - Analog Temperature sensor" ;
-    dcterms:format "application/pdf" ;
-    dcterms:source <http://example.org/TMP35_36_37.pdf> ;
-    dcterms:title "TMP36" ;
-    sosa:ObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Sensors(1)/Datastreams> .
+<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "Air temperature is the bulk temperature of the air, not the surface (skin) temperature." ;
+    dcterms:title "air_temperature" ;
+    sosa:definition <http://vocab.nerc.ac.uk/collection/P07/current/CFSN0023/> ;
+    sosa:isObservedBy <http://example.org/v1.1/ObservedProperties(1)/Datastreams> .
 
