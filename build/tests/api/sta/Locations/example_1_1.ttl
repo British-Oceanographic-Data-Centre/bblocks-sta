@@ -10,6 +10,6 @@
     geo:hasGeometry [ a <http://w3id.org/ogcincubator/bblocks-sta/Point> ;
             geo:asWKT -3.0005e+00,
                 5.34002e+01 ] ;
-    prov:hadLocation <http://example.org/v1.1/Locations(101)/HistoricalLocations> ;
-    sosa:hosts <http://example.org/v1.1/Locations(101)/Things> .
+    prov:hadLocation <http://example.org/v1.1/Locations(1)/HistoricalLocations> ;
+    sosa:hosts <http://example.org/v1.1/Locations(1)/Things> .
 

@@ -1,0 +1,6 @@
+path	@id
+/@iot.id	@id
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
+/time	http://www.w3.org/ns/prov#startedAtTime
+/Thing@iot.navigationLink	http://www.w3.org/ns/prov#entity
+/Locations@iot.navigationLink	http://www.opengis.net/ont/geosparql#hasGeometry
