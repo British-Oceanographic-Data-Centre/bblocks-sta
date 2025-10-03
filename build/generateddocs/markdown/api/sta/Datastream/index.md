@@ -129,16 +129,15 @@ x-jsonld-extra-terms:
     x-jsonld-id: https://schema.org/additionalProperty
     x-jsonld-context:
       hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
-      status: https://schema.org/PropertyValue
+      status: http://dbpedia.org/ontology/status
       name: https://schema.org/name
-      category: https://schema.org/CategoryCode
+      category: https://schema.org/category
       termCode: https://schema.org/termCode
       inDefinedTermSet: https://schema.org/inDefinedTermSet
       provider: https://schema.org/Organization
       value: https://schema.org/value
       unitCode: '@id'
       unitText: https://schema.org/unitText
-      description: http://purl.org/dc/terms/description
   ObservedProperty@iot.navigationLink:
     x-jsonld-id: http://www.w3.org/ns/sosa/observedProperty
     x-jsonld-type: '@id'
@@ -150,12 +149,13 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
-  dct: http://purl.org/dc/terms/
   sosa: http://www.w3.org/ns/sosa/
+  dct: http://purl.org/dc/terms/
   qudt: http://qudt.org/schema/qudt/
   sdo: https://schema.org/
   geo: http://www.opengis.net/ont/geosparql#
   ssn-system: http://www.w3.org/ns/ssn/system/
+  dbo: http://dbpedia.org/ontology/
   prov: http://www.w3.org/ns/prov#
   sta: https://schemas.opengis.org/sta/def/core#
 
@@ -193,9 +193,9 @@ Links to the schema:
       "@id": "sdo:additionalProperty",
       "@context": {
         "hasSystemProperty": "ssn-system:hasSystemProperty",
-        "status": "sdo:PropertyValue",
+        "status": "dbo:status",
         "name": "sdo:name",
-        "category": "sdo:CategoryCode",
+        "category": "sdo:category",
         "termCode": "sdo:termCode",
         "inDefinedTermSet": "sdo:inDefinedTermSet",
         "provider": "sdo:Organization",
@@ -223,12 +223,13 @@ Links to the schema:
       "@type": "@id"
     },
     "orel": "http://www.opengis.net/def/rel/",
-    "dct": "http://purl.org/dc/terms/",
     "sosa": "http://www.w3.org/ns/sosa/",
+    "dct": "http://purl.org/dc/terms/",
     "qudt": "http://qudt.org/schema/qudt/",
     "sdo": "https://schema.org/",
     "geo": "http://www.opengis.net/ont/geosparql#",
     "ssn-system": "http://www.w3.org/ns/ssn/system/",
+    "dbo": "http://dbpedia.org/ontology/",
     "prov": "http://www.w3.org/ns/prov#",
     "sta": "https://schemas.opengis.org/sta/def/core#",
     "@version": 1.1
