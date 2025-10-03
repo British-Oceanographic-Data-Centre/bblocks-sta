@@ -65,13 +65,14 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/thing](
 #### ttl
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix schema: <https://schema.org/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
 <http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "This thing is an oven." ;
-    dcterms:spatial <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Locations> ;
     dcterms:title "Oven" ;
+    geo:hasGeometry <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Locations> ;
     prov:hadLocation <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/HistoricalLocations> ;
     sosa:ObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Datastreams> ;
     schema:additionalProperty [ ] .
@@ -128,9 +129,9 @@ x-jsonld-extra-terms:
   properties:
     x-jsonld-id: https://schema.org/additionalProperty
     x-jsonld-context:
-      category: https://schema.org/CategoryCode
-      identifier: https://schema.org/DefinedTerm
-      provider: https://schema.org/Organization
+      category: https://schema.org/category
+      identifier: https://schema.org/identifier
+      provider: https://schema.org/provider
       name: https://schema.org/name
       termCode: https://schema.org/termCode
       inDefinedTermSet: https://schema.org/inDefinedTermSet
@@ -140,7 +141,7 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/prov#hadLocation
     x-jsonld-type: '@id'
   Locations@iot.navigationLink:
-    x-jsonld-id: http://purl.org/dc/terms/spatial
+    x-jsonld-id: http://www.opengis.net/ont/geosparql#hasGeometry
     x-jsonld-type: '@id'
   Datastreams@iot.navigationLink:
     x-jsonld-id: http://www.w3.org/ns/sosa/ObservationCollection
@@ -150,9 +151,9 @@ x-jsonld-prefixes:
   dct: http://purl.org/dc/terms/
   sdo: https://schema.org/
   prov: http://www.w3.org/ns/prov#
+  geo: http://www.opengis.net/ont/geosparql#
   sosa: http://www.w3.org/ns/sosa/
   ssn: http://www.w3.org/ns/ssn/
-  geo: http://www.opengis.net/ont/geosparql#
 
 ```
 
@@ -172,9 +173,9 @@ Links to the schema:
     "properties": {
       "@id": "sdo:additionalProperty",
       "@context": {
-        "category": "sdo:CategoryCode",
-        "identifier": "sdo:DefinedTerm",
-        "provider": "sdo:Organization",
+        "category": "sdo:category",
+        "identifier": "sdo:identifier",
+        "provider": "sdo:provider",
         "name": "sdo:name",
         "termCode": "sdo:termCode",
         "inDefinedTermSet": "sdo:inDefinedTermSet",
@@ -187,7 +188,7 @@ Links to the schema:
       "@type": "@id"
     },
     "Locations@iot.navigationLink": {
-      "@id": "dct:spatial",
+      "@id": "geo:hasGeometry",
       "@type": "@id"
     },
     "Datastreams@iot.navigationLink": {
@@ -200,9 +201,9 @@ Links to the schema:
     "dct": "http://purl.org/dc/terms/",
     "sdo": "https://schema.org/",
     "prov": "http://www.w3.org/ns/prov#",
+    "geo": "http://www.opengis.net/ont/geosparql#",
     "sosa": "http://www.w3.org/ns/sosa/",
     "ssn": "http://www.w3.org/ns/ssn/",
-    "geo": "http://www.opengis.net/ont/geosparql#",
     "@version": 1.1
   }
 }

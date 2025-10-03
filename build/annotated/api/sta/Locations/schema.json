@@ -57,8 +57,7 @@
             }
           }
         },
-        "mountingPoint": "https://schema.org/location",
-        "platformType": "https://schema.org/additionalType"
+        "mountingPoint": "https://schema.org/location"
       }
     },
     "HistoricalLocations@iot.navigationLink": {

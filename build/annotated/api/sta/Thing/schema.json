@@ -54,9 +54,9 @@
     "properties": {
       "x-jsonld-id": "https://schema.org/additionalProperty",
       "x-jsonld-context": {
-        "category": "https://schema.org/CategoryCode",
-        "identifier": "https://schema.org/DefinedTerm",
-        "provider": "https://schema.org/Organization",
+        "category": "https://schema.org/category",
+        "identifier": "https://schema.org/identifier",
+        "provider": "https://schema.org/provider",
         "name": "https://schema.org/name",
         "termCode": "https://schema.org/termCode",
         "inDefinedTermSet": "https://schema.org/inDefinedTermSet",
@@ -69,7 +69,7 @@
       "x-jsonld-type": "@id"
     },
     "Locations@iot.navigationLink": {
-      "x-jsonld-id": "http://purl.org/dc/terms/spatial",
+      "x-jsonld-id": "http://www.opengis.net/ont/geosparql#hasGeometry",
       "x-jsonld-type": "@id"
     },
     "Datastreams@iot.navigationLink": {
@@ -82,8 +82,8 @@
     "dct": "http://purl.org/dc/terms/",
     "sdo": "https://schema.org/",
     "prov": "http://www.w3.org/ns/prov#",
+    "geo": "http://www.opengis.net/ont/geosparql#",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "ssn": "http://www.w3.org/ns/ssn/",
-    "geo": "http://www.opengis.net/ont/geosparql#"
+    "ssn": "http://www.w3.org/ns/ssn/"
   }
 }

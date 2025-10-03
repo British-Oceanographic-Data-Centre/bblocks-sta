@@ -138,7 +138,6 @@ properties:
               symbol: https://schema.org/symbol
               definition: '@id'
       mountingPoint: https://schema.org/location
-      platformType: https://schema.org/additionalType
   HistoricalLocations@iot.navigationLink:
     type: string
     formats: uri
@@ -202,8 +201,7 @@ Links to the schema:
             }
           }
         },
-        "mountingPoint": "sdo:location",
-        "platformType": "sdo:additionalType"
+        "mountingPoint": "sdo:location"
       },
       "@id": "sdo:additionalProperty"
     },

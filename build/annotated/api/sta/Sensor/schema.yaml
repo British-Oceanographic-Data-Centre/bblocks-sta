@@ -15,15 +15,14 @@ properties:
     description: A JSON Object containing user-annotated properties as key-value pairs.
     x-jsonld-id: https://schema.org/additionalProperty
     x-jsonld-extra-terms:
-      category: https://schema.org/DefinedTerm
+      category: https://schema.org/category
       hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
-      identifier: https://schema.org/PropertyValue
+      identifier: https://schema.org/identifier
       manufacturer: https://schema.org/manufacturer
       model: https://schema.org/model
       serialNumber: https://schema.org/serialNumber
       valueReference: https://schema.org/valueReference
       name: https://schema.org/name
-      description: http://purl.org/dc/terms/description
       termCode: https://schema.org/termCode
       inDefinedTermSet: https://schema.org/inDefinedTermSet
       propertyID: https://schema.org/propertyID
@@ -60,9 +59,9 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
 x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
-  dct: http://purl.org/dc/terms/
   sdo: https://schema.org/
   ssn-system: http://www.w3.org/ns/ssn/system/
+  dct: http://purl.org/dc/terms/
   sosa: http://www.w3.org/ns/sosa/
   qudt: http://qudt.org/schema/qudt/
   prov: http://www.w3.org/ns/prov#

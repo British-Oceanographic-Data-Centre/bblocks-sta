@@ -29,8 +29,7 @@
             }
           }
         },
-        "mountingPoint": "sdo:location",
-        "platformType": "sdo:additionalType"
+        "mountingPoint": "sdo:location"
       },
       "@id": "sdo:additionalProperty"
     },
