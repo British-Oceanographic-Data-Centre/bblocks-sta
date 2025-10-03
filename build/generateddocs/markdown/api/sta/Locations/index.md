@@ -20,9 +20,6 @@ For compliance with SwaggerHub where the schema can be referred:
 - type of id is not specified, while it shall be string or number
 - type of metadata property is not specified, while it shall be string or object
 
-##### Till here
-
-
 ## References
 
 Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/Location](https://docs.ogc.org/is/18-088/18-088.html#location)
@@ -34,7 +31,7 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/Locatio
 ```json
 {
   "@iot.id": 1,
-  "@iot.selfLink": "http://example.org/v1.1/Locations(101)",
+  "@iot.selfLink": "http://example.org/v1.1/Locations(1)",
   "name": "BODC Test Site A",
   "description": "Test monitoring station located on the coast near Liverpool.",
   "encodingType": "application/vnd.geo+json",
@@ -42,8 +39,8 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/Locatio
     "type": "Point",
     "coordinates": [-3.0005, 53.4002]
   },
-  "HistoricalLocations@iot.navigationLink": "http://example.org/v1.1/Locations(101)/HistoricalLocations",
-  "Things@iot.navigationLink": "http://example.org/v1.1/Locations(101)/Things"
+  "HistoricalLocations@iot.navigationLink": "http://example.org/v1.1/Locations(1)/HistoricalLocations",
+  "Things@iot.navigationLink": "http://example.org/v1.1/Locations(1)/Things"
 }
 
 ```
@@ -53,7 +50,7 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/Locatio
 {
   "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/context.jsonld",
   "@iot.id": 1,
-  "@iot.selfLink": "http://example.org/v1.1/Locations(101)",
+  "@iot.selfLink": "http://example.org/v1.1/Locations(1)",
   "name": "BODC Test Site A",
   "description": "Test monitoring station located on the coast near Liverpool.",
   "encodingType": "application/vnd.geo+json",
@@ -64,8 +61,8 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/Locatio
       53.4002
     ]
   },
-  "HistoricalLocations@iot.navigationLink": "http://example.org/v1.1/Locations(101)/HistoricalLocations",
-  "Things@iot.navigationLink": "http://example.org/v1.1/Locations(101)/Things"
+  "HistoricalLocations@iot.navigationLink": "http://example.org/v1.1/Locations(1)/HistoricalLocations",
+  "Things@iot.navigationLink": "http://example.org/v1.1/Locations(1)/Things"
 }
 ```
 
@@ -83,8 +80,8 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/Locatio
     geo:hasGeometry [ a <http://w3id.org/ogcincubator/bblocks-sta/Point> ;
             geo:asWKT -3.0005e+00,
                 5.34002e+01 ] ;
-    prov:hadLocation <http://example.org/v1.1/Locations(101)/HistoricalLocations> ;
-    sosa:hosts <http://example.org/v1.1/Locations(101)/Things> .
+    prov:hadLocation <http://example.org/v1.1/Locations(1)/HistoricalLocations> ;
+    sosa:hosts <http://example.org/v1.1/Locations(1)/Things> .
 
 
 ```

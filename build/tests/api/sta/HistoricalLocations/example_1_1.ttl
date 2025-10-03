@@ -1,0 +1,7 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<http://w3id.org/ogcincubator/bblocks-sta/1> geo:hasGeometry <http://example.org/v1.1/HistoricalLocations(1)/Locations> ;
+    prov:entity <http://example.org/v1.1/HistoricalLocations(1)/Thing> ;
+    prov:startedAtTime "2024-09-01T12:00:00Z" .
+
