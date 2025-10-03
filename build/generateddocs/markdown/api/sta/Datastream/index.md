@@ -134,7 +134,7 @@ x-jsonld-extra-terms:
       category: https://schema.org/category
       termCode: https://schema.org/termCode
       inDefinedTermSet: https://schema.org/inDefinedTermSet
-      provider: https://schema.org/Organization
+      provider: https://schema.org/provider
       value: https://schema.org/value
       unitCode: '@id'
       unitText: https://schema.org/unitText
@@ -198,7 +198,7 @@ Links to the schema:
         "category": "sdo:category",
         "termCode": "sdo:termCode",
         "inDefinedTermSet": "sdo:inDefinedTermSet",
-        "provider": "sdo:Organization",
+        "provider": "sdo:provider",
         "value": "sdo:value",
         "unitCode": "@id",
         "unitText": "sdo:unitText"

@@ -137,7 +137,7 @@ Links to the schema:
         "category": "sdo:category",
         "termCode": "sdo:termCode",
         "inDefinedTermSet": "sdo:inDefinedTermSet",
-        "provider": "sdo:Organization",
+        "provider": "sdo:provider",
         "value": "sdo:value",
         "unitCode": "@id",
         "unitText": "sdo:unitText"

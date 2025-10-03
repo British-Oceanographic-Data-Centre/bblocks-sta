@@ -1,5 +1,5 @@
 Validation report for ogc.api.sta.ObservedProperty - STA ObservedProperty
-Generated 2025-10-03T14:00:58.303103+00:00
+Generated 2025-10-03T15:54:10.547591+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
