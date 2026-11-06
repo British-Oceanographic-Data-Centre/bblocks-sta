@@ -1,25 +1,8 @@
 {
   "@context": {
-    "@iot.id": "@id",
-    "@iot.selfLink": {
-      "@id": "orel:iana/1.0/self",
-      "@type": "@id"
-    },
+    "@version": 1.1,
     "name": "dct:title",
     "description": "dct:description",
-    "properties": {
-      "@id": "sdo:additionalProperty",
-      "@context": {
-        "category": "sdo:category",
-        "identifier": "sdo:identifier",
-        "provider": "sdo:provider",
-        "name": "sdo:name",
-        "termCode": "sdo:termCode",
-        "inDefinedTermSet": "sdo:inDefinedTermSet",
-        "value": "sdo:value",
-        "propertyID": "sdo:propertyID"
-      }
-    },
     "HistoricalLocations@iot.navigationLink": {
       "@id": "dct:coverage",
       "@type": "@id"
@@ -32,11 +15,13 @@
       "@id": "sosa-oms:makesObservationCollection",
       "@type": "@id"
     },
-    "orel": "http://www.opengis.net/def/rel/",
+    "@iot.selfLink": {
+      "@id": "orel:iana/1.0/self",
+      "@type": "@id"
+    },
     "dct": "http://purl.org/dc/terms/",
-    "sdo": "https://schema.org/",
+    "orel": "http://www.opengis.net/def/rel/",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "sosa-oms": "http://www.w3.org/ns/sosa/oms/",
-    "@version": 1.1
+    "sosa-oms": "http://www.w3.org/ns/sosa/oms/"
   }
 }

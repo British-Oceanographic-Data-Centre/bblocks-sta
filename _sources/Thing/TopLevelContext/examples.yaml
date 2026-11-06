@@ -1,0 +1,5 @@
+- title: Shared SensorThings API properties
+  base-uri: http://w3id.org/ogcincubator/bblocks-sta/
+  snippets:
+    - language: json
+      ref: examples/Context.json

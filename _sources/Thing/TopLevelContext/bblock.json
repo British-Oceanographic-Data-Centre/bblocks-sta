@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "STA Thing Top-Level Context",
+  "highlighted": true,
+  "abstract": "Top-level JSON-LD context shared by SensorThings API Thing representations.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-06T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-11-06",
+  "link": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "sources": [{
+    "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+    "link": "https://docs.ogc.org/is/18-088/18-088.html"
+  }],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": ["STA", "JSON-LD", "Schema.org"]
+}
