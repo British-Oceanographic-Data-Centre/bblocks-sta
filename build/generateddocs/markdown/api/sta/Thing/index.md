@@ -65,15 +65,13 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/thing](
 #### ttl
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix schema: <https://schema.org/> .
 @prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/> .
 
-<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:coverage <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/HistoricalLocations> ;
+[] dcterms:coverage <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/HistoricalLocations> ;
     dcterms:description "This thing is an oven." ;
     dcterms:spatial <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Locations> ;
     dcterms:title "Oven" ;
-    sosa-oms:makesObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Datastreams> ;
-    schema:additionalProperty [ ] .
+    sosa-oms:makesObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Things(1)/Datastreams> .
 
 
 ```
@@ -91,7 +89,6 @@ properties:
     - string
     - number
     description: The Id of the observation
-    x-jsonld-id: '@id'
   '@iot.selfLink':
     type: string
     description: The direct link to the entity
@@ -125,17 +122,6 @@ properties:
 x-jsonld-extra-terms:
   name: http://purl.org/dc/terms/title
   description: http://purl.org/dc/terms/description
-  properties:
-    x-jsonld-id: https://schema.org/additionalProperty
-    x-jsonld-context:
-      category: https://schema.org/category
-      identifier: https://schema.org/identifier
-      provider: https://schema.org/provider
-      name: https://schema.org/name
-      termCode: https://schema.org/termCode
-      inDefinedTermSet: https://schema.org/inDefinedTermSet
-      value: https://schema.org/value
-      propertyID: https://schema.org/propertyID
   HistoricalLocations@iot.navigationLink:
     x-jsonld-id: http://purl.org/dc/terms/coverage
     x-jsonld-type: '@id'
@@ -146,10 +132,9 @@ x-jsonld-extra-terms:
     x-jsonld-id: http://www.w3.org/ns/sosa/oms/makesObservationCollection
     x-jsonld-type: '@id'
 x-jsonld-prefixes:
-  orel: http://www.opengis.net/def/rel/
   dct: http://purl.org/dc/terms/
-  sdo: https://schema.org/
   sosa-oms: http://www.w3.org/ns/sosa/oms/
+  orel: http://www.opengis.net/def/rel/
   sosa: http://www.w3.org/ns/sosa/
 x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.Thing
@@ -172,19 +157,6 @@ Links to the schema:
   "@context": {
     "name": "dct:title",
     "description": "dct:description",
-    "properties": {
-      "@id": "sdo:additionalProperty",
-      "@context": {
-        "category": "sdo:category",
-        "identifier": "sdo:identifier",
-        "provider": "sdo:provider",
-        "name": "sdo:name",
-        "termCode": "sdo:termCode",
-        "inDefinedTermSet": "sdo:inDefinedTermSet",
-        "value": "sdo:value",
-        "propertyID": "sdo:propertyID"
-      }
-    },
     "HistoricalLocations@iot.navigationLink": {
       "@id": "dct:coverage",
       "@type": "@id"
@@ -197,15 +169,13 @@ Links to the schema:
       "@id": "sosa-oms:makesObservationCollection",
       "@type": "@id"
     },
-    "@iot.id": "@id",
     "@iot.selfLink": {
       "@id": "orel:iana/1.0/self",
       "@type": "@id"
     },
-    "orel": "http://www.opengis.net/def/rel/",
     "dct": "http://purl.org/dc/terms/",
-    "sdo": "https://schema.org/",
     "sosa-oms": "sosa:oms/",
+    "orel": "http://www.opengis.net/def/rel/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "@version": 1.1
   }

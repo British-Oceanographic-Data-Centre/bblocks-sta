@@ -1,0 +1,72 @@
+
+
+{
+  "itemIdentifier": "ogc.api.sta.Thing.TopLevelContext",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "STA Thing Top-Level Context",
+  "highlighted": true,
+  "abstract": "Top-level JSON-LD context shared by SensorThings API Thing representations.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-06T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-11-06",
+  "link": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "sources": [
+    {
+      "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+      "link": "https://docs.ogc.org/is/18-088/18-088.html"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "STA",
+    "JSON-LD",
+    "Schema.org"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/TopLevelContext/context.jsonld",
+  "schema": {
+    "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/TopLevelContext/schema.yaml",
+    "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/TopLevelContext/schema.json"
+  },
+  "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/TopLevelContext/schema.yaml",
+  "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/TopLevelContext/context.jsonld",
+  "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/TopLevelContext/resolvedProperties.json",
+  "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/TopLevelContext/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Thing/TopLevelContext/",
+  "description": "## SensorThings API Thing top-level context\n\nThis building block defines the shared JSON-LD mapping for the `properties`\nmember of SensorThings API Thing representations.\n\nEntity-specific contexts, such as the Thing context, can be applied within the\ntop-level context without duplicating these shared property mappings.\n",
+  "examples": [
+    {
+      "title": "Shared SensorThings API properties",
+      "base-uri": "http://w3id.org/ogcincubator/bblocks-sta/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/TopLevelContext/examples/Context.json",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/TopLevelContext/example_1_1.json",
+          "sizeBytes": 149,
+          "code": "{\n  \"properties\": {\n    \"category\": \"platform\",\n    \"identifier\": \"example-platform-1\",\n    \"name\": \"Example platform\",\n    \"value\": \"example\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/TopLevelContext/example_1_1.jsonld",
+          "sizeBytes": 290,
+          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/TopLevelContext/context.jsonld\",\n  \"properties\": {\n    \"category\": \"platform\",\n    \"identifier\": \"example-platform-1\",\n    \"name\": \"Example platform\",\n    \"value\": \"example\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/TopLevelContext/example_1_1.ttl",
+          "sizeBytes": 239,
+          "code": "@prefix schema: <https://schema.org/> .\n\n[] schema:additionalProperty [ schema:category \"platform\" ;\n            schema:identifier \"example-platform-1\" ;\n            schema:name \"Example platform\" ;\n            schema:value \"example\" ] .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\ntitle: SensorThings API Thing top-level context\ndescription: Shared top-level properties used by SensorThings API Thing representations.\ntype: object\nadditionalProperties: true\nproperties:\n  properties:\n    type: object\n    additionalProperties: true\n    x-jsonld-id: https://schema.org/additionalProperty\n    x-jsonld-extra-terms:\n      category: https://schema.org/category\n      identifier: https://schema.org/identifier\n      provider: https://schema.org/provider\n      name: https://schema.org/name\n      termCode: https://schema.org/termCode\n      inDefinedTermSet: https://schema.org/inDefinedTermSet\n      value: https://schema.org/value\n      propertyID: https://schema.org/propertyID\nx-jsonld-prefixes:\n  sdo: https://schema.org/\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.sta.Thing.TopLevelContext\n  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-06'\n",
+  "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "gitPath": "_sources/Thing/TopLevelContext"
+}
