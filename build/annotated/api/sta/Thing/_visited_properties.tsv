@@ -1,6 +1,6 @@
 path	@id	schema
 /@iot.id		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
-/@iot.selfLink		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self	/github/workspace/build/annotated/api/sta/Thing/schema.yaml
 /parameters		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
 /phenomenonTime		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
 /result		/github/workspace/build/annotated/api/sta/Thing/schema.yaml

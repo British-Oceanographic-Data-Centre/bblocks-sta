@@ -9,26 +9,30 @@ JSON-LD context applied to each SensorThings API Thing occurrence.
 
 ## Description
 
-## SensorThings API Thing occurrence context
+## SensorThings API Thing custom properties context
 
-This building block defines the JSON-LD mappings applied to each Thing
-occurrence, including its name, description, self link, and navigation links.
+This building block defines the JSON-LD mapping for the custom `properties`
+member attached to each SensorThings API Thing occurrence.
 
-The parent Thing context supplies the shared top-level `properties` mapping.
+The parent Thing context supplies the entity-level mappings for its name,
+description, self link, and navigation links.
 
 ## Examples
 
-### SensorThings API Thing occurrence
+### SensorThings API Thing custom properties
 #### json
 ```json
 {
-  "@iot.id": 1,
-  "@iot.selfLink": "http://example.org/v1.1/Things(1)",
-  "name": "Oven",
-  "description": "This thing is an oven.",
-  "Locations@iot.navigationLink": "http://example.org/v1.1/Things(1)/Locations",
-  "Datastreams@iot.navigationLink": "http://example.org/v1.1/Things(1)/Datastreams",
-  "HistoricalLocations@iot.navigationLink": "http://example.org/v1.1/Things(1)/HistoricalLocations"
+  "properties": {
+    "category": "platform",
+    "identifier": "example-platform-1",
+    "provider": "Example provider",
+    "name": "Example platform",
+    "termCode": "platform",
+    "inDefinedTermSet": "https://example.org/vocabulary",
+    "value": "example",
+    "propertyID": "platform-type"
+  }
 }
 
 ```
@@ -37,26 +41,31 @@ The parent Thing context supplies the shared top-level `properties` mapping.
 ```jsonld
 {
   "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/Properties/context.jsonld",
-  "@iot.id": 1,
-  "@iot.selfLink": "http://example.org/v1.1/Things(1)",
-  "name": "Oven",
-  "description": "This thing is an oven.",
-  "Locations@iot.navigationLink": "http://example.org/v1.1/Things(1)/Locations",
-  "Datastreams@iot.navigationLink": "http://example.org/v1.1/Things(1)/Datastreams",
-  "HistoricalLocations@iot.navigationLink": "http://example.org/v1.1/Things(1)/HistoricalLocations"
+  "properties": {
+    "category": "platform",
+    "identifier": "example-platform-1",
+    "provider": "Example provider",
+    "name": "Example platform",
+    "termCode": "platform",
+    "inDefinedTermSet": "https://example.org/vocabulary",
+    "value": "example",
+    "propertyID": "platform-type"
+  }
 }
 ```
 
 #### ttl
 ```ttl
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/> .
+@prefix schema: <https://schema.org/> .
 
-[] dcterms:coverage <http://example.org/v1.1/Things(1)/HistoricalLocations> ;
-    dcterms:description "This thing is an oven." ;
-    dcterms:spatial <http://example.org/v1.1/Things(1)/Locations> ;
-    dcterms:title "Oven" ;
-    sosa-oms:makesObservationCollection <http://example.org/v1.1/Things(1)/Datastreams> .
+[] schema:additionalProperty [ schema:category "platform" ;
+            schema:identifier "example-platform-1" ;
+            schema:inDefinedTermSet "https://example.org/vocabulary" ;
+            schema:name "Example platform" ;
+            schema:propertyID "platform-type" ;
+            schema:provider "Example provider" ;
+            schema:termCode "platform" ;
+            schema:value "example" ] .
 
 
 ```
@@ -65,30 +74,26 @@ The parent Thing context supplies the shared top-level `properties` mapping.
 
 ```yaml
 $schema: http://json-schema.org/draft-04/schema#
-title: SensorThings API Thing occurrence
-description: A Thing occurrence using the entity-level JSON-LD context.
-allOf:
-- $ref: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml
-x-jsonld-extra-terms:
-  name: http://purl.org/dc/terms/title
-  description: http://purl.org/dc/terms/description
-  HistoricalLocations@iot.navigationLink:
-    x-jsonld-id: http://purl.org/dc/terms/coverage
-    x-jsonld-type: '@id'
-  Locations@iot.navigationLink:
-    x-jsonld-id: http://purl.org/dc/terms/spatial
-    x-jsonld-type: '@id'
-  Datastreams@iot.navigationLink:
-    x-jsonld-id: http://www.w3.org/ns/sosa/oms/makesObservationCollection
-    x-jsonld-type: '@id'
-  '@iot.selfLink':
-    x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self
-    x-jsonld-type: '@id'
+title: SensorThings API Thing custom properties
+description: Custom properties attached to a SensorThings API Thing occurrence.
+type: object
+additionalProperties: true
+properties:
+  properties:
+    type: object
+    additionalProperties: true
+    x-jsonld-id: https://schema.org/additionalProperty
+    x-jsonld-extra-terms:
+      category: https://schema.org/category
+      identifier: https://schema.org/identifier
+      provider: https://schema.org/provider
+      name: https://schema.org/name
+      termCode: https://schema.org/termCode
+      inDefinedTermSet: https://schema.org/inDefinedTermSet
+      value: https://schema.org/value
+      propertyID: https://schema.org/propertyID
 x-jsonld-prefixes:
-  dct: http://purl.org/dc/terms/
-  sosa-oms: http://www.w3.org/ns/sosa/oms/
-  orel: http://www.opengis.net/def/rel/
-  sosa: http://www.w3.org/ns/sosa/
+  sdo: https://schema.org/
 x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.Thing.Properties
   register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
@@ -109,7 +114,6 @@ Links to the schema:
 {
   "@context": {
     "properties": {
-      "@id": "sdo:additionalProperty",
       "@context": {
         "category": "sdo:category",
         "identifier": "sdo:identifier",
@@ -119,31 +123,10 @@ Links to the schema:
         "inDefinedTermSet": "sdo:inDefinedTermSet",
         "value": "sdo:value",
         "propertyID": "sdo:propertyID"
-      }
-    },
-    "@iot.selfLink": {
-      "@id": "orel:iana/1.0/self",
-      "@type": "@id"
-    },
-    "name": "dct:title",
-    "description": "dct:description",
-    "HistoricalLocations@iot.navigationLink": {
-      "@id": "dct:coverage",
-      "@type": "@id"
-    },
-    "Locations@iot.navigationLink": {
-      "@id": "dct:spatial",
-      "@type": "@id"
-    },
-    "Datastreams@iot.navigationLink": {
-      "@id": "sosa-oms:makesObservationCollection",
-      "@type": "@id"
+      },
+      "@id": "sdo:additionalProperty"
     },
     "sdo": "https://schema.org/",
-    "dct": "http://purl.org/dc/terms/",
-    "sosa-oms": "sosa:oms/",
-    "orel": "http://www.opengis.net/def/rel/",
-    "sosa": "http://www.w3.org/ns/sosa/",
     "@version": 1.1
   }
 }

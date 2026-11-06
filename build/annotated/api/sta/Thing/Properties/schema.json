@@ -1,37 +1,28 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "SensorThings API Thing occurrence",
-  "description": "A Thing occurrence using the entity-level JSON-LD context.",
-  "allOf": [
-    {
-      "$ref": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.json"
-    }
-  ],
-  "x-jsonld-extra-terms": {
-    "name": "http://purl.org/dc/terms/title",
-    "description": "http://purl.org/dc/terms/description",
-    "HistoricalLocations@iot.navigationLink": {
-      "x-jsonld-id": "http://purl.org/dc/terms/coverage",
-      "x-jsonld-type": "@id"
-    },
-    "Locations@iot.navigationLink": {
-      "x-jsonld-id": "http://purl.org/dc/terms/spatial",
-      "x-jsonld-type": "@id"
-    },
-    "Datastreams@iot.navigationLink": {
-      "x-jsonld-id": "http://www.w3.org/ns/sosa/oms/makesObservationCollection",
-      "x-jsonld-type": "@id"
-    },
-    "@iot.selfLink": {
-      "x-jsonld-id": "http://www.opengis.net/def/rel/iana/1.0/self",
-      "x-jsonld-type": "@id"
+  "title": "SensorThings API Thing custom properties",
+  "description": "Custom properties attached to a SensorThings API Thing occurrence.",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "properties": {
+      "type": "object",
+      "additionalProperties": true,
+      "x-jsonld-id": "https://schema.org/additionalProperty",
+      "x-jsonld-extra-terms": {
+        "category": "https://schema.org/category",
+        "identifier": "https://schema.org/identifier",
+        "provider": "https://schema.org/provider",
+        "name": "https://schema.org/name",
+        "termCode": "https://schema.org/termCode",
+        "inDefinedTermSet": "https://schema.org/inDefinedTermSet",
+        "value": "https://schema.org/value",
+        "propertyID": "https://schema.org/propertyID"
+      }
     }
   },
   "x-jsonld-prefixes": {
-    "dct": "http://purl.org/dc/terms/",
-    "sosa-oms": "http://www.w3.org/ns/sosa/oms/",
-    "orel": "http://www.opengis.net/def/rel/",
-    "sosa": "http://www.w3.org/ns/sosa/"
+    "sdo": "https://schema.org/"
   },
   "x-bblocks-metadata": {
     "itemIdentifier": "ogc.api.sta.Thing.Properties",
