@@ -1,5 +1,5 @@
 Validation report for ogc.api.sta.Locations - STA Location
-Generated 2026-11-06T15:37:39.577446+00:00
+Generated 2026-11-06T16:19:39.038470+00:00
 === Files ===
 Using examples/Location.json from examples
 JSON-LD context is present - uplifting

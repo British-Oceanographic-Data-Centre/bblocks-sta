@@ -52,12 +52,6 @@ An ObservedProperty specifies the phenomenon of an Observation. It defines what 
 
 A Sensor is an instrument that observes a property or phenomenon with the goal of producing an estimate of the value of the property.
 
-### `ogc.api.sta.Thing.TopLevelContext` — STA Thing Top-Level Context
-
-**Type:** schema
-
-Top-level JSON-LD context shared by SensorThings API Thing representations.
-
 ### `ogc.api.sta.Thing` — STA Thing
 
 **Type:** schema
@@ -75,4 +69,10 @@ Profile of STA where the values of a Datastream are modelled as a sub-collection
 **Type:** schema
 
 Metadata about a coherent set of observations - linked to a stream of observations. [OGC 10-004r3 / ISO 19156:2011]
+
+### `ogc.api.sta.Thing.Properties` — STA Thing Properties Context
+
+**Type:** schema
+
+JSON-LD context applied to each SensorThings API Thing occurrence.
 

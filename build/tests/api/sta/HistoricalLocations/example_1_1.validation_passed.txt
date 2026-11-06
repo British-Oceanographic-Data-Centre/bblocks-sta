@@ -1,5 +1,5 @@
 Validation report for ogc.api.sta.HistoricalLocations - STA HistoricalLocation
-Generated 2026-11-06T15:37:39.572310+00:00
+Generated 2026-11-06T16:19:39.028457+00:00
 === Files ===
 Using examples/HistoricalLocation.json from examples
 JSON-LD context is present - uplifting

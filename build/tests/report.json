@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.api.sta.Observation - STA Observation",
       "bblockName": "STA Observation",
       "bblockId": "ogc.api.sta.Observation",
-      "generated": "2026-11-06T15:37:39.557325+00:00",
+      "generated": "2026-11-06T16:19:39.000740+00:00",
       "result": true,
       "items": [
         {
@@ -82,7 +82,7 @@
       "title": "Validation report for ogc.api.sta.Datastream - STA Datastream",
       "bblockName": "STA Datastream",
       "bblockId": "ogc.api.sta.Datastream",
-      "generated": "2026-11-06T15:37:39.562945+00:00",
+      "generated": "2026-11-06T16:19:39.010932+00:00",
       "result": true,
       "items": [
         {
@@ -154,7 +154,7 @@
       "title": "Validation report for ogc.api.sta.FeatureOfInterest - STA FeatureOfInterest (FOI)",
       "bblockName": "STA FeatureOfInterest (FOI)",
       "bblockId": "ogc.api.sta.FeatureOfInterest",
-      "generated": "2026-11-06T15:37:39.567890+00:00",
+      "generated": "2026-11-06T16:19:39.020180+00:00",
       "result": true,
       "items": [
         {
@@ -226,7 +226,7 @@
       "title": "Validation report for ogc.api.sta.HistoricalLocations - STA HistoricalLocation",
       "bblockName": "STA HistoricalLocation",
       "bblockId": "ogc.api.sta.HistoricalLocations",
-      "generated": "2026-11-06T15:37:39.572340+00:00",
+      "generated": "2026-11-06T16:19:39.028558+00:00",
       "result": true,
       "items": [
         {
@@ -298,7 +298,7 @@
       "title": "Validation report for ogc.api.sta.Locations - STA Location",
       "bblockName": "STA Location",
       "bblockId": "ogc.api.sta.Locations",
-      "generated": "2026-11-06T15:37:39.577477+00:00",
+      "generated": "2026-11-06T16:19:39.038576+00:00",
       "result": true,
       "items": [
         {
@@ -370,7 +370,7 @@
       "title": "Validation report for ogc.api.sta.ObservedProperty - STA ObservedProperty",
       "bblockName": "STA ObservedProperty",
       "bblockId": "ogc.api.sta.ObservedProperty",
-      "generated": "2026-11-06T15:37:39.582179+00:00",
+      "generated": "2026-11-06T16:19:39.047449+00:00",
       "result": true,
       "items": [
         {
@@ -442,7 +442,7 @@
       "title": "Validation report for ogc.api.sta.Sensor - STA Sensor",
       "bblockName": "STA Sensor",
       "bblockId": "ogc.api.sta.Sensor",
-      "generated": "2026-11-06T15:37:39.586977+00:00",
+      "generated": "2026-11-06T16:19:39.056718+00:00",
       "result": true,
       "items": [
         {
@@ -510,83 +510,11 @@
         "failed": 0
       }
     },
-    "ogc.api.sta.Thing.TopLevelContext": {
-      "title": "Validation report for ogc.api.sta.Thing.TopLevelContext - STA Thing Top-Level Context",
-      "bblockName": "STA Thing Top-Level Context",
-      "bblockId": "ogc.api.sta.Thing.TopLevelContext",
-      "generated": "2026-11-06T15:37:39.591388+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/api/sta/Thing/TopLevelContext/example_1_1.json",
-            "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/TopLevelContext/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "hasWarnings": false,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/Context.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 5,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "hasWarnings": false,
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
     "ogc.api.sta.Thing": {
       "title": "Validation report for ogc.api.sta.Thing - STA Thing",
       "bblockName": "STA Thing",
       "bblockId": "ogc.api.sta.Thing",
-      "generated": "2026-11-06T15:37:39.596540+00:00",
+      "generated": "2026-11-06T16:19:39.065194+00:00",
       "result": true,
       "items": [
         {
@@ -625,7 +553,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 5,
+                  "size": 1,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }
@@ -658,7 +586,7 @@
       "title": "Validation report for ogc.api.sta.Datastream.Datastream-Values-ObsCollection - STA Datastream Values as ObservationCollection",
       "bblockName": "STA Datastream Values as ObservationCollection",
       "bblockId": "ogc.api.sta.Datastream.Datastream-Values-ObsCollection",
-      "generated": "2026-11-06T15:37:39.603334+00:00",
+      "generated": "2026-11-06T16:19:39.078208+00:00",
       "result": true,
       "items": [
         {
@@ -730,7 +658,7 @@
       "title": "Validation report for ogc.api.sta.Datastream-Collection - STA Datastream as ObsCollection",
       "bblockName": "STA Datastream as ObsCollection",
       "bblockId": "ogc.api.sta.Datastream-Collection",
-      "generated": "2026-11-06T15:37:39.608673+00:00",
+      "generated": "2026-11-06T16:19:39.088055+00:00",
       "result": true,
       "items": [
         {
@@ -770,6 +698,78 @@
                   "empty": false,
                   "filename": "example_1_1.ttl",
                   "size": 9,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "hasWarnings": false,
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "ogc.api.sta.Thing.Properties": {
+      "title": "Validation report for ogc.api.sta.Thing.Properties - STA Thing Properties Context",
+      "bblockName": "STA Thing Properties Context",
+      "bblockId": "ogc.api.sta.Thing.Properties",
+      "generated": "2026-11-06T16:19:39.096617+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/api/sta/Thing/Properties/example_1_1.json",
+            "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/Properties/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "hasWarnings": false,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/Thing.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 5,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }

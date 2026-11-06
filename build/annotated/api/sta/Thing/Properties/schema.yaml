@@ -1,0 +1,30 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: SensorThings API Thing occurrence
+description: A Thing occurrence using the entity-level JSON-LD context.
+allOf:
+- $ref: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml
+x-jsonld-extra-terms:
+  name: http://purl.org/dc/terms/title
+  description: http://purl.org/dc/terms/description
+  HistoricalLocations@iot.navigationLink:
+    x-jsonld-id: http://purl.org/dc/terms/coverage
+    x-jsonld-type: '@id'
+  Locations@iot.navigationLink:
+    x-jsonld-id: http://purl.org/dc/terms/spatial
+    x-jsonld-type: '@id'
+  Datastreams@iot.navigationLink:
+    x-jsonld-id: http://www.w3.org/ns/sosa/oms/makesObservationCollection
+    x-jsonld-type: '@id'
+  '@iot.selfLink':
+    x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self
+    x-jsonld-type: '@id'
+x-jsonld-prefixes:
+  dct: http://purl.org/dc/terms/
+  sosa-oms: http://www.w3.org/ns/sosa/oms/
+  orel: http://www.opengis.net/def/rel/
+  sosa: http://www.w3.org/ns/sosa/
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.sta.Thing.Properties
+  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-06'

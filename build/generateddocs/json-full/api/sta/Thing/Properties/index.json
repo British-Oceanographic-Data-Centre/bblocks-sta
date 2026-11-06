@@ -1,0 +1,75 @@
+
+
+{
+  "itemIdentifier": "ogc.api.sta.Thing.Properties",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "STA Thing Properties Context",
+  "highlighted": true,
+  "abstract": "JSON-LD context applied to each SensorThings API Thing occurrence.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-06T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-11-06",
+  "link": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "sources": [
+    {
+      "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+      "link": "https://docs.ogc.org/is/18-088/18-088.html"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "STA",
+    "JSON-LD",
+    "Schema.org"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.api.sta.Thing"
+  ],
+  "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/Properties/context.jsonld",
+  "schema": {
+    "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/Properties/schema.yaml",
+    "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/Properties/schema.json"
+  },
+  "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/Properties/schema.yaml",
+  "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/Properties/context.jsonld",
+  "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/Properties/resolvedProperties.json",
+  "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/Properties/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Thing/Properties/",
+  "description": "## SensorThings API Thing occurrence context\n\nThis building block defines the JSON-LD mappings applied to each Thing\noccurrence, including its name, description, self link, and navigation links.\n\nThe parent Thing context supplies the shared top-level `properties` mapping.\n",
+  "examples": [
+    {
+      "title": "SensorThings API Thing occurrence",
+      "base-uri": "http://w3id.org/ogcincubator/bblocks-sta/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/Properties/examples/Thing.json",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/Properties/example_1_1.json",
+          "sizeBytes": 403,
+          "code": "{\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Things(1)\",\n  \"name\": \"Oven\",\n  \"description\": \"This thing is an oven.\",\n  \"Locations@iot.navigationLink\": \"http://example.org/v1.1/Things(1)/Locations\",\n  \"Datastreams@iot.navigationLink\": \"http://example.org/v1.1/Things(1)/Datastreams\",\n  \"HistoricalLocations@iot.navigationLink\": \"http://example.org/v1.1/Things(1)/HistoricalLocations\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/Properties/example_1_1.jsonld",
+          "sizeBytes": 539,
+          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/Properties/context.jsonld\",\n  \"@iot.id\": 1,\n  \"@iot.selfLink\": \"http://example.org/v1.1/Things(1)\",\n  \"name\": \"Oven\",\n  \"description\": \"This thing is an oven.\",\n  \"Locations@iot.navigationLink\": \"http://example.org/v1.1/Things(1)/Locations\",\n  \"Datastreams@iot.navigationLink\": \"http://example.org/v1.1/Things(1)/Datastreams\",\n  \"HistoricalLocations@iot.navigationLink\": \"http://example.org/v1.1/Things(1)/HistoricalLocations\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Thing/Properties/example_1_1.ttl",
+          "sizeBytes": 416,
+          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/> .\n\n[] dcterms:coverage <http://example.org/v1.1/Things(1)/HistoricalLocations> ;\n    dcterms:description \"This thing is an oven.\" ;\n    dcterms:spatial <http://example.org/v1.1/Things(1)/Locations> ;\n    dcterms:title \"Oven\" ;\n    sosa-oms:makesObservationCollection <http://example.org/v1.1/Things(1)/Datastreams> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\ntitle: SensorThings API Thing occurrence\ndescription: A Thing occurrence using the entity-level JSON-LD context.\nallOf:\n- $ref: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml\nx-jsonld-extra-terms:\n  name: http://purl.org/dc/terms/title\n  description: http://purl.org/dc/terms/description\n  HistoricalLocations@iot.navigationLink:\n    x-jsonld-id: http://purl.org/dc/terms/coverage\n    x-jsonld-type: '@id'\n  Locations@iot.navigationLink:\n    x-jsonld-id: http://purl.org/dc/terms/spatial\n    x-jsonld-type: '@id'\n  Datastreams@iot.navigationLink:\n    x-jsonld-id: http://www.w3.org/ns/sosa/oms/makesObservationCollection\n    x-jsonld-type: '@id'\n  '@iot.selfLink':\n    x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self\n    x-jsonld-type: '@id'\nx-jsonld-prefixes:\n  dct: http://purl.org/dc/terms/\n  sosa-oms: http://www.w3.org/ns/sosa/oms/\n  orel: http://www.opengis.net/def/rel/\n  sosa: http://www.w3.org/ns/sosa/\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.sta.Thing.Properties\n  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-06'\n",
+  "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "gitPath": "_sources/Thing/Properties"
+}

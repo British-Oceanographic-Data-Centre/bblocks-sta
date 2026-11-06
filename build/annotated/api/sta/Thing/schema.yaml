@@ -11,8 +11,6 @@ properties:
   '@iot.selfLink':
     type: string
     description: The direct link to the entity
-    x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self
-    x-jsonld-type: '@id'
   parameters:
     type: object
   phenomenonTime:
@@ -39,22 +37,19 @@ properties:
     type: string
     description: Reference link to the FeatureOfInterest.
 x-jsonld-extra-terms:
-  name: http://purl.org/dc/terms/title
-  description: http://purl.org/dc/terms/description
-  HistoricalLocations@iot.navigationLink:
-    x-jsonld-id: http://purl.org/dc/terms/coverage
-    x-jsonld-type: '@id'
-  Locations@iot.navigationLink:
-    x-jsonld-id: http://purl.org/dc/terms/spatial
-    x-jsonld-type: '@id'
-  Datastreams@iot.navigationLink:
-    x-jsonld-id: http://www.w3.org/ns/sosa/oms/makesObservationCollection
-    x-jsonld-type: '@id'
+  properties:
+    x-jsonld-id: https://schema.org/additionalProperty
+    x-jsonld-context:
+      category: https://schema.org/category
+      identifier: https://schema.org/identifier
+      provider: https://schema.org/provider
+      name: https://schema.org/name
+      termCode: https://schema.org/termCode
+      inDefinedTermSet: https://schema.org/inDefinedTermSet
+      value: https://schema.org/value
+      propertyID: https://schema.org/propertyID
 x-jsonld-prefixes:
-  dct: http://purl.org/dc/terms/
-  sosa-oms: http://www.w3.org/ns/sosa/oms/
-  orel: http://www.opengis.net/def/rel/
-  sosa: http://www.w3.org/ns/sosa/
+  sdo: https://schema.org/
 x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.Thing
   register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json

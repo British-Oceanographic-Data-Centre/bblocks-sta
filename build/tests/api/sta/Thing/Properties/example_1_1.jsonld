@@ -1,0 +1,10 @@
+{
+  "@context": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/Properties/context.jsonld",
+  "@iot.id": 1,
+  "@iot.selfLink": "http://example.org/v1.1/Things(1)",
+  "name": "Oven",
+  "description": "This thing is an oven.",
+  "Locations@iot.navigationLink": "http://example.org/v1.1/Things(1)/Locations",
+  "Datastreams@iot.navigationLink": "http://example.org/v1.1/Things(1)/Datastreams",
+  "HistoricalLocations@iot.navigationLink": "http://example.org/v1.1/Things(1)/HistoricalLocations"
+}

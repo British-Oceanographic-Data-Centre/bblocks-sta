@@ -1,5 +1,5 @@
 Validation report for ogc.api.sta.Datastream.Datastream-Values-ObsCollection - STA Datastream Values as ObservationCollection
-Generated 2026-11-06T15:37:39.603302+00:00
+Generated 2026-11-06T16:19:39.078141+00:00
 === Files ===
 Using examples/pnsc-sta.json from examples
 JSON-LD context is present - uplifting

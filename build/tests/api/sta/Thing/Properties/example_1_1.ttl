@@ -1,0 +1,9 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sosa-oms: <http://www.w3.org/ns/sosa/oms/> .
+
+[] dcterms:coverage <http://example.org/v1.1/Things(1)/HistoricalLocations> ;
+    dcterms:description "This thing is an oven." ;
+    dcterms:spatial <http://example.org/v1.1/Things(1)/Locations> ;
+    dcterms:title "Oven" ;
+    sosa-oms:makesObservationCollection <http://example.org/v1.1/Things(1)/Datastreams> .
+
