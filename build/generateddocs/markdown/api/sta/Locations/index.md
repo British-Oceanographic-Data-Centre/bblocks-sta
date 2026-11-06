@@ -158,6 +158,11 @@ x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   qudt: http://qudt.org/schema/qudt/
   prov: http://www.w3.org/ns/prov#
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.sta.Locations
+  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-06'
 
 ```
 

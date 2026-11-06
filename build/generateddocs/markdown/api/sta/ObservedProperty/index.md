@@ -122,6 +122,11 @@ x-jsonld-prefixes:
   sosa: http://www.w3.org/ns/sosa/
   sdo: https://schema.org/
   qudt: http://qudt.org/schema/qudt/
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.sta.ObservedProperty
+  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-06'
 
 ```
 

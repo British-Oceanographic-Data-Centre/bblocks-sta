@@ -12,7 +12,11 @@
       "prof": "http://www.w3.org/ns/dx/prof/",
       "dcat": "http://www.w3.org/ns/dcat#",
       "modspec": "http://www.opengis.net/def/ont/modspec/",
-      "itemIdentifier": "@id",
+      "void": "http://rdfs.org/ns/void#",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "role": "http://www.w3.org/ns/dx/prof/role/",
+      "shacl": "https://www.w3.org/TR/shacl/",
+      "owl": "http://www.w3.org/2002/07/owl#",
       "baseURL": "@id",
       "name": "rdfs:label",
       "abstract": {
@@ -39,6 +43,10 @@
         "@id": "dct:modified",
         "@type": "xsd:date"
       },
+      "modified": {
+        "@id": "dct:modified",
+        "@type": "xsd:dateTime"
+      },
       "scope": {
         "@id": "bblocks:scope",
         "@type": "@id",
@@ -53,14 +61,22 @@
           "link": "@id"
         }
       },
+      "license": {
+        "@id": "dct:license",
+        "@context": {
+          "name": "rdfs:label",
+          "url": {
+            "@id": "rdfs:seeAlso",
+            "@type": "@id"
+          }
+        }
+      },
       "schema": {
-        "@id": "bblocks:hasSchema",
-        "@type": "@id",
-        "@container": "@index",
-        "@index": "dct:format"
+        "@id": "prof:hasResource",
+        "@type": "@id"
       },
       "ldContext": {
-        "@id": "bblocks:hasJsonLdContext",
+        "@id": "prof:hasResource",
         "@type": "@id"
       },
       "sourceLdContext": {
@@ -74,8 +90,14 @@
         "@index": "dct:identifier",
         "@context": {
           "mediatype": "dct:format",
-          "url": "rdfs:isDefinedBy"
+          "url": {
+            "@id": "rdfs:isDefinedBy",
+            "@type": "@id"
+          }
         }
+      },
+      "rdfs:isDefinedBy": {
+        "@type": "@id"
       },
       "hasConcepts": {
         "@reverse": "skos:inScheme"
@@ -84,40 +106,123 @@
         "@id": "bblocks:dependsOn",
         "@type": "@id"
       },
-      "profileOf": {
+      "isProfileOf": {
         "@id": "prof:isProfileOf",
+        "@type": "@id"
+      },
+      "isDescribedBy": {
+        "@id": "http://www.iana.org/assignments/relation/describedby",
+        "@type": "@id"
+      },
+      "hasFormat": {
+        "@id": "dct:hasFormat",
+        "@type": "@id"
+      },
+      "seeAlso": {
+        "@id": "rdfs:seeAlso",
         "@type": "@id"
       },
       "tags": "dcat:keyword",
       "shaclShapes": {
-        "@id": "bblocks:hasShaclRule",
-        "@type": "@id",
-        "@container": "@index",
-        "@index": "rdfs:seeAlso"
+        "@id": "prof:hasResource",
+        "@type": "@id"
       },
       "validationReport": {
         "@id": "bblocks:hasValidationReport",
         "@type": "@id"
       },
+      "validationPassed": "bblocks:validationPassed",
       "imports": {
-        "@id": "bblocks:imports",
+        "@id": "owl:imports",
         "@type": "@id"
       },
       "conformanceClasses": {
         "@id": "modspec:class",
         "@type": "@id"
+      },
+      "requirementClasses": {
+        "@id": "modspec:requirementsClass",
+        "@type": "@id"
+      },
+      "sparqlEndpoint": {
+        "@id": "void:sparqlEndpoint",
+        "@type": "@id"
+      },
+      "viewerURL": {
+        "@id": "foaf:homepage",
+        "@type": "@id"
+      },
+      "dct:conformsTo": {
+        "@type": "@id"
+      },
+      "prof:hasRole": {
+        "@type": "@id"
+      },
+      "prof:hasArtifact": {
+        "@type": "@id"
+      },
+      "rdfs:seeAlso": {
+        "@type": "@id"
+      },
+      "ontology": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
+      },
+      "rdfData": {
+        "@id": "prof:hasResource",
+        "@type": "@id"
+      },
+      "links": {
+        "@id": "prof:hasResource",
+        "@context": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/context.jsonld"
+      },
+      "concept": {
+        "@id": "skos:closeMatch",
+        "@type": "@id"
+      },
+      "rdfType": {
+        "@id": "rdfs:subClassOf",
+        "@type": "@id"
+      },
+      "resources": {
+        "@id": "prof:hasResource",
+        "@context": {
+          "role": {
+            "@id": "prof:hasRole",
+            "@type": "@id"
+          },
+          "constraints": "role:constraints",
+          "example": "role:example",
+          "guidance": "role:guidance",
+          "mapping": "role:mapping",
+          "schema": "role:schema",
+          "specification": "role:specification",
+          "validation": "role:validation",
+          "vocabulary": "role:vocabulary",
+          "data": "role:data",
+          "ref": {
+            "@id": "prof:hasArtifact",
+            "@type": "@id"
+          },
+          "format": "dct:format",
+          "conformsTo": {
+            "@id": "dct:conformsTo",
+            "@type": "@id"
+          }
+        }
       }
     }
   ],
+  "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
   "name": "Building Blocks - Sensor Things API Building Blocks",
   "abstract": "This is set of data [building blocks](https://ogcincubator.github.io/bblocks-docs/) describing reusable components of the Sensor Things API 1.1.  Building blocks provide elements that may be reused, and mappings to the underlying OMS model via the SOSA ontology. \n",
   "description": "Initial work on the bblocks extraction was done for the particular cases of the Iliad project.\nThis initial draft can be missing some elements of the STA and relax on some formal constraints for the better support of the JSON Schema, OpenAPI 3.0.1 and JSON-LD specifications.\nThe mapping of schema elements to formal definitions (JSON-LD context files) shall be treated as draft proposition.\n",
-  "modified": "2025-10-03T15:54:07.797654",
+  "modified": "2026-11-06T15:29:21.065621",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
-      "shortCommitId": "\"cbdf07",
-      "date": "2025-09-30T10:25:21+00:00\""
+      "commitId": "\"fe84508ca45c287cb2c58b84725ef6cc398b9e4c",
+      "shortCommitId": "\"fe8450",
+      "date": "2026-11-06T11:55:06+00:00\""
     }
   },
   "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
@@ -125,13 +230,35 @@
   "baseURL": "https://british-oceanographic-data-centre.github.io/bblocks-sta/",
   "viewerURL": "https://british-oceanographic-data-centre.github.io/bblocks-sta/",
   "validationReport": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/report.html",
+  "validationReportJson": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/report.json",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json"
   ],
   "remoteCacheDir": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ],
   "@type": [
     "skos:ConceptScheme",
-    "dcat:Catalog"
+    "dcat:Catalog",
+    "bblocks:BBlocksRegister"
   ],
   "skos:prefLabel": "Building Blocks - Sensor Things API Building Blocks",
   "hasConcepts": [
@@ -146,7 +273,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -161,16 +288,31 @@
         "OMS",
         "SOSA"
       ],
-      "shaclShapes": {},
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json"
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Observation/",
       "documentation": {
@@ -187,11 +329,23 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Observation"
         }
       },
+      "@id": "bblocks://ogc.api.sta.Observation",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA Observation",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.sta.Datastream",
@@ -204,7 +358,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -219,16 +373,31 @@
         "OMS",
         "SOSA"
       ],
-      "shaclShapes": {},
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.json"
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream/",
       "documentation": {
@@ -245,11 +414,23 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream"
         }
       },
+      "@id": "bblocks://ogc.api.sta.Datastream",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA Datastream",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.sta.FeatureOfInterest",
@@ -261,7 +442,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -274,16 +455,31 @@
       "tags": [
         "templates"
       ],
-      "shaclShapes": {},
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.json"
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/FeatureOfInterest/",
       "documentation": {
@@ -300,11 +496,23 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.FeatureOfInterest"
         }
       },
+      "@id": "bblocks://ogc.api.sta.FeatureOfInterest",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA FeatureOfInterest (FOI)",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.sta.HistoricalLocations",
@@ -317,7 +525,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -333,16 +541,31 @@
         "PROV",
         "GeoJSON"
       ],
-      "shaclShapes": {},
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/schema.json"
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/HistoricalLocations/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/HistoricalLocations/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/HistoricalLocations/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/HistoricalLocations/",
       "documentation": {
@@ -359,11 +582,23 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.HistoricalLocations"
         }
       },
+      "@id": "bblocks://ogc.api.sta.HistoricalLocations",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA HistoricalLocation",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.sta.Locations",
@@ -376,7 +611,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -392,16 +627,31 @@
         "Location",
         "SOSA"
       ],
-      "shaclShapes": {},
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/schema.json"
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Locations/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Locations/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Locations/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Locations/",
       "documentation": {
@@ -418,11 +668,23 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Locations"
         }
       },
+      "@id": "bblocks://ogc.api.sta.Locations",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA Location",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.sta.ObservedProperty",
@@ -435,7 +697,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -451,16 +713,31 @@
         "SOSA",
         "I-ADOPT"
       ],
-      "shaclShapes": {},
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.json"
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/ObservedProperty/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/ObservedProperty/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/ObservedProperty/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/ObservedProperty/",
       "documentation": {
@@ -477,11 +754,23 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.ObservedProperty"
         }
       },
+      "@id": "bblocks://ogc.api.sta.ObservedProperty",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA ObservedProperty",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.sta.Sensor",
@@ -494,7 +783,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -509,16 +798,31 @@
         "OMS",
         "SOSA"
       ],
-      "shaclShapes": {},
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.json"
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Sensor/",
       "documentation": {
@@ -535,11 +839,23 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Sensor"
         }
       },
+      "@id": "bblocks://ogc.api.sta.Sensor",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA Sensor",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.sta.Thing",
@@ -552,7 +868,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -567,16 +883,31 @@
         "OMS",
         "SOSA"
       ],
-      "shaclShapes": {},
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.json"
+      "shaclShapes": null,
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Thing/",
       "documentation": {
@@ -593,11 +924,23 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Thing"
         }
       },
+      "@id": "bblocks://ogc.api.sta.Thing",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA Thing",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "dependsOn": null,
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.sta.Datastream.Datastream-Values-ObsCollection",
@@ -610,7 +953,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -625,19 +968,34 @@
         "OMS",
         "SOSA"
       ],
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.sta.Observation"
+        "bblocks://ogc.api.sta.Observation"
       ],
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.json"
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream/Datastream-Values-ObsCollection/",
       "documentation": {
@@ -654,11 +1012,22 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream.Datastream-Values-ObsCollection"
         }
       },
+      "@id": "bblocks://ogc.api.sta.Datastream.Datastream-Values-ObsCollection",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA Datastream Values as ObservationCollection",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
     },
     {
       "itemIdentifier": "ogc.api.sta.Datastream-Collection",
@@ -671,7 +1040,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -686,19 +1055,34 @@
         "OMS",
         "SOSA"
       ],
-      "shaclShapes": {},
+      "shaclShapes": null,
       "dependsOn": [
-        "ogc.api.sta.Datastream"
+        "bblocks://ogc.api.sta.Datastream"
       ],
-      "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/context.jsonld",
-      "schema": {
-        "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.yaml",
-        "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.json"
+      "ldContext": {
+        "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream-Collection/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream-Collection/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream-Collection/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream-Collection/",
       "documentation": {
@@ -715,11 +1099,54 @@
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream-Collection"
         }
       },
+      "@id": "bblocks://ogc.api.sta.Datastream-Collection",
       "@type": [
         "bblocks:Schema",
         "skos:Concept",
-        "dcat:Dataset"
-      ]
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "STA Datastream as ObsCollection",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://british-oceanographic-data-centre.github.io/bblocks-sta/"
+      }
+    }
+  ],
+  "skos:hasTopConcept": [
+    {
+      "@id": "bblocks://ogc.api.sta.Observation"
+    },
+    {
+      "@id": "bblocks://ogc.api.sta.Datastream"
+    },
+    {
+      "@id": "bblocks://ogc.api.sta.FeatureOfInterest"
+    },
+    {
+      "@id": "bblocks://ogc.api.sta.HistoricalLocations"
+    },
+    {
+      "@id": "bblocks://ogc.api.sta.Locations"
+    },
+    {
+      "@id": "bblocks://ogc.api.sta.ObservedProperty"
+    },
+    {
+      "@id": "bblocks://ogc.api.sta.Sensor"
+    },
+    {
+      "@id": "bblocks://ogc.api.sta.Thing"
+    },
+    {
+      "@id": "bblocks://ogc.api.sta.Datastream.Datastream-Values-ObsCollection"
+    },
+    {
+      "@id": "bblocks://ogc.api.sta.Datastream-Collection"
     }
   ]
 }

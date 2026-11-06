@@ -1,11 +1,11 @@
-path	@id
-/@iot.id	@id
-/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
-/parameters	
-/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/result	http://www.w3.org/ns/sosa/hasSimpleResult
-/resultQuality	http://www.w3.org/ns/dqv#hasQualityMeasurement
-/resultTime	http://www.w3.org/ns/sosa/resultTime
-/validTime	
-/Datastream@iot.navigationLink	http://www.w3.org/ns/sosa/usedProcedure
-/FeatureOfInterest@iot.navigationLink	http://www.w3.org/ns/sosa/hasFeatureOfInterest
+path	@id	schema
+/@iot.id	@id	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/parameters		/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/result	http://www.w3.org/ns/sosa/hasSimpleResult	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/resultQuality	http://www.w3.org/ns/dqv#hasQualityMeasurement	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/resultTime	http://www.w3.org/ns/sosa/resultTime	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/validTime		/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/Datastream@iot.navigationLink	http://www.w3.org/ns/sosa/usedProcedure	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/FeatureOfInterest@iot.navigationLink	http://www.w3.org/ns/sosa/hasFeatureOfInterest	/github/workspace/build/annotated/api/sta/Observation/schema.yaml

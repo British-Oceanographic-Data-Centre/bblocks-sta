@@ -1,11 +1,11 @@
-path	@id
-/@iot.id	@id
-/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
-/parameters	
-/phenomenonTime	
-/result	
-/resultQuality	
-/resultTime	
-/validTime	
-/Datastream@iot.navigationLink	
-/FeatureOfInterest@iot.navigationLink	
+path	@id	schema
+/@iot.id	@id	/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self	/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/parameters		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/phenomenonTime		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/result		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/resultQuality		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/resultTime		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/validTime		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/Datastream@iot.navigationLink		/github/workspace/build/annotated/api/sta/Thing/schema.yaml
+/FeatureOfInterest@iot.navigationLink		/github/workspace/build/annotated/api/sta/Thing/schema.yaml

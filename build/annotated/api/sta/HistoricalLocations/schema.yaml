@@ -34,3 +34,8 @@ x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
   prov: http://www.w3.org/ns/prov#
   geo: http://www.opengis.net/ont/geosparql#
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.sta.HistoricalLocations
+  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-06'

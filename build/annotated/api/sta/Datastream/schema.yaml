@@ -66,3 +66,8 @@ x-jsonld-prefixes:
   dbo: http://dbpedia.org/ontology/
   prov: http://www.w3.org/ns/prov#
   sta: https://schemas.opengis.org/sta/def/core#
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.sta.Datastream
+  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-06'

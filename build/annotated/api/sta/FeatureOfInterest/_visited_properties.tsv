@@ -1,9 +1,9 @@
-path	@id
-/@iot.id	@id
-/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
-/name	http://purl.org/dc/terms/title
-/description	http://purl.org/dc/terms/description
-/encodingType	http://purl.org/dc/terms/format
-/feature	http://www.opengis.net/ont/geosparql#hasGeometry
-/properties	
-/Observations@iot.navigationLink	http://www.w3.org/ns/sosa/isFeatureOfInterestOf
+path	@id	schema
+/@iot.id	@id	/github/workspace/build/annotated/api/sta/FeatureOfInterest/schema.yaml
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self	/github/workspace/build/annotated/api/sta/FeatureOfInterest/schema.yaml
+/name	http://purl.org/dc/terms/title	/github/workspace/build/annotated/api/sta/FeatureOfInterest/schema.yaml
+/description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/api/sta/FeatureOfInterest/schema.yaml
+/encodingType	http://purl.org/dc/terms/format	/github/workspace/build/annotated/api/sta/FeatureOfInterest/schema.yaml
+/feature	http://www.opengis.net/ont/geosparql#hasGeometry	/github/workspace/build/annotated/api/sta/FeatureOfInterest/schema.yaml
+/properties		/github/workspace/build/annotated/api/sta/FeatureOfInterest/schema.yaml
+/Observations@iot.navigationLink	http://www.w3.org/ns/sosa/isFeatureOfInterestOf	/github/workspace/build/annotated/api/sta/FeatureOfInterest/schema.yaml

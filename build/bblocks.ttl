@@ -1,289 +1,347 @@
 @prefix bblocks: <https://www.opengis.net/def/bblocks/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://british-oceanographic-data-centre.github.io/bblocks-sta/build/bblocks.ttl> a prov:Entity ;
-    dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N6c698c27ef0e4d00a20edff763ba25a8 ;
-    prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-10-03T15:54:10.678244"^^xsd:dateTime ;
-            prov:startedAtTime "2025-10-03T15:54:10.600415"^^xsd:dateTime ;
-            prov:used [ a prov:Entity ;
-                    dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-                [ a prov:Entity ;
-                    dct:format "application/json" ;
-                    dct:hasVersion "git:0ae75775cb2c598e1f858a94312d5218daf8361f" ;
-                    rdfs:seeAlso <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json> ] ;
-            prov:wasAssociatedWith _:N6c698c27ef0e4d00a20edff763ba25a8 ] .
-
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.Datastream-Collection> a skos:Concept,
+<bblocks://ogc.api.sta.Datastream-Collection> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "STA Datastream as ObsCollection" ;
     dct:abstract "Metadata about a coherent set of observations - linked to a stream of observations. [OGC 10-004r3 / ISO 19156:2011]"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream-Collection/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream-Collection" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream-Collection> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream-Collection/index.md" ] ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream-Collection/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream-Collection/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/18-088/18-088.html#datastream> ;
     skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA Datastream as ObsCollection" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
     dcat:keyword "OMS",
         "SOSA",
         "STA" ;
-    bblocks:dependsOn <https://british-oceanographic-data-centre.github.io/ogc.api.sta.Datastream> ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.api.sta.Datastream> ;
     bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream-Collection/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.Datastream.Datastream-Values-ObsCollection> a skos:Concept,
+<bblocks://ogc.api.sta.Datastream.Datastream-Values-ObsCollection> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "STA Datastream Values as ObservationCollection" ;
     dct:abstract "Profile of STA where the values of a Datastream are modelled as a sub-collection"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream/Datastream-Values-ObsCollection/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream.Datastream-Values-ObsCollection> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/Datastream-Values-ObsCollection/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream.Datastream-Values-ObsCollection" ] ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/Datastream-Values-ObsCollection/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream/Datastream-Values-ObsCollection/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/18-088/18-088.html#datastream> ;
     skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA Datastream Values as ObservationCollection" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
     dcat:keyword "OMS",
         "SOSA",
         "STA" ;
-    bblocks:dependsOn <https://british-oceanographic-data-centre.github.io/ogc.api.sta.Observation> ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.api.sta.Observation> ;
     bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.FeatureOfInterest> a skos:Concept,
+<bblocks://ogc.api.sta.FeatureOfInterest> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "STA FeatureOfInterest (FOI)" ;
     dct:abstract "Representation of the result of the FeatureOfInterest. "^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.FeatureOfInterest" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/FeatureOfInterest/index.md" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/FeatureOfInterest/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.FeatureOfInterest> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/FeatureOfInterest/index.json" ] ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/FeatureOfInterest/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/18-088/18-088.html> ;
     skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA FeatureOfInterest (FOI)" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
     dcat:keyword "templates" ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.HistoricalLocations> a skos:Concept,
+<bblocks://ogc.api.sta.HistoricalLocations> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "STA HistoricalLocation" ;
     dct:abstract "A HistoricalLocation represents the association of a Thing with its Location(s) at a specific time. It provides the temporal context for where a Thing was located, enabling tracking of movement or changes in position."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-10-02T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/HistoricalLocations/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/HistoricalLocations/index.json" ],
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/HistoricalLocations/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.HistoricalLocations" ] ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.HistoricalLocations> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/HistoricalLocations/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/18-088/18-088.html#historicallocation> ;
     skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA HistoricalLocation" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
     dcat:keyword "GeoJSON",
         "HistoricalLocation",
         "PROV",
         "STA" ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/HistoricalLocations/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.Locations> a skos:Concept,
+<bblocks://ogc.api.sta.Locations> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "STA Location" ;
     dct:abstract "A Location represents the spatial position of a Thing. Locations are encoded using a geometry, typically expressed in GeoJSON, and may include descriptive metadata. Locations can be associated with one or more Things and tracked historically through HistoricalLocations."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-10-02T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Locations/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Locations" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Locations> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Locations/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Locations/index.md" ] ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Locations/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/18-088/18-088.html#location> ;
     skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA Location" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
     dcat:keyword "GeoJSON",
         "Location",
         "SOSA",
         "STA" ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Locations/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.ObservedProperty> a skos:Concept,
+<bblocks://ogc.api.sta.ObservedProperty> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "STA ObservedProperty" ;
     dct:abstract "An ObservedProperty specifies the phenomenon of an Observation. It defines what is being observed or measured, typically referenced using a URI from a controlled vocabulary or ontology."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-10-02T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/ObservedProperty/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.ObservedProperty" ],
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/ObservedProperty/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/ObservedProperty/index.json" ] ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/ObservedProperty/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.ObservedProperty> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/18-088/18-088.html#observedproperty> ;
     skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA ObservedProperty" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
     dcat:keyword "I-ADOPT",
         "OMS",
         "SOSA",
         "STA" ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/ObservedProperty/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.Sensor> a skos:Concept,
+<bblocks://ogc.api.sta.Sensor> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "STA Sensor" ;
     dct:abstract "A Sensor is an instrument that observes a property or phenomenon with the goal of producing an estimate of the value of the property."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-02-10T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Sensor/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Sensor> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Sensor/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Sensor/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Sensor" ] ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Sensor/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/18-088/18-088.html#sensor> ;
     skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA Sensor" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
     dcat:keyword "OMS",
         "SOSA",
         "STA" ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.Thing> a skos:Concept,
+<bblocks://ogc.api.sta.Thing> a skos:Concept,
         dcat:Dataset,
+        bblocks:BBlock,
         bblocks:Schema ;
     rdfs:label "STA Thing" ;
     dct:abstract "A thing is an object of the physical world (physical things) or the information world (virtual things) that is capable of being identified and integrated into communication networks. [ITU-T Y.2060]"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Thing/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Thing/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Thing" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Thing/index.json" ] ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Thing> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Thing/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/18-088/18-088.html#thing> ;
     skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA Thing" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
     dcat:keyword "OMS",
         "SOSA",
         "STA" ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.Datastream> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "STA Datastream" ;
-    dct:abstract "Metadata about a coherent set of observations, linked to value stream. [OGC 10-004r3 / ISO 19156:2011]"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2024-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/index.md" ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
-    dct:source <https://docs.ogc.org/is/18-088/18-088.html#datastream> ;
-    skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
-    dcat:keyword "OMS",
-        "SOSA",
-        "STA" ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://british-oceanographic-data-centre.github.io/ogc.api.sta.Observation> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "STA Observation" ;
-    dct:abstract "Representation of the result of act of measuring or otherwise determining the value of a property. [OGC 10-004r3 / ISO 19156:2011]"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2024-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Observation" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Observation/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Observation/index.md" ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2025-10-03"^^xsd:date ;
-    dct:source <https://docs.ogc.org/is/18-088/18-088.html#observation> ;
-    skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
-    dcat:keyword "OMS",
-        "SOSA",
-        "STA" ;
-    bblocks:hasJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/context.jsonld> ;
-    bblocks:hasSchema <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json>,
-        <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+<https://british-oceanographic-data-centre.github.io/bblocks-sta/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N7bb7b85aac1c4f56aef8cbdb54873a1c ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-11-06T15:29:23.358233"^^xsd:dateTime ;
+            prov:startedAtTime "2026-11-06T15:29:23.123582"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:b74a90f72376f690bd8718d6475ff52ab7e30324" ;
+                    rdfs:seeAlso <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N7bb7b85aac1c4f56aef8cbdb54873a1c ] .
 
 <https://docs.ogc.org/is/18-088/18-088.html> rdfs:label "OGC SensorThings API Part 1: Sensing Version 1.1" .
 
@@ -299,10 +357,89 @@
 
 <https://docs.ogc.org/is/18-088/18-088.html#thing> rdfs:label "OGC SensorThings API Part 1: Sensing Version 1.1" .
 
+<bblocks://ogc.api.sta.Datastream> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "STA Datastream" ;
+    dct:abstract "Metadata about a coherent set of observations, linked to value stream. [OGC 10-004r3 / ISO 19156:2011]"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-02-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Datastream> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-11-06"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/18-088/18-088.html#datastream> ;
+    skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA Datastream" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    dcat:keyword "OMS",
+        "SOSA",
+        "STA" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.api.sta.Observation> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "STA Observation" ;
+    dct:abstract "Representation of the result of act of measuring or otherwise determining the value of a property. [OGC 10-004r3 / ISO 19156:2011]"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2024-02-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Observation/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/bblock/ogc.api.sta.Observation> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Observation/index.md> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-11-06"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/18-088/18-088.html#observation> ;
+    skos:inScheme <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    skos:prefLabel "STA Observation" ;
+    skos:topConceptOf <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    dcat:keyword "OMS",
+        "SOSA",
+        "STA" ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:hasSourceJsonLdContext <https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
 <https://docs.ogc.org/is/18-088/18-088.html#datastream> rdfs:label "OGC SensorThings API Part 1: Sensing Version 1.1" .
 
 <https://british-oceanographic-data-centre.github.io/bblocks-sta/> a skos:ConceptScheme,
-        dcat:Catalog ;
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
     rdfs:label "Building Blocks - Sensor Things API Building Blocks" ;
     dct:abstract """This is set of data [building blocks](https://ogcincubator.github.io/bblocks-docs/) describing reusable components of the Sensor Things API 1.1.  Building blocks provide elements that may be reused, and mappings to the underlying OMS model via the SOSA ontology. 
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
@@ -310,13 +447,37 @@
 This initial draft can be missing some elements of the STA and relax on some formal constraints for the better support of the JSON Schema, OpenAPI 3.0.1 and JSON-LD specifications.
 The mapping of schema elements to formal definitions (JSON-LD context files) shall be treated as draft proposition.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:modified "2026-11-06T15:29:21.065621"^^xsd:dateTime ;
+    owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://ogc.api.sta.Datastream>,
+        <bblocks://ogc.api.sta.Datastream-Collection>,
+        <bblocks://ogc.api.sta.Datastream.Datastream-Values-ObsCollection>,
+        <bblocks://ogc.api.sta.FeatureOfInterest>,
+        <bblocks://ogc.api.sta.HistoricalLocations>,
+        <bblocks://ogc.api.sta.Locations>,
+        <bblocks://ogc.api.sta.Observation>,
+        <bblocks://ogc.api.sta.ObservedProperty>,
+        <bblocks://ogc.api.sta.Sensor>,
+        <bblocks://ogc.api.sta.Thing> ;
     skos:prefLabel "Building Blocks - Sensor Things API Building Blocks" ;
-    bblocks:hasValidationReport <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/report.html> ;
-    bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/bblocks.jsonld> ],
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/bblocks.ttl> ] ;
+    foaf:homepage <https://british-oceanographic-data-centre.github.io/bblocks-sta/> ;
+    bblocks:hasValidationReport <https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/report.html> .
 
-_:N6c698c27ef0e4d00a20edff763ba25a8 a prov:Agent,
+_:N7bb7b85aac1c4f56aef8cbdb54873a1c a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.4.4" ;
+    dct:hasVersion "0.6.0" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

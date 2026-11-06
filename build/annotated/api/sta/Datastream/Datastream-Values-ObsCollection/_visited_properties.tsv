@@ -1,13 +1,13 @@
-path	@id
-/@iot.count	https://www.w3.org/TR/vocab-ssn/#collectionCount
-/value	@graph
-/value/@iot.id	@id
-/value/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
-/value/parameters	
-/value/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime
-/value/result	http://www.w3.org/ns/sosa/hasSimpleResult
-/value/resultQuality	http://www.w3.org/ns/dqv#hasQualityMeasurement
-/value/resultTime	http://www.w3.org/ns/sosa/resultTime
-/value/validTime	
-/value/Datastream@iot.navigationLink	http://www.w3.org/ns/sosa/usedProcedure
-/value/FeatureOfInterest@iot.navigationLink	http://www.w3.org/ns/sosa/hasFeatureOfInterest
+path	@id	schema
+/@iot.count	https://www.w3.org/TR/vocab-ssn/#collectionCount	/github/workspace/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.yaml
+/value	@graph	/github/workspace/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/schema.yaml
+/value/@iot.id	@id	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/parameters		https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/phenomenonTime	http://www.w3.org/ns/sosa/phenomenonTime	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/result	http://www.w3.org/ns/sosa/hasSimpleResult	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/resultQuality	http://www.w3.org/ns/dqv#hasQualityMeasurement	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/resultTime	http://www.w3.org/ns/sosa/resultTime	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/validTime		https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/Datastream@iot.navigationLink	http://www.w3.org/ns/sosa/usedProcedure	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/FeatureOfInterest@iot.navigationLink	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml

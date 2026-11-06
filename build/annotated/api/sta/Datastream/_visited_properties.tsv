@@ -1,4 +1,4 @@
-path	@id
-/@iot.id	@id
-/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
-/Observations@iot.navigationLink	http://www.w3.org/ns/sosa/hasMember
+path	@id	schema
+/@iot.id	@id	/github/workspace/build/annotated/api/sta/Datastream/schema.yaml
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self	/github/workspace/build/annotated/api/sta/Datastream/schema.yaml
+/Observations@iot.navigationLink	http://www.w3.org/ns/sosa/hasMember	/github/workspace/build/annotated/api/sta/Datastream/schema.yaml

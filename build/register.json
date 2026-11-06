@@ -1,13 +1,14 @@
 {
+  "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
   "name": "Sensor Things API Building Blocks",
   "abstract": "This is set of data [building blocks](https://ogcincubator.github.io/bblocks-docs/) describing reusable components of the Sensor Things API 1.1.  Building blocks provide elements that may be reused, and mappings to the underlying OMS model via the SOSA ontology. \n",
   "description": "Initial work on the bblocks extraction was done for the particular cases of the Iliad project.\nThis initial draft can be missing some elements of the STA and relax on some formal constraints for the better support of the JSON Schema, OpenAPI 3.0.1 and JSON-LD specifications.\nThe mapping of schema elements to formal definitions (JSON-LD context files) shall be treated as draft proposition.\n",
-  "modified": "2025-10-03T15:54:07.797654",
+  "modified": "2026-11-06T15:29:21.065621",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
-      "shortCommitId": "\"cbdf07",
-      "date": "2025-09-30T10:25:21+00:00\""
+      "commitId": "\"fe84508ca45c287cb2c58b84725ef6cc398b9e4c",
+      "shortCommitId": "\"fe8450",
+      "date": "2026-11-06T11:55:06+00:00\""
     }
   },
   "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
@@ -15,6 +16,7 @@
   "baseURL": "https://british-oceanographic-data-centre.github.io/bblocks-sta/",
   "viewerURL": "https://british-oceanographic-data-centre.github.io/bblocks-sta/",
   "validationReport": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/report.html",
+  "validationReportJson": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/report.json",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json"
   ],
@@ -30,7 +32,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -53,8 +55,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Observation/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Observation/",
       "documentation": {
@@ -83,7 +85,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -106,8 +108,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream/",
       "documentation": {
@@ -135,7 +137,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -156,8 +158,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/FeatureOfInterest/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/FeatureOfInterest/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/FeatureOfInterest/",
       "documentation": {
@@ -186,7 +188,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -210,8 +212,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/HistoricalLocations/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/HistoricalLocations/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/HistoricalLocations/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/HistoricalLocations/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/HistoricalLocations/",
       "documentation": {
@@ -240,7 +242,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -264,8 +266,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Locations/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Locations/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Locations/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Locations/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Locations/",
       "documentation": {
@@ -294,7 +296,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -318,8 +320,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/ObservedProperty/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/ObservedProperty/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/ObservedProperty/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/ObservedProperty/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/ObservedProperty/",
       "documentation": {
@@ -348,7 +350,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -371,8 +373,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Sensor/",
       "documentation": {
@@ -401,7 +403,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -424,8 +426,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Thing/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Thing/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Thing/",
       "documentation": {
@@ -454,7 +456,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -471,7 +473,7 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.sta.Observation"
+        "bblocks://ogc.api.sta.Observation"
       ],
       "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/context.jsonld",
       "schema": {
@@ -480,8 +482,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Datastream-Values-ObsCollection/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Datastream-Values-ObsCollection/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream/Datastream-Values-ObsCollection/",
       "documentation": {
@@ -510,7 +512,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2025-10-03",
+      "dateOfLastChange": "2026-11-06",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -527,7 +529,7 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.api.sta.Datastream"
+        "bblocks://ogc.api.sta.Datastream"
       ],
       "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/context.jsonld",
       "schema": {
@@ -536,8 +538,8 @@
       },
       "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream-Collection/schema.yaml",
       "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream-Collection/context.jsonld",
+      "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream-Collection/resolvedProperties.json",
       "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream-Collection/",
-      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream-Collection/",
       "documentation": {
@@ -556,5 +558,25 @@
       }
     }
   ],
-  "remoteCacheDir": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/_cache"
+  "remoteCacheDir": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
 }

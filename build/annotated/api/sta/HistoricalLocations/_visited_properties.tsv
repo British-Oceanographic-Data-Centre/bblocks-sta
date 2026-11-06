@@ -1,6 +1,6 @@
-path	@id
-/@iot.id	@id
-/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self
-/time	http://www.w3.org/ns/prov#startedAtTime
-/Thing@iot.navigationLink	http://www.w3.org/ns/prov#entity
-/Locations@iot.navigationLink	http://www.opengis.net/ont/geosparql#hasGeometry
+path	@id	schema
+/@iot.id	@id	/github/workspace/build/annotated/api/sta/HistoricalLocations/schema.yaml
+/@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self	/github/workspace/build/annotated/api/sta/HistoricalLocations/schema.yaml
+/time	http://www.w3.org/ns/prov#startedAtTime	/github/workspace/build/annotated/api/sta/HistoricalLocations/schema.yaml
+/Thing@iot.navigationLink	http://www.w3.org/ns/prov#entity	/github/workspace/build/annotated/api/sta/HistoricalLocations/schema.yaml
+/Locations@iot.navigationLink	http://www.opengis.net/ont/geosparql#hasGeometry	/github/workspace/build/annotated/api/sta/HistoricalLocations/schema.yaml

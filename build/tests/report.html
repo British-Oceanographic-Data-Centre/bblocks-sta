@@ -9,6 +9,14 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <style>
+            .entry-message.text-warning-emphasis,
+            .entry-message.text-danger {
+                border-left: 3px solid var(--bs-warning);
+                padding-left: .4rem;
+            }
+            .entry-message.text-danger {
+                border-left-color: var(--bs-danger);
+            }
             .entry-message {
                 white-space: pre-wrap;
                 font-size: 80%;
@@ -46,12 +54,25 @@
                     border-width: var(--bs-accordion-border-width);
                 }
             }
+            .anchor {
+                color: black;
+                opacity: 0;
+                text-decoration: none;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+            }
+            .anchor-container:hover .anchor {
+                opacity: 60%;
+            }
+            .anchor-container:hover .anchor:hover {
+                opacity: 100%;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2025-10-03T15:54:10.598414+00:00</small>
+            <small class="datetime">Generated at 2026-11-06T15:29:23.121322+00:00</small>
                 <p class="summary fw-semibold text-success">
                     Number of passing building blocks: 10 / 10 (100%)
                 </p>
@@ -61,13 +82,14 @@
             </div>
                 <div class="accordion mt-2" id="bblock-reports">
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.Observation" id="bblock-ogc.api.sta.Observation">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.Observation">
                                     <div class="flex-fill">
                                         STA Observation
                                         <small class="ms-2 bblock-id">ogc.api.sta.Observation</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.Observation">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -81,9 +103,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.Observation-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-1"
                                                             aria-expanded="false" aria-controls="uid-1"
@@ -93,6 +115,7 @@
                                                     </button>
                                                     <a href="api/sta/Observation/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.Observation-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -100,11 +123,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-1">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/Observation.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -114,13 +149,14 @@
                             </div>
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.Datastream" id="bblock-ogc.api.sta.Datastream">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.Datastream">
                                     <div class="flex-fill">
                                         STA Datastream
                                         <small class="ms-2 bblock-id">ogc.api.sta.Datastream</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.Datastream">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -134,9 +170,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.Datastream-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-2"
                                                             aria-expanded="false" aria-controls="uid-2"
@@ -146,6 +182,7 @@
                                                     </button>
                                                     <a href="api/sta/Datastream/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.Datastream-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -153,11 +190,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-2">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/pnsc-sta.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -167,13 +216,14 @@
                             </div>
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.FeatureOfInterest" id="bblock-ogc.api.sta.FeatureOfInterest">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.FeatureOfInterest">
                                     <div class="flex-fill">
                                         STA FeatureOfInterest (FOI)
                                         <small class="ms-2 bblock-id">ogc.api.sta.FeatureOfInterest</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.FeatureOfInterest">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -187,9 +237,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.FeatureOfInterest-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-3"
                                                             aria-expanded="false" aria-controls="uid-3"
@@ -199,6 +249,7 @@
                                                     </button>
                                                     <a href="api/sta/FeatureOfInterest/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.FeatureOfInterest-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -206,11 +257,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-3">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/FeatureOfInterest.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -220,13 +283,14 @@
                             </div>
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.HistoricalLocations" id="bblock-ogc.api.sta.HistoricalLocations">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.HistoricalLocations">
                                     <div class="flex-fill">
                                         STA HistoricalLocation
                                         <small class="ms-2 bblock-id">ogc.api.sta.HistoricalLocations</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.HistoricalLocations">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -240,9 +304,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.HistoricalLocations-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-4"
                                                             aria-expanded="false" aria-controls="uid-4"
@@ -252,6 +316,7 @@
                                                     </button>
                                                     <a href="api/sta/HistoricalLocations/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.HistoricalLocations-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -259,11 +324,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-4">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/HistoricalLocation.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -273,13 +350,14 @@
                             </div>
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.Locations" id="bblock-ogc.api.sta.Locations">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.Locations">
                                     <div class="flex-fill">
                                         STA Location
                                         <small class="ms-2 bblock-id">ogc.api.sta.Locations</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.Locations">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -293,9 +371,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.Locations-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-5"
                                                             aria-expanded="false" aria-controls="uid-5"
@@ -305,6 +383,7 @@
                                                     </button>
                                                     <a href="api/sta/Locations/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.Locations-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -312,11 +391,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-5">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/Location.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -326,13 +417,14 @@
                             </div>
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.ObservedProperty" id="bblock-ogc.api.sta.ObservedProperty">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.ObservedProperty">
                                     <div class="flex-fill">
                                         STA ObservedProperty
                                         <small class="ms-2 bblock-id">ogc.api.sta.ObservedProperty</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.ObservedProperty">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -346,9 +438,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.ObservedProperty-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-6"
                                                             aria-expanded="false" aria-controls="uid-6"
@@ -358,6 +450,7 @@
                                                     </button>
                                                     <a href="api/sta/ObservedProperty/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.ObservedProperty-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -365,11 +458,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-6">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/ObservedProperty.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -379,13 +484,14 @@
                             </div>
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.Sensor" id="bblock-ogc.api.sta.Sensor">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.Sensor">
                                     <div class="flex-fill">
                                         STA Sensor
                                         <small class="ms-2 bblock-id">ogc.api.sta.Sensor</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.Sensor">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -399,9 +505,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.Sensor-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-7"
                                                             aria-expanded="false" aria-controls="uid-7"
@@ -411,6 +517,7 @@
                                                     </button>
                                                     <a href="api/sta/Sensor/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.Sensor-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -418,11 +525,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-7">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/Sensor.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -432,13 +551,14 @@
                             </div>
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.Thing" id="bblock-ogc.api.sta.Thing">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.Thing">
                                     <div class="flex-fill">
                                         STA Thing
                                         <small class="ms-2 bblock-id">ogc.api.sta.Thing</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.Thing">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -452,9 +572,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.Thing-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-8"
                                                             aria-expanded="false" aria-controls="uid-8"
@@ -464,6 +584,7 @@
                                                     </button>
                                                     <a href="api/sta/Thing/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.Thing-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -471,11 +592,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-8">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/Thing.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -485,13 +618,14 @@
                             </div>
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.Datastream.Datastream-Values-ObsCollection" id="bblock-ogc.api.sta.Datastream.Datastream-Values-ObsCollection">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.Datastream\.Datastream-Values-ObsCollection">
                                     <div class="flex-fill">
                                         STA Datastream Values as ObservationCollection
                                         <small class="ms-2 bblock-id">ogc.api.sta.Datastream.Datastream-Values-ObsCollection</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.Datastream.Datastream-Values-ObsCollection">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -505,9 +639,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.Datastream.Datastream-Values-ObsCollection-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-9"
                                                             aria-expanded="false" aria-controls="uid-9"
@@ -517,6 +651,7 @@
                                                     </button>
                                                     <a href="api/sta/Datastream/Datastream-Values-ObsCollection/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.Datastream.Datastream-Values-ObsCollection-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -524,11 +659,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-9">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/pnsc-sta.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -538,13 +685,14 @@
                             </div>
                         </div>
                         <div class="accordion-item bblock-report" data-bblock-id="ogc.api.sta.Datastream-Collection" id="bblock-ogc.api.sta.Datastream-Collection">
-                            <h2 class="accordion-header bblock-title">
+                            <h2 class="accordion-header bblock-title anchor-container">
                                 <button class="accordion-button collapsed" type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#bblock-collapse-ogc\.api\.sta\.Datastream-Collection">
                                     <div class="flex-fill">
                                         STA Datastream as ObsCollection
                                         <small class="ms-2 bblock-id">ogc.api.sta.Datastream-Collection</small>
+                                        <a class="anchor" href="#bblock-ogc.api.sta.Datastream-Collection">¶</a>
                                     </div>
 
                                     <span class="badge text-bg-success me-2">
@@ -558,9 +706,9 @@
                                         <p class="summary fw-semibold text-success">
                                             Test passed: 1 / 1
                                         </p>
-                                        <div class="card mb-2 validation-item ">
+                                        <div class="card mb-2 validation-item " id="item-ogc.api.sta.Datastream-Collection-1">
                                             <div class="card-body">
-                                                <div class="card-title mb-0">
+                                                <div class="card-title mb-0 anchor-container">
                                                     <button type="button" class="btn btn-sm btn-primary collapsed"
                                                             data-bs-toggle="collapse" data-bs-target="#uid-10"
                                                             aria-expanded="false" aria-controls="uid-10"
@@ -570,6 +718,7 @@
                                                     </button>
                                                     <a href="api/sta/Datastream-Collection/example_1_1.json" target="_blank">example_1_1.json</a>
                                                     <span class="badge bg-secondary example">Example</span>
+                                                    <a class="anchor" href="#item-ogc.api.sta.Datastream-Collection-1">¶</a>
                                                     <div class="float-end">
                                                             <span class="badge text-bg-success me-2">Passed</span>
                                                     </div>
@@ -577,11 +726,23 @@
                                                 <div class="card-text mt-2 validation-text collapse" id="uid-10">
                                                     <div class="validation-text-inner">
                                                                     <div class="font-monospace subsection-title mt-2">Files</div>
-                                                                    <div class="font-monospace entry-message section-files ">Using example_1_1.json from examples</div>
+                                                                
+                                                                    
+                                                                    
+                                                                    <div class="font-monospace entry-message section-files ">Using examples/pnsc-sta.json from examples</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                
+                                                                    
+                                                                    
                                                                     <div class="font-monospace entry-message section-json_schema ">Validation passed</div>
                                                     </div>
                                                 </div>
@@ -604,13 +765,20 @@
                         accordionEntries.forEach(e => e.classList.remove('show'));
                     }
                 });
-                if (location.hash.startsWith('#bblock-')) {
+                if (/^#(bblock|item)-/.test(location.hash)) {
                     const highlight = document.querySelector(location.hash.replaceAll('.', '\\.'));
                     if (highlight) {
                         highlight.querySelector('.accordion-collapse').classList.add('show');
                         highlight.classList.add('highlighted');
                     }
                 }
+                document.addEventListener('click', ev => {
+                    if (!ev.target.classList.contains('anchor') || !ev.target.href) {
+                      return;
+                    }
+                    ev.stopPropagation();
+                    navigator?.clipboard?.writeText(ev.target.href);
+                });
             });
         </script>
     </body>
