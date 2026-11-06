@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "category": "platform",
+    "identifier": "example-platform-1",
+    "provider": "Example provider",
+    "name": "Example platform",
+    "termCode": "platform",
+    "inDefinedTermSet": "https://example.org/vocabulary",
+    "value": "example",
+    "propertyID": "platform-type"
+  }
+}

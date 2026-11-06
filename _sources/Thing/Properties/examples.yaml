@@ -1,5 +1,5 @@
-- title: SensorThings API Thing occurrence
+- title: SensorThings API Thing custom properties
   base-uri: http://w3id.org/ogcincubator/bblocks-sta/
   snippets:
     - language: json
-      ref: examples/Thing.json
+      ref: examples/Properties.json

@@ -1,5 +1,9 @@
 "$schema": "http://json-schema.org/draft-04/schema#"
-title: SensorThings API Thing occurrence
-description: A Thing occurrence using the entity-level JSON-LD context.
-allOf:
-  - $ref: bblocks://ogc.api.sta.Thing
+title: SensorThings API Thing custom properties
+description: Custom properties attached to a SensorThings API Thing occurrence.
+type: object
+additionalProperties: true
+properties:
+  properties:
+    type: object
+    additionalProperties: true
