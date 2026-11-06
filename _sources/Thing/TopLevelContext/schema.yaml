@@ -1,0 +1,9 @@
+"$schema": "http://json-schema.org/draft-04/schema#"
+title: SensorThings API Thing top-level context
+description: Shared top-level properties used by SensorThings API Thing representations.
+type: object
+additionalProperties: true
+properties:
+  properties:
+    type: object
+    additionalProperties: true

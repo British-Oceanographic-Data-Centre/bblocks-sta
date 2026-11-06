@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "category": "platform",
+    "identifier": "example-platform-1",
+    "name": "Example platform",
+    "value": "example"
+  }
+}
