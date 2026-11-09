@@ -135,12 +135,11 @@ x-jsonld-prefixes:
   dct: http://purl.org/dc/terms/
   sosa-oms: http://www.w3.org/ns/sosa/oms/
   orel: http://www.opengis.net/def/rel/
-  sosa: http://www.w3.org/ns/sosa/
 x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.Thing
   register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-06'
+  dateOfLastChange: '2026-11-09'
 
 ```
 
@@ -174,9 +173,8 @@ Links to the schema:
       "@type": "@id"
     },
     "dct": "http://purl.org/dc/terms/",
-    "sosa-oms": "sosa:oms/",
+    "sosa-oms": "http://www.w3.org/ns/sosa/oms/",
     "orel": "http://www.opengis.net/def/rel/",
-    "sosa": "http://www.w3.org/ns/sosa/",
     "@version": 1.1
   }
 }

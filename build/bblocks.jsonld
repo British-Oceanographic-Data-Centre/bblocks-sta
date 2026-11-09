@@ -217,12 +217,12 @@
   "name": "Building Blocks - Sensor Things API Building Blocks",
   "abstract": "This is set of data [building blocks](https://ogcincubator.github.io/bblocks-docs/) describing reusable components of the Sensor Things API 1.1.  Building blocks provide elements that may be reused, and mappings to the underlying OMS model via the SOSA ontology. \n",
   "description": "Initial work on the bblocks extraction was done for the particular cases of the Iliad project.\nThis initial draft can be missing some elements of the STA and relax on some formal constraints for the better support of the JSON Schema, OpenAPI 3.0.1 and JSON-LD specifications.\nThe mapping of schema elements to formal definitions (JSON-LD context files) shall be treated as draft proposition.\n",
-  "modified": "2026-11-06T16:40:28.155060",
+  "modified": "2026-11-09T14:04:37.418523",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"fe84508ca45c287cb2c58b84725ef6cc398b9e4c",
-      "shortCommitId": "\"fe8450",
-      "date": "2026-11-06T11:55:06+00:00\""
+      "commitId": "\"2deb5c60331691186d997e4f6ae9aab18b548ce5",
+      "shortCommitId": "\"2deb5c",
+      "date": "2026-11-09T12:20:47+00:00\""
     }
   },
   "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
@@ -273,7 +273,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -316,13 +316,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Observation/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Observation/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Observation/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Observation/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -358,7 +358,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -401,13 +401,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -442,7 +442,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -483,13 +483,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/FeatureOfInterest/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/FeatureOfInterest/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/FeatureOfInterest/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/FeatureOfInterest/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -525,7 +525,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -569,13 +569,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/HistoricalLocations/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/HistoricalLocations/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/HistoricalLocations/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/HistoricalLocations/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -611,7 +611,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -655,13 +655,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Locations/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Locations/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Locations/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Locations/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -697,7 +697,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -741,13 +741,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/ObservedProperty/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/ObservedProperty/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/ObservedProperty/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/ObservedProperty/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -783,7 +783,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/sta-bblock",
       "sources": [
         {
@@ -826,13 +826,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Sensor/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Sensor/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Sensor/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Sensor/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -868,7 +868,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
       "sources": [
         {
@@ -911,13 +911,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Thing/Properties/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Thing/Properties/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Thing/Properties/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Thing/Properties/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -953,7 +953,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -996,13 +996,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Thing/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Thing/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Thing/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Thing/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1038,7 +1038,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -1084,13 +1084,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream/Datastream-Values-ObsCollection/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/Datastream-Values-ObsCollection/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream/Datastream-Values-ObsCollection/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream/Datastream-Values-ObsCollection/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -1125,7 +1125,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2026-11-06",
+      "dateOfLastChange": "2026-11-09",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -1171,13 +1171,13 @@
       "validationPassed": true,
       "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream-Collection/",
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream-Collection/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/json-full/api/sta/Datastream-Collection/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/generateddocs/markdown/api/sta/Datastream-Collection/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",

@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.api.sta.Observation - STA Observation",
       "bblockName": "STA Observation",
       "bblockId": "ogc.api.sta.Observation",
-      "generated": "2026-11-06T16:40:30.042479+00:00",
+      "generated": "2026-11-09T14:04:40.558671+00:00",
       "result": true,
       "items": [
         {
@@ -82,7 +82,7 @@
       "title": "Validation report for ogc.api.sta.Datastream - STA Datastream",
       "bblockName": "STA Datastream",
       "bblockId": "ogc.api.sta.Datastream",
-      "generated": "2026-11-06T16:40:30.048385+00:00",
+      "generated": "2026-11-09T14:04:40.568904+00:00",
       "result": true,
       "items": [
         {
@@ -154,7 +154,7 @@
       "title": "Validation report for ogc.api.sta.FeatureOfInterest - STA FeatureOfInterest (FOI)",
       "bblockName": "STA FeatureOfInterest (FOI)",
       "bblockId": "ogc.api.sta.FeatureOfInterest",
-      "generated": "2026-11-06T16:40:30.053467+00:00",
+      "generated": "2026-11-09T14:04:40.578014+00:00",
       "result": true,
       "items": [
         {
@@ -226,7 +226,7 @@
       "title": "Validation report for ogc.api.sta.HistoricalLocations - STA HistoricalLocation",
       "bblockName": "STA HistoricalLocation",
       "bblockId": "ogc.api.sta.HistoricalLocations",
-      "generated": "2026-11-06T16:40:30.058087+00:00",
+      "generated": "2026-11-09T14:04:40.586234+00:00",
       "result": true,
       "items": [
         {
@@ -298,7 +298,7 @@
       "title": "Validation report for ogc.api.sta.Locations - STA Location",
       "bblockName": "STA Location",
       "bblockId": "ogc.api.sta.Locations",
-      "generated": "2026-11-06T16:40:30.063546+00:00",
+      "generated": "2026-11-09T14:04:40.595461+00:00",
       "result": true,
       "items": [
         {
@@ -370,7 +370,7 @@
       "title": "Validation report for ogc.api.sta.ObservedProperty - STA ObservedProperty",
       "bblockName": "STA ObservedProperty",
       "bblockId": "ogc.api.sta.ObservedProperty",
-      "generated": "2026-11-06T16:40:30.068540+00:00",
+      "generated": "2026-11-09T14:04:40.603685+00:00",
       "result": true,
       "items": [
         {
@@ -442,7 +442,7 @@
       "title": "Validation report for ogc.api.sta.Sensor - STA Sensor",
       "bblockName": "STA Sensor",
       "bblockId": "ogc.api.sta.Sensor",
-      "generated": "2026-11-06T16:40:30.073611+00:00",
+      "generated": "2026-11-09T14:04:40.612173+00:00",
       "result": true,
       "items": [
         {
@@ -514,7 +514,7 @@
       "title": "Validation report for ogc.api.sta.Thing.Properties - STA Thing Properties Context",
       "bblockName": "STA Thing Properties Context",
       "bblockId": "ogc.api.sta.Thing.Properties",
-      "generated": "2026-11-06T16:40:30.078524+00:00",
+      "generated": "2026-11-09T14:04:40.620519+00:00",
       "result": true,
       "items": [
         {
@@ -586,7 +586,7 @@
       "title": "Validation report for ogc.api.sta.Thing - STA Thing",
       "bblockName": "STA Thing",
       "bblockId": "ogc.api.sta.Thing",
-      "generated": "2026-11-06T16:40:30.083998+00:00",
+      "generated": "2026-11-09T14:04:40.629844+00:00",
       "result": true,
       "items": [
         {
@@ -658,7 +658,7 @@
       "title": "Validation report for ogc.api.sta.Datastream.Datastream-Values-ObsCollection - STA Datastream Values as ObservationCollection",
       "bblockName": "STA Datastream Values as ObservationCollection",
       "bblockId": "ogc.api.sta.Datastream.Datastream-Values-ObsCollection",
-      "generated": "2026-11-06T16:40:30.091293+00:00",
+      "generated": "2026-11-09T14:04:40.642344+00:00",
       "result": true,
       "items": [
         {
@@ -730,7 +730,7 @@
       "title": "Validation report for ogc.api.sta.Datastream-Collection - STA Datastream as ObsCollection",
       "bblockName": "STA Datastream as ObsCollection",
       "bblockId": "ogc.api.sta.Datastream-Collection",
-      "generated": "2026-11-06T16:40:30.097155+00:00",
+      "generated": "2026-11-09T14:04:40.651959+00:00",
       "result": true,
       "items": [
         {

@@ -98,7 +98,7 @@ x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.Thing.Properties
   register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-06'
+  dateOfLastChange: '2026-11-09'
 
 ```
 

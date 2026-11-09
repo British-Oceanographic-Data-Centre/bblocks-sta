@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2026-11-06",
+  "dateOfLastChange": "2026-11-09",
   "link": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
   "sources": [
     {
@@ -66,7 +66,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\ntitle: SensorThings API Thing custom properties\ndescription: Custom properties attached to a SensorThings API Thing occurrence.\ntype: object\nadditionalProperties: true\nproperties:\n  properties:\n    type: object\n    additionalProperties: true\n    x-jsonld-id: https://schema.org/additionalProperty\n    x-jsonld-extra-terms:\n      category: https://schema.org/category\n      identifier: https://schema.org/identifier\n      provider: https://schema.org/provider\n      name: https://schema.org/name\n      termCode: https://schema.org/termCode\n      inDefinedTermSet: https://schema.org/inDefinedTermSet\n      value: https://schema.org/value\n      propertyID: https://schema.org/propertyID\nx-jsonld-prefixes:\n  sdo: https://schema.org/\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.sta.Thing.Properties\n  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-06'\n",
+  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\ntitle: SensorThings API Thing custom properties\ndescription: Custom properties attached to a SensorThings API Thing occurrence.\ntype: object\nadditionalProperties: true\nproperties:\n  properties:\n    type: object\n    additionalProperties: true\n    x-jsonld-id: https://schema.org/additionalProperty\n    x-jsonld-extra-terms:\n      category: https://schema.org/category\n      identifier: https://schema.org/identifier\n      provider: https://schema.org/provider\n      name: https://schema.org/name\n      termCode: https://schema.org/termCode\n      inDefinedTermSet: https://schema.org/inDefinedTermSet\n      value: https://schema.org/value\n      propertyID: https://schema.org/propertyID\nx-jsonld-prefixes:\n  sdo: https://schema.org/\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.sta.Thing.Properties\n  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
   "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
   "gitPath": "_sources/Thing/Properties"
 }

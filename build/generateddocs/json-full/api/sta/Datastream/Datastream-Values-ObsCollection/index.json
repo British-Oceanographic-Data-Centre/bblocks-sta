@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2026-11-06",
+  "dateOfLastChange": "2026-11-09",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -69,7 +69,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\nproperties:\n  '@iot.count':\n    type: number\n    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#collectionCount\n  value:\n    type: array\n    items:\n      allOf:\n      - $ref: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml\n    x-jsonld-id: '@graph'\nx-jsonld-extra-terms:\n  Observations@iot.navigationLink:\n    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#hasMember\n    x-jsonld-type: '@id'\nx-jsonld-prefixes:\n  sosa: https://www.w3.org/TR/vocab-ssn/#\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.sta.Datastream.Datastream-Values-ObsCollection\n  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-06'\n",
+  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\nproperties:\n  '@iot.count':\n    type: number\n    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#collectionCount\n  value:\n    type: array\n    items:\n      allOf:\n      - $ref: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml\n    x-jsonld-id: '@graph'\nx-jsonld-extra-terms:\n  Observations@iot.navigationLink:\n    x-jsonld-id: https://www.w3.org/TR/vocab-ssn/#hasMember\n    x-jsonld-type: '@id'\nx-jsonld-prefixes:\n  sosa: https://www.w3.org/TR/vocab-ssn/#\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.sta.Datastream.Datastream-Values-ObsCollection\n  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
   "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
   "gitPath": "_sources/Datastream/Datastream-Values-ObsCollection"
 }
