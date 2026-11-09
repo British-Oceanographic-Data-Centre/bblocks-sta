@@ -1,0 +1,5 @@
+- title: SensorThings API Datastream custom properties
+  base-uri: http://w3id.org/ogcincubator/bblocks-sta/
+  snippets:
+    - language: json
+      ref: examples/Properties.json

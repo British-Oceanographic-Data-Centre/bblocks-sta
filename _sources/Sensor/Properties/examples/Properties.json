@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "category": "temperature sensor",
+    "identifier": "TMP36-1",
+    "manufacturer": "Example manufacturer",
+    "model": "TMP36",
+    "serialNumber": "SN-0001",
+    "name": "Example temperature sensor",
+    "value": "active",
+    "unitCode": "http://qudt.org/vocab/unit/DEG_C"
+  }
+}

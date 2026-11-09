@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "properties": {
+      "@id": "sdo:additionalProperty",
+      "@context": {
+        "hasSystemProperty": "ssn-system:hasSystemProperty",
+        "status": "sdo:status",
+        "name": "sdo:name",
+        "license": "sdo:license",
+        "description": "sdo:description",
+        "url": "sdo:url",
+        "usageInfo": "sdo:usageInfo",
+        "identifier": "sdo:identifier",
+        "propertyID": "sdo:propertyID",
+        "category": "sdo:category",
+        "termCode": "sdo:termCode",
+        "inDefinedTermSet": "sdo:inDefinedTermSet",
+        "provider": "sdo:provider",
+        "value": "sdo:value",
+        "unitCode": "@id",
+        "unitText": "sdo:unitText"
+      }
+    },
+    "sdo": "https://schema.org/",
+    "ssn-system": "http://www.w3.org/ns/ssn/system/"
+  }
+}

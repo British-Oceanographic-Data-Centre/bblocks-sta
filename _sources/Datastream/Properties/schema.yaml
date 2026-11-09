@@ -1,0 +1,9 @@
+"$schema": "http://json-schema.org/draft-04/schema#"
+title: SensorThings API Datastream custom properties
+description: Custom properties attached to a SensorThings API Datastream occurrence.
+type: object
+additionalProperties: true
+properties:
+  properties:
+    type: object
+    additionalProperties: true
