@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "name": "Example datastream property",
+    "description": "Metadata attached to an individual datastream.",
+    "identifier": "example-datastream-property-1",
+    "category": "quality",
+    "value": "example",
+    "unitCode": "http://qudt.org/vocab/unit/UNITLESS"
+  }
+}

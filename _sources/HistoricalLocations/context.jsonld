@@ -1,6 +1,5 @@
 {
   "@context": {
-    "@version": 1.1,
     "@iot.id": "@id",
     "@iot.selfLink": "orel:iana/1.0/self",
     "time": "prov:startedAtTime",
@@ -12,8 +11,9 @@
       "@id": "geo:hasGeometry",
       "@type": "@id"
     },
-    "geo": "http://www.opengis.net/ont/geosparql#",
     "orel": "http://www.opengis.net/def/rel/",
-    "prov": "http://www.w3.org/ns/prov#"
+    "prov": "http://www.w3.org/ns/prov#",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "@version": 1.1
   }
 }

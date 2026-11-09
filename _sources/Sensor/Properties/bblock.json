@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "STA Sensor Properties Context",
+  "highlighted": true,
+  "abstract": "JSON-LD context applied to each SensorThings API Sensor occurrence.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-11-09",
+  "link": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "sources": [{
+    "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+    "link": "https://docs.ogc.org/is/18-088/18-088.html"
+  }],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": ["STA", "JSON-LD", "Schema.org", "SSN"]
+}
