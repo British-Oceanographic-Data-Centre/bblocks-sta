@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "ogc.api.sta.Sensor.Properties",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "STA Sensor Properties Context",
+  "highlighted": true,
+  "abstract": "JSON-LD context applied to each SensorThings API Sensor occurrence.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-11-09",
+  "link": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "sources": [
+    {
+      "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+      "link": "https://docs.ogc.org/is/18-088/18-088.html"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "STA",
+    "JSON-LD",
+    "Schema.org",
+    "SSN"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/Properties/context.jsonld",
+  "schema": {
+    "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/Properties/schema.yaml",
+    "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/Properties/schema.json"
+  },
+  "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/Properties/schema.yaml",
+  "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/Properties/context.jsonld",
+  "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/Properties/resolvedProperties.json",
+  "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/Properties/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Sensor/Properties/",
+  "description": "## SensorThings API Sensor custom properties context\n\nThis building block defines the JSON-LD mapping for the custom `properties`\nmember attached to each SensorThings API Sensor occurrence.\n\nThe parent Sensor context supplies the entity-level mappings for its name,\ndescription, encoding type, metadata, self link, and Datastream navigation link.\n",
+  "examples": [
+    {
+      "title": "SensorThings API Sensor custom properties",
+      "base-uri": "http://w3id.org/ogcincubator/bblocks-sta/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Sensor/Properties/examples/Properties.json",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Sensor/Properties/example_1_1.json",
+          "sizeBytes": 306,
+          "code": "{\n  \"properties\": {\n    \"category\": \"temperature sensor\",\n    \"identifier\": \"TMP36-1\",\n    \"manufacturer\": \"Example manufacturer\",\n    \"model\": \"TMP36\",\n    \"serialNumber\": \"SN-0001\",\n    \"name\": \"Example temperature sensor\",\n    \"value\": \"active\",\n    \"unitCode\": \"http://qudt.org/vocab/unit/DEG_C\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Sensor/Properties/example_1_1.jsonld",
+          "sizeBytes": 443,
+          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Sensor/Properties/context.jsonld\",\n  \"properties\": {\n    \"category\": \"temperature sensor\",\n    \"identifier\": \"TMP36-1\",\n    \"manufacturer\": \"Example manufacturer\",\n    \"model\": \"TMP36\",\n    \"serialNumber\": \"SN-0001\",\n    \"name\": \"Example temperature sensor\",\n    \"value\": \"active\",\n    \"unitCode\": \"http://qudt.org/vocab/unit/DEG_C\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Sensor/Properties/example_1_1.ttl",
+          "sizeBytes": 404,
+          "code": "@prefix schema: <https://schema.org/> .\n\n<http://qudt.org/vocab/unit/DEG_C> schema:category \"temperature sensor\" ;\n    schema:identifier \"TMP36-1\" ;\n    schema:manufacturer \"Example manufacturer\" ;\n    schema:model \"TMP36\" ;\n    schema:name \"Example temperature sensor\" ;\n    schema:serialNumber \"SN-0001\" ;\n    schema:value \"active\" .\n\n[] schema:additionalProperty <http://qudt.org/vocab/unit/DEG_C> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\ntitle: SensorThings API Sensor custom properties\ndescription: Custom properties attached to a SensorThings API Sensor occurrence.\ntype: object\nadditionalProperties: true\nproperties:\n  properties:\n    type: object\n    additionalProperties: true\n    x-jsonld-id: https://schema.org/additionalProperty\n    x-jsonld-extra-terms:\n      category: https://schema.org/category\n      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty\n      identifier: https://schema.org/identifier\n      manufacturer: https://schema.org/manufacturer\n      model: https://schema.org/model\n      serialNumber: https://schema.org/serialNumber\n      valueReference: https://schema.org/valueReference\n      name: https://schema.org/name\n      termCode: https://schema.org/termCode\n      inDefinedTermSet: https://schema.org/inDefinedTermSet\n      propertyID: https://schema.org/propertyID\n      value: https://schema.org/value\n      unitCode: '@id'\n      unitText: https://schema.org/unitText\n      maxValue: https://schema.org/maxValue\n      minValue: https://schema.org/minValue\nx-jsonld-prefixes:\n  sdo: https://schema.org/\n  ssn-system: http://www.w3.org/ns/ssn/system/\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.sta.Sensor.Properties\n  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "gitPath": "_sources/Sensor/Properties"
+}

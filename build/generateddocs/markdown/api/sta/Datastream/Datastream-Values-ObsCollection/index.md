@@ -187,21 +187,21 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel#datastr
 
 <http://w3id.org/ogcincubator/bblocks-sta/5c9828ee2b0cb39ae13fc06dd238960f> sosa:hasFeatureOfInterest <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Observations('5c9828ee2b0cb39ae13fc06dd238960f')/FeatureOfInterest> ;
     sosa:hasSimpleResult [ ] ;
+    sosa:isMemberOf <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Observations('5c9828ee2b0cb39ae13fc06dd238960f')/Datastream> ;
     sosa:phenomenonTime "2024-03-30T11:35:00" ;
-    sosa:resultTime "2024-03-30T11:35:00" ;
-    sosa:usedProcedure <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Observations('5c9828ee2b0cb39ae13fc06dd238960f')/Datastream> .
+    sosa:resultTime "2024-03-30T11:35:00" .
 
 <http://w3id.org/ogcincubator/bblocks-sta/af6992915f7037c10949a4aab2119109> sosa:hasFeatureOfInterest <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Observations('af6992915f7037c10949a4aab2119109')/FeatureOfInterest> ;
     sosa:hasSimpleResult [ ] ;
+    sosa:isMemberOf <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Observations('af6992915f7037c10949a4aab2119109')/Datastream> ;
     sosa:phenomenonTime "2024-03-30T11:17:00" ;
-    sosa:resultTime "2024-03-30T11:17:00" ;
-    sosa:usedProcedure <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Observations('af6992915f7037c10949a4aab2119109')/Datastream> .
+    sosa:resultTime "2024-03-30T11:17:00" .
 
 <http://w3id.org/ogcincubator/bblocks-sta/ec36b55fb78177474b2f5ec2227c0818> sosa:hasFeatureOfInterest <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Observations('ec36b55fb78177474b2f5ec2227c0818')/FeatureOfInterest> ;
     sosa:hasSimpleResult [ ] ;
+    sosa:isMemberOf <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Observations('ec36b55fb78177474b2f5ec2227c0818')/Datastream> ;
     sosa:phenomenonTime "2024-03-30T11:17:00" ;
-    sosa:resultTime "2024-03-30T11:17:00" ;
-    sosa:usedProcedure <https://sensor-things-api-sensor-things-api.apps.dcw1.paas.psnc.pl/jf2024/api/v1.0/Observations('ec36b55fb78177474b2f5ec2227c0818')/Datastream> .
+    sosa:resultTime "2024-03-30T11:17:00" .
 
 
 ```
@@ -254,16 +254,10 @@ Links to the schema:
     "@iot.selfLink": "orel:iana/1.0/self",
     "phenomenonTime": "http://www.w3.org/ns/sosa/phenomenonTime",
     "result": "http://www.w3.org/ns/sosa/hasSimpleResult",
-    "resultQuality": {
-      "@context": {
-        "rdf:type": "rdf:type",
-        "dqv:value": "dqv:value"
-      },
-      "@id": "dqv:hasQualityMeasurement"
-    },
+    "resultQuality": "dqv:hasQualityMeasurement",
     "resultTime": "http://www.w3.org/ns/sosa/resultTime",
     "Datastream@iot.navigationLink": {
-      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@id": "http://www.w3.org/ns/sosa/isMemberOf",
       "@type": "@id"
     },
     "FeatureOfInterest@iot.navigationLink": {
@@ -274,8 +268,8 @@ Links to the schema:
     "sosa": "https://www.w3.org/TR/vocab-ssn/#",
     "orel": "http://www.opengis.net/def/rel/",
     "dqv": "http://www.w3.org/ns/dqv#",
-    "sdo": "https://schema.org/",
-    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "@version": 1.1
   }
 }

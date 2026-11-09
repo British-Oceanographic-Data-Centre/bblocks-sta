@@ -12,27 +12,6 @@
       },
       "@id": "geo:hasGeometry"
     },
-    "properties": {
-      "@context": {
-        "altitude": {
-          "@id": "sosa:hasResult",
-          "@context": {
-            "value": "sdo:value",
-            "reference": "dct:description",
-            "unitOfMeasurement": {
-              "@id": "qudt:unit",
-              "@context": {
-                "name": "sdo:name",
-                "symbol": "sdo:symbol",
-                "definition": "@id"
-              }
-            }
-          }
-        },
-        "mountingPoint": "sdo:location"
-      },
-      "@id": "sdo:additionalProperty"
-    },
     "HistoricalLocations@iot.navigationLink": {
       "@id": "prov:hadLocation",
       "@type": "@id"
@@ -44,10 +23,8 @@
     "orel": "http://www.opengis.net/def/rel/",
     "dct": "http://purl.org/dc/terms/",
     "geo": "http://www.opengis.net/ont/geosparql#",
-    "sdo": "https://schema.org/",
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "qudt": "http://qudt.org/schema/qudt/",
     "prov": "http://www.w3.org/ns/prov#",
+    "sosa": "http://www.w3.org/ns/sosa/",
     "@version": 1.1
   }
 }

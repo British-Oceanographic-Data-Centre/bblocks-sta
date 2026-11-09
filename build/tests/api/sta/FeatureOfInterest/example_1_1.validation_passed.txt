@@ -1,5 +1,5 @@
 Validation report for ogc.api.sta.FeatureOfInterest - STA FeatureOfInterest (FOI)
-Generated 2026-11-09T14:04:40.577950+00:00
+Generated 2026-11-09T16:32:24.120426+00:00
 === Files ===
 Using examples/FeatureOfInterest.json from examples
 JSON-LD context is present - uplifting

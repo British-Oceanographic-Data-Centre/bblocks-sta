@@ -5,32 +5,14 @@ type: object
 properties:
   '@iot.id':
     description: The Id of the sensor
-    x-jsonld-id: '@id'
   '@iot.selfLink':
     type: string
     description: The direct link to the entity
     x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self
+    x-jsonld-type: '@id'
   properties:
     type: object
     description: A JSON Object containing user-annotated properties as key-value pairs.
-    x-jsonld-id: https://schema.org/additionalProperty
-    x-jsonld-extra-terms:
-      category: https://schema.org/category
-      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
-      identifier: https://schema.org/identifier
-      manufacturer: https://schema.org/manufacturer
-      model: https://schema.org/model
-      serialNumber: https://schema.org/serialNumber
-      valueReference: https://schema.org/valueReference
-      name: https://schema.org/name
-      termCode: https://schema.org/termCode
-      inDefinedTermSet: https://schema.org/inDefinedTermSet
-      propertyID: https://schema.org/propertyID
-      value: https://schema.org/value
-      unitCode: '@id'
-      unitText: https://schema.org/unitText
-      maxValue: https://schema.org/maxValue
-      minValue: https://schema.org/minValue
   name:
     type: string
     description: A property provides a label for Sensor entity, commonly a descriptive
@@ -55,16 +37,13 @@ properties:
     description: Reference link to the DataStream Definition.
 x-jsonld-extra-terms:
   Datastreams@iot.navigationLink:
-    x-jsonld-id: http://www.w3.org/ns/sosa/ObservationCollection
+    x-jsonld-id: http://www.w3.org/ns/sosa/madeObservation
     x-jsonld-type: '@id'
 x-jsonld-prefixes:
-  orel: http://www.opengis.net/def/rel/
-  sdo: https://schema.org/
-  ssn-system: http://www.w3.org/ns/ssn/system/
   dct: http://purl.org/dc/terms/
+  orel: http://www.opengis.net/def/rel/
   sosa: http://www.w3.org/ns/sosa/
-  qudt: http://qudt.org/schema/qudt/
-  prov: http://www.w3.org/ns/prov#
+  dcterms: http://purl.org/dc/terms/
 x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.Sensor
   register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json

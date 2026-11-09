@@ -100,11 +100,6 @@ properties:
   properties:
     type: object
     description: A JSON Object containing user-annotated properties as key-value pairs.
-    x-jsonld-id: https://schema.org/additionalProperty
-    x-jsonld-extra-terms:
-      name: https://schema.org/name
-      value: https://schema.org/value
-      unit: http://qudt.org/schema/qudt/unit
   Datastreams@iot.navigationLink:
     type: string
     description: Reference link to related Datastream entities.
@@ -120,8 +115,6 @@ x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
   dct: http://purl.org/dc/terms/
   sosa: http://www.w3.org/ns/sosa/
-  sdo: https://schema.org/
-  qudt: http://qudt.org/schema/qudt/
 x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.ObservedProperty
   register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
@@ -149,14 +142,6 @@ Links to the schema:
       "@type": "@id"
     },
     "description": "dct:description",
-    "properties": {
-      "@context": {
-        "name": "sdo:name",
-        "value": "sdo:value",
-        "unit": "qudt:unit"
-      },
-      "@id": "sdo:additionalProperty"
-    },
     "Datastreams@iot.navigationLink": {
       "@id": "sosa:isObservedBy",
       "@type": "@id"
@@ -164,8 +149,6 @@ Links to the schema:
     "orel": "http://www.opengis.net/def/rel/",
     "dct": "http://purl.org/dc/terms/",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "sdo": "https://schema.org/",
-    "qudt": "http://qudt.org/schema/qudt/",
     "@version": 1.1
   }
 }

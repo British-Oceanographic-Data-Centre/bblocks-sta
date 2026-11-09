@@ -4,5 +4,5 @@ path	@id	schema
 /name	http://purl.org/dc/terms/title	/github/workspace/build/annotated/api/sta/ObservedProperty/schema.yaml
 /definition	http://www.w3.org/ns/sosa/definition	/github/workspace/build/annotated/api/sta/ObservedProperty/schema.yaml
 /description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/api/sta/ObservedProperty/schema.yaml
-/properties	https://schema.org/additionalProperty	/github/workspace/build/annotated/api/sta/ObservedProperty/schema.yaml
+/properties		/github/workspace/build/annotated/api/sta/ObservedProperty/schema.yaml
 /Datastreams@iot.navigationLink	http://www.w3.org/ns/sosa/isObservedBy	/github/workspace/build/annotated/api/sta/ObservedProperty/schema.yaml

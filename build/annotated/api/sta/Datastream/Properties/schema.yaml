@@ -1,0 +1,35 @@
+$schema: http://json-schema.org/draft-04/schema#
+title: SensorThings API Datastream custom properties
+description: Custom properties attached to a SensorThings API Datastream occurrence.
+type: object
+additionalProperties: true
+properties:
+  properties:
+    type: object
+    additionalProperties: true
+    x-jsonld-id: https://schema.org/additionalProperty
+    x-jsonld-extra-terms:
+      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
+      status: https://schema.org/status
+      name: https://schema.org/name
+      license: https://schema.org/license
+      description: https://schema.org/description
+      url: https://schema.org/url
+      usageInfo: https://schema.org/usageInfo
+      identifier: https://schema.org/identifier
+      propertyID: https://schema.org/propertyID
+      category: https://schema.org/category
+      termCode: https://schema.org/termCode
+      inDefinedTermSet: https://schema.org/inDefinedTermSet
+      provider: https://schema.org/provider
+      value: https://schema.org/value
+      unitCode: '@id'
+      unitText: https://schema.org/unitText
+x-jsonld-prefixes:
+  sdo: https://schema.org/
+  ssn-system: http://www.w3.org/ns/ssn/system/
+x-bblocks-metadata:
+  itemIdentifier: ogc.api.sta.Datastream.Properties
+  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-09'

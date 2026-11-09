@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "ogc.api.sta.Datastream.Properties",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "STA Datastream Properties Context",
+  "highlighted": true,
+  "abstract": "JSON-LD context applied to each SensorThings API Datastream occurrence.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2026-11-09",
+  "link": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "sources": [
+    {
+      "title": "OGC SensorThings API Part 1: Sensing Version 1.1",
+      "link": "https://docs.ogc.org/is/18-088/18-088.html"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "tags": [
+    "STA",
+    "JSON-LD",
+    "Schema.org",
+    "SSN"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Properties/context.jsonld",
+  "schema": {
+    "application/yaml": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Properties/schema.yaml",
+    "application/json": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Properties/schema.json"
+  },
+  "sourceSchema": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Properties/schema.yaml",
+  "sourceLdContext": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Properties/context.jsonld",
+  "resolvedSchemaProperties": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Properties/resolvedProperties.json",
+  "sourceFiles": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Properties/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta/blob/master/build/tests/api/sta/Datastream/Properties/",
+  "description": "## SensorThings API Datastream custom properties context\n\nThis building block defines the JSON-LD mapping for the custom `properties`\nmember attached to each SensorThings API Datastream occurrence.\n\nThe parent Datastream context supplies the entity-level mappings for its name,\ndescription, observation metadata, self link, and navigation links.\n",
+  "examples": [
+    {
+      "title": "SensorThings API Datastream custom properties",
+      "base-uri": "http://w3id.org/ogcincubator/bblocks-sta/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "https://british-oceanographic-data-centre.github.io/bblocks-sta/_sources/Datastream/Properties/examples/Properties.json",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Datastream/Properties/example_1_1.json",
+          "sizeBytes": 294,
+          "code": "{\n  \"properties\": {\n    \"name\": \"Example datastream property\",\n    \"description\": \"Metadata attached to an individual datastream.\",\n    \"identifier\": \"example-datastream-property-1\",\n    \"category\": \"quality\",\n    \"value\": \"example\",\n    \"unitCode\": \"http://qudt.org/vocab/unit/UNITLESS\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Datastream/Properties/example_1_1.jsonld",
+          "sizeBytes": 435,
+          "code": "{\n  \"@context\": \"https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Datastream/Properties/context.jsonld\",\n  \"properties\": {\n    \"name\": \"Example datastream property\",\n    \"description\": \"Metadata attached to an individual datastream.\",\n    \"identifier\": \"example-datastream-property-1\",\n    \"category\": \"quality\",\n    \"value\": \"example\",\n    \"unitCode\": \"http://qudt.org/vocab/unit/UNITLESS\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/tests/api/sta/Datastream/Properties/example_1_1.ttl",
+          "sizeBytes": 385,
+          "code": "@prefix schema: <https://schema.org/> .\n\n<http://qudt.org/vocab/unit/UNITLESS> schema:category \"quality\" ;\n    schema:description \"Metadata attached to an individual datastream.\" ;\n    schema:identifier \"example-datastream-property-1\" ;\n    schema:name \"Example datastream property\" ;\n    schema:value \"example\" .\n\n[] schema:additionalProperty <http://qudt.org/vocab/unit/UNITLESS> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: http://json-schema.org/draft-04/schema#\ntitle: SensorThings API Datastream custom properties\ndescription: Custom properties attached to a SensorThings API Datastream occurrence.\ntype: object\nadditionalProperties: true\nproperties:\n  properties:\n    type: object\n    additionalProperties: true\n    x-jsonld-id: https://schema.org/additionalProperty\n    x-jsonld-extra-terms:\n      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty\n      status: https://schema.org/status\n      name: https://schema.org/name\n      license: https://schema.org/license\n      description: https://schema.org/description\n      url: https://schema.org/url\n      usageInfo: https://schema.org/usageInfo\n      identifier: https://schema.org/identifier\n      propertyID: https://schema.org/propertyID\n      category: https://schema.org/category\n      termCode: https://schema.org/termCode\n      inDefinedTermSet: https://schema.org/inDefinedTermSet\n      provider: https://schema.org/provider\n      value: https://schema.org/value\n      unitCode: '@id'\n      unitText: https://schema.org/unitText\nx-jsonld-prefixes:\n  sdo: https://schema.org/\n  ssn-system: http://www.w3.org/ns/ssn/system/\nx-bblocks-metadata:\n  itemIdentifier: ogc.api.sta.Datastream.Properties\n  register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/British-Oceanographic-Data-Centre/bblocks-sta",
+  "gitPath": "_sources/Datastream/Properties"
+}

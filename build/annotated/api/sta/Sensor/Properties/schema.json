@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "SensorThings API Sensor custom properties",
+  "description": "Custom properties attached to a SensorThings API Sensor occurrence.",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "properties": {
+      "type": "object",
+      "additionalProperties": true,
+      "x-jsonld-id": "https://schema.org/additionalProperty",
+      "x-jsonld-extra-terms": {
+        "category": "https://schema.org/category",
+        "hasSystemProperty": "http://www.w3.org/ns/ssn/system/hasSystemProperty",
+        "identifier": "https://schema.org/identifier",
+        "manufacturer": "https://schema.org/manufacturer",
+        "model": "https://schema.org/model",
+        "serialNumber": "https://schema.org/serialNumber",
+        "valueReference": "https://schema.org/valueReference",
+        "name": "https://schema.org/name",
+        "termCode": "https://schema.org/termCode",
+        "inDefinedTermSet": "https://schema.org/inDefinedTermSet",
+        "propertyID": "https://schema.org/propertyID",
+        "value": "https://schema.org/value",
+        "unitCode": "@id",
+        "unitText": "https://schema.org/unitText",
+        "maxValue": "https://schema.org/maxValue",
+        "minValue": "https://schema.org/minValue"
+      }
+    }
+  },
+  "x-jsonld-prefixes": {
+    "sdo": "https://schema.org/",
+    "ssn-system": "http://www.w3.org/ns/ssn/system/"
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.api.sta.Sensor.Properties",
+    "register": "https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-11-09"
+  }
+}

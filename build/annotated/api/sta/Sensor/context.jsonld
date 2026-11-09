@@ -1,31 +1,12 @@
 {
   "@context": {
     "Datastreams@iot.navigationLink": {
-      "@id": "sosa:ObservationCollection",
+      "@id": "sosa:madeObservation",
       "@type": "@id"
     },
-    "@iot.id": "@id",
-    "@iot.selfLink": "orel:iana/1.0/self",
-    "properties": {
-      "@context": {
-        "category": "sdo:category",
-        "hasSystemProperty": "ssn-system:hasSystemProperty",
-        "identifier": "sdo:identifier",
-        "manufacturer": "sdo:manufacturer",
-        "model": "sdo:model",
-        "serialNumber": "sdo:serialNumber",
-        "valueReference": "sdo:valueReference",
-        "name": "sdo:name",
-        "termCode": "sdo:termCode",
-        "inDefinedTermSet": "sdo:inDefinedTermSet",
-        "propertyID": "sdo:propertyID",
-        "value": "sdo:value",
-        "unitCode": "@id",
-        "unitText": "sdo:unitText",
-        "maxValue": "sdo:maxValue",
-        "minValue": "sdo:minValue"
-      },
-      "@id": "sdo:additionalProperty"
+    "@iot.selfLink": {
+      "@id": "orel:iana/1.0/self",
+      "@type": "@id"
     },
     "name": "dct:title",
     "description": "dct:description",
@@ -34,13 +15,10 @@
       "@id": "dct:source",
       "@type": "@id"
     },
-    "orel": "http://www.opengis.net/def/rel/",
-    "sdo": "https://schema.org/",
-    "ssn-system": "http://www.w3.org/ns/ssn/system/",
     "dct": "http://purl.org/dc/terms/",
+    "orel": "http://www.opengis.net/def/rel/",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "qudt": "http://qudt.org/schema/qudt/",
-    "prov": "http://www.w3.org/ns/prov#",
+    "dcterms": "http://purl.org/dc/terms/",
     "@version": 1.1
   }
 }

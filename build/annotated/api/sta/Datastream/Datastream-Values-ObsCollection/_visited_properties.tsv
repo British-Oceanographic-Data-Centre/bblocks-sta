@@ -9,5 +9,5 @@ path	@id	schema
 /value/resultQuality	http://www.w3.org/ns/dqv#hasQualityMeasurement	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
 /value/resultTime	http://www.w3.org/ns/sosa/resultTime	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
 /value/validTime		https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
-/value/Datastream@iot.navigationLink	http://www.w3.org/ns/sosa/usedProcedure	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
+/value/Datastream@iot.navigationLink	http://www.w3.org/ns/sosa/isMemberOf	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml
 /value/FeatureOfInterest@iot.navigationLink	http://www.w3.org/ns/sosa/hasFeatureOfInterest	https://british-oceanographic-data-centre.github.io/bblocks-sta/build/annotated/api/sta/Observation/schema.yaml

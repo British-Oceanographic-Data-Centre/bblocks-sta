@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "properties": {
+      "@context": {
+        "category": "sdo:category",
+        "hasSystemProperty": "ssn-system:hasSystemProperty",
+        "identifier": "sdo:identifier",
+        "manufacturer": "sdo:manufacturer",
+        "model": "sdo:model",
+        "serialNumber": "sdo:serialNumber",
+        "valueReference": "sdo:valueReference",
+        "name": "sdo:name",
+        "termCode": "sdo:termCode",
+        "inDefinedTermSet": "sdo:inDefinedTermSet",
+        "propertyID": "sdo:propertyID",
+        "value": "sdo:value",
+        "unitCode": "@id",
+        "unitText": "sdo:unitText",
+        "maxValue": "sdo:maxValue",
+        "minValue": "sdo:minValue"
+      },
+      "@id": "sdo:additionalProperty"
+    },
+    "sdo": "https://schema.org/",
+    "ssn-system": "http://www.w3.org/ns/ssn/system/",
+    "@version": 1.1
+  }
+}

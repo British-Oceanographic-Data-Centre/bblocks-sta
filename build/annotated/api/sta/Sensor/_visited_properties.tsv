@@ -1,7 +1,7 @@
 path	@id	schema
-/@iot.id	@id	/github/workspace/build/annotated/api/sta/Sensor/schema.yaml
+/@iot.id		/github/workspace/build/annotated/api/sta/Sensor/schema.yaml
 /@iot.selfLink	http://www.opengis.net/def/rel/iana/1.0/self	/github/workspace/build/annotated/api/sta/Sensor/schema.yaml
-/properties	https://schema.org/additionalProperty	/github/workspace/build/annotated/api/sta/Sensor/schema.yaml
+/properties		/github/workspace/build/annotated/api/sta/Sensor/schema.yaml
 /name	http://purl.org/dc/terms/title	/github/workspace/build/annotated/api/sta/Sensor/schema.yaml
 /description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/api/sta/Sensor/schema.yaml
 /encodingType	http://purl.org/dc/terms/format	/github/workspace/build/annotated/api/sta/Sensor/schema.yaml

@@ -16,6 +16,12 @@ The mapping of schema elements to formal definitions (JSON-LD context files) sha
 
 Representation of the result of act of measuring or otherwise determining the value of a property. [OGC 10-004r3 / ISO 19156:2011]
 
+### `ogc.api.sta.Datastream.Properties` — STA Datastream Properties Context
+
+**Type:** schema
+
+JSON-LD context applied to each SensorThings API Datastream occurrence.
+
 ### `ogc.api.sta.Datastream` — STA Datastream
 
 **Type:** schema
@@ -45,6 +51,12 @@ A Location represents the spatial position of a Thing. Locations are encoded usi
 **Type:** schema
 
 An ObservedProperty specifies the phenomenon of an Observation. It defines what is being observed or measured, typically referenced using a URI from a controlled vocabulary or ontology.
+
+### `ogc.api.sta.Sensor.Properties` — STA Sensor Properties Context
+
+**Type:** schema
+
+JSON-LD context applied to each SensorThings API Sensor occurrence.
 
 ### `ogc.api.sta.Sensor` — STA Sensor
 

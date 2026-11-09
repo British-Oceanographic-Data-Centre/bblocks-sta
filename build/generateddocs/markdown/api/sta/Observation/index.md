@@ -60,9 +60,9 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/observa
 
 <http://w3id.org/ogcincubator/bblocks-sta/1> sosa:hasFeatureOfInterest <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/FeatureOfInterest> ;
     sosa:hasSimpleResult 7.04e+01 ;
+    sosa:isMemberOf <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/Datastream> ;
     sosa:phenomenonTime "2014-12-31T11:59:59.00+08:00" ;
-    sosa:resultTime "2014-12-31T11:59:59.00+08:00" ;
-    sosa:usedProcedure <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/Datastream> .
+    sosa:resultTime "2014-12-31T11:59:59.00+08:00" .
 
 
 ```
@@ -100,9 +100,6 @@ properties:
     type: string
     description: A description of the quality of the result. Type DQ_Element.
     x-jsonld-id: http://www.w3.org/ns/dqv#hasQualityMeasurement
-    x-jsonld-extra-terms:
-      rdf:type: rdf:type
-      dqv:value: http://www.w3.org/ns/dqv#value
   resultTime:
     type: string
     description: The time the result was generated. TM_Instant (ISO 8601 Time string)
@@ -114,7 +111,7 @@ properties:
   Datastream@iot.navigationLink:
     type: string
     description: Reference link to the DataStream Definition.
-    x-jsonld-id: http://www.w3.org/ns/sosa/usedProcedure
+    x-jsonld-id: http://www.w3.org/ns/sosa/isMemberOf
     x-jsonld-type: '@id'
   FeatureOfInterest@iot.navigationLink:
     type: string
@@ -125,8 +122,8 @@ x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
   sosa: http://www.w3.org/ns/sosa/
   dqv: http://www.w3.org/ns/dqv#
-  sdo: https://schema.org/
-  dct: http://purl.org/dc/terms/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
 x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.Observation
   register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
@@ -150,16 +147,10 @@ Links to the schema:
     "@iot.selfLink": "orel:iana/1.0/self",
     "phenomenonTime": "sosa:phenomenonTime",
     "result": "sosa:hasSimpleResult",
-    "resultQuality": {
-      "@context": {
-        "rdf:type": "rdf:type",
-        "dqv:value": "dqv:value"
-      },
-      "@id": "dqv:hasQualityMeasurement"
-    },
+    "resultQuality": "dqv:hasQualityMeasurement",
     "resultTime": "sosa:resultTime",
     "Datastream@iot.navigationLink": {
-      "@id": "sosa:usedProcedure",
+      "@id": "sosa:isMemberOf",
       "@type": "@id"
     },
     "FeatureOfInterest@iot.navigationLink": {
@@ -169,8 +160,8 @@ Links to the schema:
     "orel": "http://www.opengis.net/def/rel/",
     "sosa": "http://www.w3.org/ns/sosa/",
     "dqv": "http://www.w3.org/ns/dqv#",
-    "sdo": "https://schema.org/",
-    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "@version": 1.1
   }
 }

@@ -3,7 +3,7 @@
 
 <http://w3id.org/ogcincubator/bblocks-sta/1> sosa:hasFeatureOfInterest <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/FeatureOfInterest> ;
     sosa:hasSimpleResult 7.04e+01 ;
+    sosa:isMemberOf <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/Datastream> ;
     sosa:phenomenonTime "2014-12-31T11:59:59.00+08:00" ;
-    sosa:resultTime "2014-12-31T11:59:59.00+08:00" ;
-    sosa:usedProcedure <http://w3id.org/ogcincubator/bblocks-sta/Observations(1)/Datastream> .
+    sosa:resultTime "2014-12-31T11:59:59.00+08:00" .
 

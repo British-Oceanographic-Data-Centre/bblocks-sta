@@ -124,20 +124,6 @@ properties:
   properties:
     type: object
     description: A JSON Object containing user-annotated properties as key-value pairs.
-    x-jsonld-id: https://schema.org/additionalProperty
-    x-jsonld-extra-terms:
-      altitude:
-        x-jsonld-id: http://www.w3.org/ns/sosa/hasResult
-        x-jsonld-context:
-          value: https://schema.org/value
-          reference: http://purl.org/dc/terms/description
-          unitOfMeasurement:
-            '@id': http://qudt.org/schema/qudt/unit
-            '@context':
-              name: https://schema.org/name
-              symbol: https://schema.org/symbol
-              definition: '@id'
-      mountingPoint: https://schema.org/location
   HistoricalLocations@iot.navigationLink:
     type: string
     formats: uri
@@ -154,10 +140,8 @@ x-jsonld-prefixes:
   orel: http://www.opengis.net/def/rel/
   dct: http://purl.org/dc/terms/
   geo: http://www.opengis.net/ont/geosparql#
-  sdo: https://schema.org/
-  sosa: http://www.w3.org/ns/sosa/
-  qudt: http://qudt.org/schema/qudt/
   prov: http://www.w3.org/ns/prov#
+  sosa: http://www.w3.org/ns/sosa/
 x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.Locations
   register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
@@ -189,27 +173,6 @@ Links to the schema:
       },
       "@id": "geo:hasGeometry"
     },
-    "properties": {
-      "@context": {
-        "altitude": {
-          "@id": "sosa:hasResult",
-          "@context": {
-            "value": "sdo:value",
-            "reference": "dct:description",
-            "unitOfMeasurement": {
-              "@id": "qudt:unit",
-              "@context": {
-                "name": "sdo:name",
-                "symbol": "sdo:symbol",
-                "definition": "@id"
-              }
-            }
-          }
-        },
-        "mountingPoint": "sdo:location"
-      },
-      "@id": "sdo:additionalProperty"
-    },
     "HistoricalLocations@iot.navigationLink": {
       "@id": "prov:hadLocation",
       "@type": "@id"
@@ -221,10 +184,8 @@ Links to the schema:
     "orel": "http://www.opengis.net/def/rel/",
     "dct": "http://purl.org/dc/terms/",
     "geo": "http://www.opengis.net/ont/geosparql#",
-    "sdo": "https://schema.org/",
-    "sosa": "http://www.w3.org/ns/sosa/",
-    "qudt": "http://qudt.org/schema/qudt/",
     "prov": "http://www.w3.org/ns/prov#",
+    "sosa": "http://www.w3.org/ns/sosa/",
     "@version": 1.1
   }
 }

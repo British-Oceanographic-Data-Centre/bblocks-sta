@@ -60,11 +60,11 @@ Requirements: [http://www.opengis.net/spec/iot_sensing/1.1/req/datamodel/sensor]
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 
-<http://w3id.org/ogcincubator/bblocks-sta/1> dcterms:description "TMP36 - Analog Temperature sensor" ;
+[] dcterms:description "TMP36 - Analog Temperature sensor" ;
     dcterms:format "application/pdf" ;
     dcterms:source <http://example.org/TMP35_36_37.pdf> ;
     dcterms:title "TMP36" ;
-    sosa:ObservationCollection <http://w3id.org/ogcincubator/bblocks-sta/Sensors(1)/Datastreams> .
+    sosa:madeObservation <http://w3id.org/ogcincubator/bblocks-sta/Sensors(1)/Datastreams> .
 
 
 ```
@@ -79,32 +79,14 @@ type: object
 properties:
   '@iot.id':
     description: The Id of the sensor
-    x-jsonld-id: '@id'
   '@iot.selfLink':
     type: string
     description: The direct link to the entity
     x-jsonld-id: http://www.opengis.net/def/rel/iana/1.0/self
+    x-jsonld-type: '@id'
   properties:
     type: object
     description: A JSON Object containing user-annotated properties as key-value pairs.
-    x-jsonld-id: https://schema.org/additionalProperty
-    x-jsonld-extra-terms:
-      category: https://schema.org/category
-      hasSystemProperty: http://www.w3.org/ns/ssn/system/hasSystemProperty
-      identifier: https://schema.org/identifier
-      manufacturer: https://schema.org/manufacturer
-      model: https://schema.org/model
-      serialNumber: https://schema.org/serialNumber
-      valueReference: https://schema.org/valueReference
-      name: https://schema.org/name
-      termCode: https://schema.org/termCode
-      inDefinedTermSet: https://schema.org/inDefinedTermSet
-      propertyID: https://schema.org/propertyID
-      value: https://schema.org/value
-      unitCode: '@id'
-      unitText: https://schema.org/unitText
-      maxValue: https://schema.org/maxValue
-      minValue: https://schema.org/minValue
   name:
     type: string
     description: A property provides a label for Sensor entity, commonly a descriptive
@@ -129,16 +111,13 @@ properties:
     description: Reference link to the DataStream Definition.
 x-jsonld-extra-terms:
   Datastreams@iot.navigationLink:
-    x-jsonld-id: http://www.w3.org/ns/sosa/ObservationCollection
+    x-jsonld-id: http://www.w3.org/ns/sosa/madeObservation
     x-jsonld-type: '@id'
 x-jsonld-prefixes:
-  orel: http://www.opengis.net/def/rel/
-  sdo: https://schema.org/
-  ssn-system: http://www.w3.org/ns/ssn/system/
   dct: http://purl.org/dc/terms/
+  orel: http://www.opengis.net/def/rel/
   sosa: http://www.w3.org/ns/sosa/
-  qudt: http://qudt.org/schema/qudt/
-  prov: http://www.w3.org/ns/prov#
+  dcterms: http://purl.org/dc/terms/
 x-bblocks-metadata:
   itemIdentifier: ogc.api.sta.Sensor
   register: https://british-oceanographic-data-centre.github.io/bblocks-sta/build/register.json
@@ -159,31 +138,12 @@ Links to the schema:
 {
   "@context": {
     "Datastreams@iot.navigationLink": {
-      "@id": "sosa:ObservationCollection",
+      "@id": "sosa:madeObservation",
       "@type": "@id"
     },
-    "@iot.id": "@id",
-    "@iot.selfLink": "orel:iana/1.0/self",
-    "properties": {
-      "@context": {
-        "category": "sdo:category",
-        "hasSystemProperty": "ssn-system:hasSystemProperty",
-        "identifier": "sdo:identifier",
-        "manufacturer": "sdo:manufacturer",
-        "model": "sdo:model",
-        "serialNumber": "sdo:serialNumber",
-        "valueReference": "sdo:valueReference",
-        "name": "sdo:name",
-        "termCode": "sdo:termCode",
-        "inDefinedTermSet": "sdo:inDefinedTermSet",
-        "propertyID": "sdo:propertyID",
-        "value": "sdo:value",
-        "unitCode": "@id",
-        "unitText": "sdo:unitText",
-        "maxValue": "sdo:maxValue",
-        "minValue": "sdo:minValue"
-      },
-      "@id": "sdo:additionalProperty"
+    "@iot.selfLink": {
+      "@id": "orel:iana/1.0/self",
+      "@type": "@id"
     },
     "name": "dct:title",
     "description": "dct:description",
@@ -192,13 +152,10 @@ Links to the schema:
       "@id": "dct:source",
       "@type": "@id"
     },
-    "orel": "http://www.opengis.net/def/rel/",
-    "sdo": "https://schema.org/",
-    "ssn-system": "http://www.w3.org/ns/ssn/system/",
     "dct": "http://purl.org/dc/terms/",
+    "orel": "http://www.opengis.net/def/rel/",
     "sosa": "http://www.w3.org/ns/sosa/",
-    "qudt": "http://qudt.org/schema/qudt/",
-    "prov": "http://www.w3.org/ns/prov#",
+    "dcterms": "http://purl.org/dc/terms/",
     "@version": 1.1
   }
 }

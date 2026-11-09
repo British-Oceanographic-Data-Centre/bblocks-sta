@@ -7,5 +7,5 @@ path	@id	schema
 /resultQuality	http://www.w3.org/ns/dqv#hasQualityMeasurement	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
 /resultTime	http://www.w3.org/ns/sosa/resultTime	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
 /validTime		/github/workspace/build/annotated/api/sta/Observation/schema.yaml
-/Datastream@iot.navigationLink	http://www.w3.org/ns/sosa/usedProcedure	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
+/Datastream@iot.navigationLink	http://www.w3.org/ns/sosa/isMemberOf	/github/workspace/build/annotated/api/sta/Observation/schema.yaml
 /FeatureOfInterest@iot.navigationLink	http://www.w3.org/ns/sosa/hasFeatureOfInterest	/github/workspace/build/annotated/api/sta/Observation/schema.yaml

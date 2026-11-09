@@ -5,6 +5,6 @@ path	@id	schema
 /description	http://purl.org/dc/terms/description	/github/workspace/build/annotated/api/sta/Locations/schema.yaml
 /encodingType	http://purl.org/dc/terms/format	/github/workspace/build/annotated/api/sta/Locations/schema.yaml
 /location	http://www.opengis.net/ont/geosparql#hasGeometry	/github/workspace/build/annotated/api/sta/Locations/schema.yaml
-/properties	https://schema.org/additionalProperty	/github/workspace/build/annotated/api/sta/Locations/schema.yaml
+/properties		/github/workspace/build/annotated/api/sta/Locations/schema.yaml
 /HistoricalLocations@iot.navigationLink	http://www.w3.org/ns/prov#hadLocation	/github/workspace/build/annotated/api/sta/Locations/schema.yaml
 /Things@iot.navigationLink	http://www.w3.org/ns/sosa/hosts	/github/workspace/build/annotated/api/sta/Locations/schema.yaml
